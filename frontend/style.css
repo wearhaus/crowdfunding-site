@@ -17,23 +17,60 @@ p {
 	margin: 0;
 }
 
+/* Nav bars */
+
 .nav {
 	background-color: black;
+	float:auto;
 	height: 60px;
+	opacity: .8;
 	position: fixed;
 	top: 0;
 	width: 100%;
 }
 
-.carousel {
+/* Shortcuts */
+
+#shortcuts {
+	background-color: blue;
+	bottom: 20px;
 	height: auto;
-	margin: 60 0 0 0;
-	padding: 0;
-	width: 100%;
+	position: fixed;
+	right: 20px;
+	width: auto;
 }
 
-.scrollview {
-	height: 100%;
+#shortcuts ul {
+	list-style-type: none;
+}
+
+#shortcuts li {
+	height: 20px;
+	margin: 5px 0;
+}
+
+#shortcuts li p {
+	font-size: 16pt;
+	float:right;
+}
+
+#shortcuts li div {
+	background-color: none;
+	border-radius: 10px;
+	border-radius: 10px;
+	bottom: 40px;
+	float: right;
+	height: 20px;
+	margin-left: 5px;
+	width: 20px;
+}
+
+/* Basic slide structure */
+
+.carousel {
+	height: auto;
+	margin: 0;
+	padding: 0;
 	width: 100%;
 }
 
@@ -47,8 +84,8 @@ p {
 #main {
 	background-image:url("rave.jpg");
 	background-position: center;
-	height: auto;
-	padding: 40 0;
+	height: 640px;
+	padding: 100 0 40 0;
 	width: 100%;
 }
 
@@ -259,7 +296,7 @@ p {
 
 
 
-/* Lights */
+/* Lights pulsing */
 
 #lights {
 	height: 700px;

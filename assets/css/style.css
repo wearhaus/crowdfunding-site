@@ -1,0 +1,214 @@
+body {
+	margin: 0;
+}
+
+h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24pt;
+	font-weight: 700;
+	margin: 0;
+}
+
+p {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	margin: 0;
+}
+
+/* Nav bar */
+
+.nav {
+	background: rgba(0, 0, 0, 0.25);
+	height: 80px;
+	padding: 20px 0 20px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+/* Logo stuff */
+.logo-container {
+	float: left;
+	height: 80px;
+	overflow: hidden;
+	position: absolute;
+	left: 50px;
+	width: 110px;
+}
+
+.logo-container > p {
+	font-size: 12pt;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Meter stuff */
+
+.meter-container {
+	height: 80px;
+	margin: auto;
+	width: 450px;
+}
+
+#stats {
+	height: 50px;
+	width: 100%;
+}
+
+.stat {
+	float: left;
+	width: 150px;
+}
+
+.stat > p > strong {
+	color: #00bccc;
+	font-size: 18pt;
+	font-weight: 700;
+	text-align: center;
+}
+
+.stat > p {
+	font-size: 12pt;
+	font-weight: 400;
+	text-align: center;
+}
+
+.meter { 
+	height: 24px;
+	position: relative;
+	border-color: #00bccc;
+	border-radius: 25px;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.meter > span {
+	display: block;
+	height: 100%;
+	    -webkit-border-top-left-radius: 20px;
+	 -webkit-border-bottom-left-radius: 20px;
+	        -moz-border-radius-topleft: 20px;
+	     -moz-border-radius-bottomleft: 20px;
+	            border-top-left-radius: 20px;
+	         border-bottom-left-radius: 20px;
+	background-color: #00bccc;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/* Preorder button stuff */
+
+#preorder-container {
+	height: 70px;
+	padding-top: 10px;
+	position: absolute;
+	right: 50px;
+	width: auto;
+}
+
+#button-outer {
+	border-color: #00bccc;
+	border-radius: 35px;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+	height: 58px;
+	padding: 5px;
+	width: 240px;
+}
+
+#button {
+	background-color: #00bccc;
+	border-color: #00bccc;
+	border-radius: 28px;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+	height: 54px;
+	width: 236px;
+}
+
+#button > h1 {
+	color: white;
+	font-size: 16pt;
+	line-height: 42pt;
+	text-align: center;
+}
+
+#button > p {
+	color: white;
+	font-size: 12pt;
+	text-align: center;
+}
+
+
+/* Shortcuts */
+
+#shortcuts {
+	background-color: blue;
+	bottom: 20px;
+	height: auto;
+	position: fixed;
+	right: 20px;
+	width: auto;
+}
+
+#shortcuts ul {
+	list-style-type: none;
+}
+
+#shortcuts li {
+	height: 20px;
+	margin: 5px 0;
+}
+
+#shortcuts li p {
+	font-size: 16pt;
+	float:right;
+}
+
+#shortcuts li div {
+	background-color: none;
+	border-radius: 10px;
+	border-radius: 10px;
+	bottom: 40px;
+	float: right;
+	height: 20px;
+	margin-left: 5px;
+	width: 20px;
+}
+
+/* Basic slide structure */
+
+.carousel {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.slide {
+	background-color: #222;
+	height: 800px;
+	width: 100%;
+}
+
+/* Main slide */
+
+#main {
+	background-color: #111;
+	padding-top: 120px;
+}
+
+#headphone-img {
+	background-image: url('../img/headphones_front.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+
+}
