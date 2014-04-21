@@ -190,19 +190,22 @@ p {
 }
 
 #shortcuts li div.inner {
+	background-repeat: no-repeat;
+	background-position: center center;
 	border-color: #00bccc;
 	border-radius: 50%;
 	border-style: solid;
 	border-width: 1px;
 	float: right;
 	height: 28px;
-	transition: 0.5s ease-in-out;
+	transition: .25s ease-in-out;
 	width: 28px;
 }
 
 #shortcuts li div.inner:hover {
 	background-color: #00bccc;
 }
+
 
 /* Basic slide structure */
 
@@ -252,6 +255,7 @@ p {
 	border-radius: 50%;
 	border-style: solid;
 	border-width: 1px;
+	cursor: pointer;
 	display: table;
 	height: 104px;
 	padding: 7px;

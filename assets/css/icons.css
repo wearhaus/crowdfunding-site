@@ -5,63 +5,52 @@ div.logo-thumb {
 	width: 93px;
 }
 
-div.icon-customize {
-	background-image: url('../img/customize-blue-outline.png');
-	background-size: cover;
-	height: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 4px;
-	width: 20px;
-}
-
-div.icon-details {
-	background-image: url('../img/details-blue-outline.png');
-	background-size: cover;
-	height: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 3px;
-	width: 20px;
-}
-
-div.icon-home {
+#shortcuts li div.home {
 	background-image: url('../img/home-blue-outline.png');
-	background-size: cover;
-	height: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 6px;
-	width: 15px;
+	background-size: 15px;
 }
 
-div.icon-interface {
-	background-image: url('../img/interface-blue-outline.png');
-	background-size: cover;
-	height: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 4px;
-	width: 20px;
+#shortcuts li div.home:hover {
+	background-image: url('../img/home-black-fill.png');
 }
 
-div.icon-social {
+#shortcuts li div.social {
 	background-image: url('../img/social-blue-outline.png');
-	background-size: cover;
-	height: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 3px;
-	width: 20px;
+	background-size: 16px;
 }
 
-div.icon-story {
+#shortcuts li div.social:hover {
+	background-image: url('../img/social-black-fill.png');
+}
+
+#shortcuts li div.customize {
+	background-image: url('../img/customize-blue-outline.png');
+	background-size: 19px;
+}
+#shortcuts li div.customize:hover {
+	background-image: url('../img/customize-black-fill.png');
+}
+
+#shortcuts li div.interface {
+	background-image: url('../img/interface-blue-outline.png');
+	background-size: 17px;
+}
+#shortcuts li div.interface:hover {
+	background-image: url('../img/interface-black-fill.png');
+}
+
+#shortcuts li div.details {
+	background-image: url('../img/details-blue-outline.png');
+	background-size: 20px;
+}
+#shortcuts li div.details:hover {
+	background-image: url('../img/details-black-fill.png');
+}
+
+#shortcuts li div.story {
 	background-image: url('../img/story-blue-outline.png');
-	background-size: cover;
-	height: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 4px;
-	width: 20px;
+	background-size: 18px;
 }
-
+#shortcuts li div.story:hover {
+	background-image: url('../img/story-black-fill.png');
+}
