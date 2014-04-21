@@ -127,15 +127,11 @@ p {
 	cursor: pointer;
 	height: 58px;
 	width: 240px;
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition:.5s;
+	transition:.25s;
 }
 
 #button:hover {
-	background-color: #50bccc;
+	background-color: #007c8c;
 }
 
 #button > h1 {
@@ -278,6 +274,7 @@ p {
 	height: 94px;
 	padding: 5px;
 	vertical-align: middle;
+	transition: .25s ease-in-out;
 	width: 94px;
 }
 
@@ -288,5 +285,6 @@ p {
     height: 0;
     left: 40%;
     position: relative;
+   	transition: .25s ease-in-out;
     width: 0;
 }

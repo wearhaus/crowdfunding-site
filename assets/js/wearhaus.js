@@ -36,5 +36,14 @@ $(document).ready(function(){
 		$("p.story").css("color", "none");
 	});
 
+	$("#play-button").hover(function() {
+		console.log("hello");
+		$("#play-button .inner").css("background-color", "#00bccc");
+		$("#play-symbol").css("border-left-color", "white");
+	}, function(){
+		$("#play-button .inner").css("background-color", "none");
+		$("#play-symbol").css("border-left-color", "#00bccc");
+
+	});
 
 });
