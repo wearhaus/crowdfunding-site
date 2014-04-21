@@ -172,10 +172,16 @@ p {
 }
 
 #shortcuts li p {
+	color: transparent;
+	cursor: default;
 	font-size: 12pt;
 	float:right;
 	line-height: 40px;
+	transition: 0.25s ease-in-out;
+    -webkit-user-select:none;
+    user-select:none;
 }
+
 
 #shortcuts li div.outer {
 	border-color: transparent;
@@ -204,6 +210,7 @@ p {
 
 #shortcuts li div.inner:hover {
 	background-color: #00bccc;
+	cursor: pointer;
 }
 
 

@@ -1,21 +1,39 @@
 $(document).ready(function(){
 
-	/*$("#shortcuts li div.home").hover(function(){
-		console.log("hello");
-		$("#shortcuts li div.home").css("background-color", "#00bccc");
-		$("div.icon-home").css("background-image", "url('../assets/img/home-black-fill.png')");
+	$("div.home").hover(function(){
+		$("p.home").css("color", "white");
 	}, function(){
-		$("#shortcuts li div.home").css("background-color", "transparent");
-		$("div.icon-home").css("background-image", "url('../assets/img/home-blue-outline.png')");
-	});*/
+		$("p.home").css("color", "none");
+	});
 
-	$("#shortcuts li div.social").hover(function(){
-		console.log("hello");
-		$("#shortcuts li div.social").css("background-color", "#00bccc");
-		$("div.icon-social").css("background-image", "url('../assets/img/social-black-fill.png')");
+	$("div.social").hover(function(){
+		$("p.social").css("color", "white");
 	}, function(){
-		$("#shortcuts li div.social").css("background-color", "transparent");
-		$("div.icon-social").css("background-image", "url('../assets/img/social-blue-outline.png')");
+		$("p.social").css("color", "none");
+	});
+
+	$("div.customize").hover(function(){
+		$("p.customize").css("color", "white");
+	}, function(){
+		$("p.customize").css("color", "none");
+	});
+
+	$("div.interface").hover(function(){
+		$("p.interface").css("color", "white");
+	}, function(){
+		$("p.interface").css("color", "none");
+	});
+
+	$("div.details").hover(function(){
+		$("p.details").css("color", "white");
+	}, function(){
+		$("p.details").css("color", "none");
+	});
+
+	$("div.story").hover(function(){
+		$("p.story").css("color", "white");
+	}, function(){
+		$("p.story").css("color", "none");
 	});
 
 
