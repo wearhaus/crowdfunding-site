@@ -223,7 +223,7 @@ p {
 
 .slide {
 	background-color: #222;
-	height: 800px;
+	height: 640px;
 	width: 100%;
 }
 
@@ -232,6 +232,7 @@ p {
 #main {
 	background-color: #111;
 	padding-top: 120px;
+	height:700px;
 }
 
 #headphone-img {
@@ -289,4 +290,79 @@ p {
     position: relative;
    	transition: .25s ease-in-out;
     width: 0;
+}
+
+
+/* Social slide */
+#social {
+	background-image: url('../img/people_listening.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 640px;
+}
+
+#social-text-container {
+	background-color: rgba(255,255,255,0.2);
+	margin-left: 80px;
+	margin-top: 400px;
+	padding: 20px;
+	position: absolute;
+	width: 500px;
+}
+
+#social-text {
+	font-size: 24pt;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+
+/* Interface slide */
+#interface {
+	background-color: #111;
+}
+
+#interface-container {
+	left: 20%;
+	margin-top: 40px;
+	height: 560px;
+	position: absolute;
+	width: 900px;
+}
+
+#iphone-background {
+	background-image: url("../img/iphone_black.png");
+	background-position: center center;
+	background-size: cover;
+	float: left;
+	height: 557px;
+	width: 271px;
+}
+
+#iphone-app {
+	background-image: url("../img/test.gif");
+	background-size: cover;
+	height: 396px;
+	margin-left: 20px;
+	margin-top: 82px;
+	position: absolute;
+	width: 223px;
+}
+
+#interface-text-container {
+	display: table;
+	float: left;
+	height: 100%;
+	margin-left: 80px;
+	width: 480px;
+}
+
+#interface-text-vertical-align {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#interface-text {
+	font-weight: 400;
+	letter-spacing: 3px;
 }
