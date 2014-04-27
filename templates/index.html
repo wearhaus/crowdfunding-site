@@ -8,17 +8,28 @@
 		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
         <script>
             $(function($) {
-				var	colors = ["fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33"],
-					bodybg = "#222",
+				var	colors = ["#fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33"],
+					color_words = ["white", "cyan", "green", "yellow", "orange", "red"]
+					bodybg = "#1b1b1b",
 					start = 1;
 					
 				var	sections = colors.length,
 					arcAngle = 360/sections,
 					fillBorder = 2;
 
+				var currentLightColor = "cyan", currentBaseColor = "black";
+				$(".headphone-stage").css(
+					"background-image",
+					"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".jpg')"
+				);
+
 				function LED(color) {
-					console.log(colors[color]);
-					
+					//console.log(colors[color]);
+					currentLightColor = color_words[color];
+					$(".headphone-stage").css(
+						"background-image",
+						"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".jpg')"
+					);
 				}
 
 				$("input.wheel")
@@ -45,7 +56,6 @@
 					release : function (v) {
 						this.o.fgColor = colors[this.cv];
 						this._draw();
-						LED(this.cv);
 					}
 				});
 
@@ -81,7 +91,12 @@
 
 				$("input.blackwhite-checkbox")
 				.change(function() {
-					console.log($(this).is(":checked") ? "white" : "black");
+					//console.log($(this).is(":checked") ? "white" : "black");
+					currentBaseColor = $(this).is(":checked") ? "white" : "black";
+					$(".headphone-stage").css(
+						"background-image",
+						"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".jpg')"
+					);
 				});           
             });
         </script>
@@ -191,6 +206,8 @@
 						<div style="width:300px;">	</div>
 					</div>
 					<div class="palette-container">
+						<p id="personalize-text">YOUR MUSIC</p>
+						<p id="personalize-text">YOUR COLOR</p>
 						<div class="palette">	
 							<div class="color-container">
 								<input class="color" data-index=0>
