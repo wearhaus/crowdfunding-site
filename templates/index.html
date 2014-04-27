@@ -4,7 +4,88 @@
 		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="../static/js/jquery.knob.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+        <script>
+            $(function($) {
+				var	colors = ["fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33"],
+					bodybg = "#222",
+					start = 1;
+					
+				var	sections = colors.length,
+					arcAngle = 360/sections,
+					fillBorder = 2;
+
+				function LED(color) {
+					console.log(colors[color]);
+					
+				}
+
+				$("input.wheel")
+				.attr("value", start)
+				.knob({
+					width:			240,
+					height:			240,
+					thickness:		.07,
+					cursor:			30,
+					angleOffset:	30,
+					min : 			0,
+					max : 			6,
+					bgColor:		bodybg,
+					fgColor:		colors[start],
+					stopper: 		false,
+					displayInput:	false,
+
+					//Handler functions for click/scroll - will call transition function
+					change : function (v) {
+						this.o.fgColor = colors[v];
+						LED(v);
+					},
+
+					release : function (v) {
+						this.o.fgColor = colors[this.cv];
+						this._draw();
+						LED(this.cv);
+					}
+				});
+
+                $("input.color")
+                .each(
+					function(i, e) {
+						$(e).attr('data-bgColor', colors[$(e).data('index')]);
+						$(e).attr('data-angleOffset', arcAngle*parseInt($(e).data('index')));
+					})
+                .knob({
+					width:			200,
+					height:			200,
+					thickness:		.45,
+					angleArc:		arcAngle,
+					displayInput:	false,
+					readonly:		true,
+				});
+
+                $("input.fill")
+                .each(
+					function(i, e) {
+						$(e).attr('data-angleOffset', arcAngle*parseInt($(e).data('index')) + fillBorder);
+					})
+				.knob({
+					width:			196,
+					height:			196,
+					thickness:		.42,
+					angleArc:		arcAngle - 2*fillBorder,
+					bgColor:		bodybg,
+					displayInput:	false,
+					readonly:		true,
+				});
+
+				$("input.blackwhite-checkbox")
+				.change(function() {
+					console.log($(this).is(":checked") ? "white" : "black");
+				});           
+            });
+        </script>
+
 	</head>
 	<body>
 
@@ -98,6 +179,65 @@
 					<p id="social-text">WIRELESSLY SHARE</p>
 					<p id="social-text">MUSIC WITH YOUR FRIENDS</p>
 				</div>
+			</div>
+			<!-- Personalization slide -->
+			<div class="slide" id="personalize">
+				<div class="personalize-container">
+					<div class="headphone-stage">
+						<div style="width:300px;">	</div>
+					</div>
+					<div class="palette-container">
+						<div class="palette">	
+							<div class="color-container">
+								<input class="color" data-index=0>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=1>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=2>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=3>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=4>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=5>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=0>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=1>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=2>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=3>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=4>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=5>
+							</div>
+							<div class="wheel-container">
+								<input class="wheel">
+							</div>
+						</div>
+						<div class="blackwhite">
+								<input type="checkbox" name="blackwhite" class="blackwhite-checkbox" id="basecolor">
+								<label class="blackwhite-label" for="basecolor">
+									<div class="blackwhite-inner"></div>
+									<div class="blackwhite-switch"></div>
+								</label>
+							</div>
+					</div>
+				</div>
+
 			</div>
 			<!-- Interface slide -->
 			<div class="slide" id="interface">
