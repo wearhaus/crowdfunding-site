@@ -87,6 +87,17 @@ $(document).ready(function() {
 	}, function(){
 		$("#play-button .inner-play").css("background-color", "none");
 		$("#play-symbol").css("border-left-color", "#00bccc");
+	});
 
+	/* Play button click */
+	$("#play-button").click(function() {
+		$("#play-button").fadeOut("fast", function() {
+			$("#video-container").animate({
+				height: "480px",
+				width: "853px"
+			}, 250, function() {
+				$("#campaign-video").attr("src", "http://www.youtube.com/embed/uQnzm_uywxk?autoplay=1&color=white&showinfo=0");
+			});
+		});
 	});
 });
