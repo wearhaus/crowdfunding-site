@@ -307,9 +307,9 @@ p {
 	overflow: hidden;
 	position: absolute;
 	top: 25%;
-	transition: .25s ease-in-out;
+	transition: .25s;
 	right: 0;
-	visibility: hidden;
+	opacity: 0;
 	width: 933px;
 }
 

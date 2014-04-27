@@ -92,7 +92,7 @@ $(document).ready(function() {
 	/* Play button click */
 	$("#play-button").click(function() {
 		$("#play-button").fadeOut("fast", function() {
-			$("#video-container").css("visibility", "visible");
+			$("#video-container").css("opacity", "1");
 			setTimeout(function() {
 				$("#campaign-video").attr("src", "http://www.youtube.com/embed/uQnzm_uywxk?autoplay=1&color=white&showinfo=0");
 			}, 250);
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 	/* Exit video play */
 	$(".x").click(function() {
-		$("#video-container").css("visibility", "hidden");
+		$("#video-container").css("opacity", "0");
 		$("#campaign-video").attr("src", "");
 		$("#play-button").fadeIn("fast");
 	});
