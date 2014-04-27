@@ -92,12 +92,17 @@ $(document).ready(function() {
 	/* Play button click */
 	$("#play-button").click(function() {
 		$("#play-button").fadeOut("fast", function() {
-			$("#video-container").animate({
-				height: "480px",
-				width: "853px"
-			}, 250, function() {
+			$("#video-container").css("visibility", "visible");
+			setTimeout(function() {
 				$("#campaign-video").attr("src", "http://www.youtube.com/embed/uQnzm_uywxk?autoplay=1&color=white&showinfo=0");
-			});
+			}, 250);
 		});
+	});
+
+	/* Exit video play */
+	$(".x").click(function() {
+		$("#video-container").css("visibility", "hidden");
+		$("#campaign-video").attr("src", "");
+		$("#play-button").fadeIn("fast");
 	});
 });

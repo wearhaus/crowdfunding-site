@@ -129,7 +129,7 @@ p {
 	cursor: pointer;
 	height: 58px;
 	width: 240px;
-	transition:.25s;
+	transition: .25s;
 }
 
 #button:hover {
@@ -255,6 +255,7 @@ p {
 	position: absolute;
 	right: 0;
 	width: 120px;
+	z-index: 100;
 }
 
 #play-button div.outer-play {
@@ -299,17 +300,23 @@ p {
 
 /* Main slide video */
 #video-container {
-	background-color: #111;
-	height: 0;
-	transition: .25s ease-in-out;
+	height: 480px;
 	left: 0;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 	position: absolute;
 	top: 25%;
+	transition: .25s ease-in-out;
 	right: 0;
-	width: 0;
+	visibility: hidden;
+	width: 933px;
+}
+
+#campaign-video {
+	background-color: black;
+	margin-left: 40px;
+	position: absolute;
 }
 
 /* Social slide */

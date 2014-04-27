@@ -5,6 +5,20 @@ div.logo-thumb {
 	width: 93px;
 }
 
+div.x {
+	background-image: url('../img/x.png');
+	background-size: cover;
+	height: 30px;
+	float: right;
+	transition: .25s;
+	width: 30px;
+}
+
+div.x:hover {
+	background-image: url('../img/x-hover.png');
+	cursor: pointer;
+}
+
 #shortcuts li div.inner.home {
 	background-image: url('../img/home-blue-outline.png');
 	background-size: 18px;
