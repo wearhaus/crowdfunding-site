@@ -462,6 +462,8 @@ p {
 /* Interface slide */
 #interface {
 	background-color: #111;
+	background-image: url("../img/dark_wood/dark_wood.png");
+	background-repeat: repeat;
 }
 
 #interface-container {
