@@ -10,6 +10,7 @@
             $(function($) {
 				var	colors = ["#fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33"],
 					color_words = ["white", "cyan", "green", "yellow", "orange", "red"]
+					colorcount = colors.length,
 					bodybg = "#1b1b1b",
 					start = 1;
 					
@@ -24,7 +25,7 @@
 				);
 
 				function LED(color) {
-					//console.log(colors[color]);
+					console.log(color);
 					currentLightColor = color_words[color];
 					$(".headphone-stage").css(
 						"background-image",
@@ -49,12 +50,13 @@
 
 					//Handler functions for click/scroll - will call transition function
 					change : function (v) {
+						v %= colorcount;
 						this.o.fgColor = colors[v];
 						LED(v);
 					},
 
 					release : function (v) {
-						this.o.fgColor = colors[this.cv];
+						this.o.fgColor = colors[this.cv % colorcount];
 						this._draw();
 					}
 				});
@@ -251,7 +253,9 @@
 			<div class="slide" id="interface">
 				<div id="interface-container">
 					<div id="iphone-background">
-						<div id="iphone-app"></div>
+						<div id="iphone-app">
+							<iframe src="http://gfycat.com/iframe/ElegantAcidicHarborseal" frameborder="0" scrolling="no" width="237" height="403" href="#"></iframe>
+						</div>
 					</div>
 					<div id="interface-text-container">
 						<div id="interface-text-vertical-align">

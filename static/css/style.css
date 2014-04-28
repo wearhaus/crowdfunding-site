@@ -232,7 +232,7 @@ p {
 }
 
 #headphone-img {
-	background-image: url('../img/headphones/WH_black_Blue.jpg');
+	/* background-image: url('../img/headphones/WH_black_Blue.jpg'); */
 	background-position: center;
 	background-size: cover;
 	height: 700px;
