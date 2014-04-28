@@ -19,54 +19,32 @@ div.x:hover {
 	cursor: pointer;
 }
 
-#shortcuts li div.inner.home {
+#shortcuts li .inner.home {
 	background-image: url('../img/home-blue-outline.png');
 	background-size: 18px;
 }
-/*
-#shortcuts li div.inner.home:hover {
-	background-image: url('../img/home-black-fill.png');
-}*/
 
-#shortcuts li div.inner.social {
+#shortcuts li .inner.social {
 	background-image: url('../img/social-blue-outline.png');
 	background-size: 19px;
 }
-/*
-#shortcuts li div.inner.social:hover {
-	background-image: url('../img/social-black-fill.png');
-}*/
 
-#shortcuts li div.inner.customize {
+#shortcuts li .inner.customize {
 	background-image: url('../img/customize-blue-outline.png');
 	background-size: 22px;
 }
 
-/*#shortcuts li div.inner.customize:hover {
-	background-image: url('../img/customize-black-fill.png');
-}
-*/
-#shortcuts li div.inner.interface {
+#shortcuts li .inner.interface {
 	background-image: url('../img/interface-blue-outline.png');
 	background-size: 20px;
 }
-/*#shortcuts li div.inner.interface:hover {
-	background-image: url('../img/interface-black-fill.png');
-}
-*/
-#shortcuts li div.inner.details {
+
+#shortcuts li .inner.details {
 	background-image: url('../img/details-blue-outline.png');
 	background-size: 22px;
 }
-/*#shortcuts li div.inner.details:hover {
-	background-image: url('../img/details-black-fill.png');
-}
-*/
-#shortcuts li div.inner.story {
+
+#shortcuts li .inner.story {
 	background-image: url('../img/story-blue-outline.png');
 	background-size: 20px;
 }
-/*#shortcuts li div.inner.story:hover {
-	background-image: url('../img/story-black-fill.png');
-}
-*/

@@ -17,6 +17,12 @@ p {
 	margin: 0;
 }
 
+:target {
+  -webkit-animation: 1s ease;  
+  -moz-animation: 1s ease;
+  animation: 1s ease;
+}
+
 /* Nav bar */
 
 .nav {
@@ -175,26 +181,13 @@ p {
 	font-size: 12pt;
 	font-weight: 300;
 	float:right;
-	line-height: 42px;
+	line-height: 32px;
 	transition: 0.25s ease-in-out;
     -webkit-user-select:none;
     user-select:none;
 }
 
-
-#shortcuts li div.outer {
-	border-color: transparent;
-	border-radius: 50%;
-	border-style: solid;
-	border-width: 2px;
-	float: right;
-	height: 32px;
-	margin-left: 5px;
-	padding: 2px;
-	width: 32px;
-}
-
-#shortcuts li div.inner {
+#shortcuts li .inner {
 	background-repeat: no-repeat;
 	background-position: center center;
 	border-color: #00bccc;
@@ -203,11 +196,12 @@ p {
 	border-width: 2px;
 	float: right;
 	height: 28px;
+	margin-left: 15px;
 	transition: .25s ease-in-out;
 	width: 28px;
 }
 
-#shortcuts li div.inner:hover {
+#shortcuts li .inner:hover {
 	border-color: #007c8c;
 	cursor: pointer;
 }
@@ -219,6 +213,7 @@ p {
 	height: auto;
 	margin: 0;
 	padding: 0;
+	transition: 1s;
 	width: 100%;
 }
 
@@ -230,7 +225,7 @@ p {
 
 /* Main slide */
 
-#main {
+#home {
 	background-color: #111;
 	padding-top: 60px;
 	height:700px;
@@ -342,8 +337,8 @@ p {
 	letter-spacing: 3px;
 }
 
-/* Personalization slide */
-#personalize {
+/* Customization slide */
+#customize {
 	background-color: #1b1b1b;
 }
 
@@ -512,4 +507,9 @@ p {
 #interface-text {
 	font-weight: 400;
 	letter-spacing: 3px;
+}
+
+/* Details slide */
+#details {
+	background-color: #333;
 }

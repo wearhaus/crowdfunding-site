@@ -2,37 +2,37 @@ $(document).ready(function() {
 
 	/* Shortcut hover */
 
-	$("div.home").hover(function(){
+	$(".inner.home").hover(function(){
 		$("p.home").css("color", "white");
 	}, function(){
 		$("p.home").css("color", "none");
 	});
 
-	$("div.social").hover(function(){
+	$(".inner.social").hover(function(){
 		$("p.social").css("color", "white");
 	}, function(){
 		$("p.social").css("color", "none");
 	});
 
-	$("div.customize").hover(function(){
+	$(".inner.customize").hover(function(){
 		$("p.customize").css("color", "white");
 	}, function(){
 		$("p.customize").css("color", "none");
 	});
 
-	$("div.interface").hover(function(){
+	$(".inner.interface").hover(function(){
 		$("p.interface").css("color", "white");
 	}, function(){
 		$("p.interface").css("color", "none");
 	});
 
-	$("div.details").hover(function(){
+	$(".inner.details").hover(function(){
 		$("p.details").css("color", "white");
 	}, function(){
 		$("p.details").css("color", "none");
 	});
 
-	$("div.story").hover(function(){
+	$(".inner.story").hover(function(){
 		$("p.story").css("color", "white");
 	}, function(){
 		$("p.story").css("color", "none");
@@ -44,39 +44,50 @@ $(document).ready(function() {
 
 	function makeShortcutActive(shortcut) {
 		if (currentActiveShortcut) {
-			$("div.inner." + currentActiveShortcut).css(
+			$(".inner." + currentActiveShortcut).css(
 				"background-image", "url('../static/img/" + currentActiveShortcut + "-blue-outline.png')"
 			);
 		}
-		$("div.inner." + shortcut).css(
+		$(".inner." + shortcut).css(
 			"background-image", "url('../static/img/" + shortcut + "-blue-fill.png')"
 		);
 		currentActiveShortcut = shortcut;
 	}
 
-	$("div.inner.home").click(function() {
+	$(".inner.home").click(function() {
 		makeShortcutActive("home");
 	});
 
-	$("div.inner.social").click(function() {
+	$(".inner.social").click(function() {
 		makeShortcutActive("social");
 	});
 
-	$("div.inner.customize").click(function() {
+	$(".inner.customize").click(function() {
 		makeShortcutActive("customize");
 	});
 
-	$("div.inner.interface").click(function() {
+	$(".inner.interface").click(function() {
 		makeShortcutActive("interface");
 	});
 
-	$("div.inner.details").click(function() {
+	$(".inner.details").click(function() {
 		makeShortcutActive("details");
 	});
 
-	$("div.inner.story").click(function() {
+	$(".inner.story").click(function() {
 		makeShortcutActive("story");
 	});
+
+	/* Scroll handler */
+	var slideNames = ["home", "social", "customize", "interface", "details", "story"];
+
+	$( window ).scroll(function() {
+		var slideIndex = Math.floor($(window).scrollTop() / 640);
+		if (slideNames[slideIndex] != currentActiveShortcut) {
+			makeShortcutActive(slideNames[slideIndex]);
+		}
+	});
+
 
 
 	/* Play button hover */
