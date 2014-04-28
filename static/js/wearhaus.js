@@ -104,16 +104,6 @@ $(document).ready(function() {
 		});
 	});
 
-	/* Play button hover */
-
-	$("#play-button").hover(function() {
-		$("#play-button .inner-play").css("background-color", "#00bccc");
-		$("#play-symbol").css("border-left-color", "white");
-	}, function(){
-		$("#play-button .inner-play").css("background-color", "none");
-		$("#play-symbol").css("border-left-color", "#00bccc");
-	});
-
 	/* Play button click */
 	$("#play-button").click(function() {
 		$("#play-button").fadeOut("fast", function() {
