@@ -82,7 +82,7 @@ $(document).ready(function() {
 	var slideNames = ["home", "social", "customize", "interface", "details", "story"];
 
 	$( window ).scroll(function() {
-		var slideIndex = Math.floor($(window).scrollTop() / 640);
+		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 640);
 		if (slideNames[slideIndex] != currentActiveShortcut) {
 			makeShortcutActive(slideNames[slideIndex]);
 		}
@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 		    $('html, body').stop().animate({
 		        'scrollTop': $target.offset().top - 100
-		    }, 500, 'swing', function () {
+		    }, 900, 'swing', function () {
 		        window.location.hash = target;
 		    });
 		});
