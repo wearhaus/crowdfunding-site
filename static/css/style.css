@@ -160,7 +160,7 @@ p {
 /* Shortcuts */
 
 #shortcuts {
-	bottom: 20px;
+	bottom: 80px;
 	height: auto;
 	position: fixed;
 	right: 40px;
@@ -649,7 +649,7 @@ p.details-text {
 /* Footer */
 .footer {
 	background-color: #00bccc;
-	height: 100px;
+	height: 80px;
 }
 
 #footer-nav {
@@ -657,7 +657,7 @@ p.details-text {
 	left: 0;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 40px;
+	margin-top: 34px;
 	position: absolute;
 	right: 0;
 	width: 330px;
