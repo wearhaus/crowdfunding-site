@@ -451,7 +451,7 @@ p {
 
 .headphone-stage {
 	background-position: center center;
-	background-size: cover;
+	background-size: auto 800px;
 	width: 400px;
 	height: 100%;
 	float: left;
