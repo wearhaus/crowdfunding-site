@@ -109,7 +109,7 @@ $(document).ready(function() {
 		$("#play-button").fadeOut("fast", function() {
 			$("#video-container").css("opacity", "1");
 			setTimeout(function() {
-				$("#campaign-video").attr("src", "http://www.youtube.com/embed/uQnzm_uywxk?autoplay=1&color=white&showinfo=0");
+				$("#campaign-video").attr("src", "http://www.youtube.com/embed/_Fo8CYQ2lpk?rel=0&autoplay=1&color=white&showinfo=0");
 			}, 250);
 		});
 	});
