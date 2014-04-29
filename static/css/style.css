@@ -326,15 +326,15 @@ p {
 
 /* Social slide */
 #social {
-	background-image: url('../img/people_listening.jpg');
+	background-image: url('../img/social.jpg');
 	background-position: center;
 	background-size: cover;
 	height: 640px;
 }
 
 #social-text-container {
-	background-color: rgba(255,255,255,0.2);
-	margin-left: 80px;
+	background-color: rgba(255,255,255,0.3);
+	margin-left: 120px;
 	margin-top: 400px;
 	padding: 20px;
 	position: absolute;
