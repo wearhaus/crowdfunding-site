@@ -122,12 +122,12 @@
 			</div>
 			<div class="meter-container">
 				<div id="stats">
-					<div class="stat"><p><strong>1337</strong></p><p>BACKERS</p></div>
-					<div class="stat"><p><strong>$133,370</strong><p>OF $50,000</p></div>
-					<div class="stat"><p><strong>30</strong></p><p>DAYS LEFT</p></div>
+					<div class="stat"><p><strong>{{backers}}</strong></p><p>BACKERS</p></div>
+					<div class="stat"><p><strong>${{raised}}</strong><p>OF ${{goal}}</p></div>
+					<div class="stat"><p><strong>{{days_remaining}}</strong></p><p>DAYS LEFT</p></div>
 				</div>
 				<div class="meter">
-					<span style="width:37%"></span>
+					<span style="width:{{progress}}%"></span>
 				</div>
 			</div>
 		</div>
@@ -323,5 +323,10 @@
 				</ul>
 			</div>
 		</div>
+		<script type="text/javascript"> 
+			var ftRandom = Math.random()*1000000; 
+
+			document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/4943;29237;3452;iframe/?spotName=Homepage&cachebuster='+ftRandom+'"></iframe>');
+		</script>
 	</body>
 </html>
