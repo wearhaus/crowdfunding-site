@@ -17,15 +17,23 @@ def days_until(year, month, day):
     return difference.days
 
 def grab_campaign_data():
-    j = urllib2.urlopen('https://checkout.wearhaus.com/api/campaigns/3?api_key=d2e5116bb53855961394')
-    campaign = json.load(j)
+    try:
+        j = urllib2.urlopen('https://checkout.wearhaus.com/api/campaigns/3?api_key=d2e5116bb53855961394')
+        campaign = json.load(j)
+        data = {
+            'goal' : int(campaign.get('goal_dollars')),
+            'raised' : int(campaign.get('stats_raised_amount', '75000')),
+            'backers' : int(campaign.get('stats_number_of_contributions')),
+            'days_remaining' : days_until(*parse_date(campaign.get('expiration_date'))),
+        }
+    except:
+        data = {
+            'goal': 75000,
+            'raised': 999999,
+            'backers': 9999,
+            'days_remaining': 30,
+        }
 
-    data = {
-        'goal' : int(campaign.get('goal_dollars')),
-        'raised' : int(campaign.get('stats_raised_amount', '75000')),
-        'backers' : campaign.get('stats_number_of_contributions'),
-        'days_remaining' : days_until(*parse_date(campaign.get('expiration_date'))),
-    }
     data['percent'] = float(data.get('raised')) / data.get('goal') * 100
     data['progress'] = min(data.get('percent'), 100)
     return data
