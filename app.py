@@ -47,8 +47,11 @@ def main_special(referral):
     if promo.get(referral):
         data = grab_campaign_data()
         return render_template('index.html', code=promo.get(referral)['code'], discount=promo.get(referral)['amount'], **data)
-    return redirect(url_for('/'))
+    return redirect('/')
 
 #@app.teardown_appcontext
 #def shutdown_session(exception=None):
     #b_session.remove()
+
+if __name__ == "__main__":
+    app.run(debug=True)

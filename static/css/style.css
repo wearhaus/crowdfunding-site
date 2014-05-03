@@ -240,6 +240,20 @@ p {
 	width: 100%;
 }
 
+#cta {
+	height: auto;
+	position: absolute;
+	right: 20px;
+	top: 140px;
+	width: 320px;
+}
+
+#cta p {
+	font-size: 12pt;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
 /* Main slide - play button */
 
 #play-button {

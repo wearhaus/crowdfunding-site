@@ -81,12 +81,15 @@ $(document).ready(function() {
 	/* Scroll handler */
 	var slideNames = ["home", "social", "customize", "interface", "details", "story"];
 
-	$( window ).scroll(function() {
+	function updateShortCutOnScroll() {
 		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 640);
 		if (slideNames[slideIndex] != currentActiveShortcut) {
 			makeShortcutActive(slideNames[slideIndex]);
 		}
-	});
+	};
+	updateShortCutOnScroll();
+
+	$( window ).scroll(updateShortCutOnScroll);
 
 	/* Smooth transition on shortcut click */
 	$(document).ready(function(){
