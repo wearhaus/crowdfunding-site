@@ -12,7 +12,7 @@ promo = {
         "amount": 30
         }, 
     "harvard": {
-        "code": "crimson",
+        "code": "CRIMSON",
         "amount": 30
         }, 
     "nyu": {
@@ -43,7 +43,7 @@ promo = {
         "code": "DREXEL",
         "amount": 30
         }, 
-    "clarement": {
+    "claremont": {
         "code": "5CC",
         "amount": 30
         }, 
