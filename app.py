@@ -1,4 +1,6 @@
+import json
 import os
+import urllib2
 
 from flask import Flask, redirect, render_template, request, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
@@ -25,23 +27,39 @@ def thank_you():
     email = str(request.args.get('email'))
     # Check if we already have that email stored, if so just return
     user = User.query.filter_by(email=email).first()
-    if user:
-        print user
+
+    if user and user.referral_code:
         return render_template('thankyou.html', email=user.email, code=user.referral_code)
 
     j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
     payments = json.load(j)
     for payment in payments:
         if payment['email'] == email:
+            print payment
             # Grab referral code from that payment index
-            payment_id = payment['id']
-            #referral_code = ReferralCode.query.filter_by(id=payment_id).first()
-            referral_code = "asdfasdf" #Placeholder
+            payment_id = payment.get(u'id')
+            print payment_id
+            referral_code = ReferralCode.query.all()[payment_id].referral_code
+            print referral_code
+            user = User.query.filter_by(email=email).first()
+            print user
 
-            user = User(email, referral_code)
-            db_session.add(user)
-            db_session.commit()
-    return render_template('thankyou.html')
+            if user:
+                user.referral_code = referral_code
+            else:
+                user = User(email, referral_code)
+
+            print user
+            try:
+                db.session.add(user)
+                db.session.commit()
+            except Exception as e:
+                print e
+                print "User commit failed. Rolling back"
+                db.session.rollback()
+            print User.query.all()
+            return render_template('thankyou.html', email=user.email, code=user.referral_code)
+    return render_template('thankyou.html', error=True)
 
 
 @app.route('/<referral>')
@@ -76,18 +94,6 @@ class ReferralCode(db.Model):
 
     def __repr__(self):
         return '<Code %r>' % self.referral_code
-
-
-def create_user(email, code):
-    user = User(email, code)
-    db.session.add(user)
-    db.session.commit()
-
-
-def add_referral_code(code):
-    referral_code = ReferralCode(code)
-    db.session.add(referral_code)
-    db.session.commit()
 
 
 if __name__ == "__main__":
