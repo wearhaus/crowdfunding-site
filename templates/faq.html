@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+        <script>
+            $(document).ready(function() {
+				$('.faqs h3').each(function() {
+					var tis = $(this), state = false, answer = tis.next('div').hide().css('height','auto').slideUp();
+					tis.click(function() {
+						state = !state;
+						answer.slideToggle(state);
+						tis.toggleClass('active',state);
+					});
+				});
+			});
+        </script>
+	</head>
+	<body>
+
+		<!-- Nav bar content -->
+		<div class="nav">
+			<div class="logo-container">
+				<div class="logo-thumb"></div>
+				<p>WEARHAUS</p>
+			</div>
+			<div id="preorder-container">
+				<div id="button-outer">
+					<div id="button" onclick="window.open('https://checkout.wearhaus.com/preorder/checkout/amount')">
+						<h1>PRE-ORDER NOW</h1>
+					</div>
+				</div>
+				<!--<p id="savings-text">Get yours early. Save $50</p>-->
+			</div>
+			<div class="meter-container">
+				<div id="stats">
+					<div class="stat"><p><strong>{{backers}}</strong></p><p>BACKERS</p></div>
+					<div class="stat"><p><strong>${{raised}}</strong><p>OF ${{goal}}</p></div>
+					<div class="stat"><p><strong>{{days_remaining}}</strong></p><p>DAYS LEFT</p></div>
+				</div>
+				<div class="meter">
+					<span style="width:{{progress}}%"></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main carousel content -->
+		<div class="carousel">
+			
+			<!-- FAQ Slide -->
+			<div class="slide" id="faqtitle">
+				<div id="faq-background">
+					<div id="faq-title-container">
+						<h1>Frequently Asked Questions</h1>
+					</div>
+					<div id="faqs-container">
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>This is question 1?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>This is question 2?</h3>
+								<div>
+									<p>This is the answer to question #2.  fad adfa dfasd fas af fsdf df adf fsdf....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>This is question 3?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>This is question 4?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>This is question 5?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>This is question 6?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Footer -->
+		<div class="footer">
+			<div id="footer-nav">
+				<ul>
+					<li><a href="/press"><p>PRESS</p></a></li>
+					<li><a href="/faq"><p>FAQ</p></a></li>
+					<li><a href="http://jobs.wearhaus.com/" target="_blank"><p>JOBS</p></a></li>
+					<li><a href="mailto:team@wearhaus.com"><p>CONTACT</p></a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+			var ftRandom = Math.random()*1000000; 
+
+			document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/4943;29237;3452;iframe/?spotName=Homepage&cachebuster='+ftRandom+'"></iframe>');
+		</script>
+	</body>
+</html>
