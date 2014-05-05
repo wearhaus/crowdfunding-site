@@ -39,6 +39,11 @@ div.x:hover {
 	background-size: 20px;
 }
 
+#shortcuts li .inner.touch {
+	background-image: url('../img/touch-blue-outline.png');
+	background-size: 20px;
+}
+
 #shortcuts li .inner.details {
 	background-image: url('../img/details-blue-outline.png');
 	background-size: 22px;

@@ -79,7 +79,7 @@ $(document).ready(function() {
 	});
 
 	/* Scroll handler */
-	var slideNames = ["home", "social", "customize", "interface", "details", "story"];
+	var slideNames = ["home", "social", "customize", "interface", "touch", "details", "story"];
 
 	function updateShortCutOnScroll() {
 		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 640);
