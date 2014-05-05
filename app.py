@@ -2,7 +2,7 @@ import json
 import os
 import urllib2
 
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, send_from_directory, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String
 
