@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<title>Wearhaus ARC - Next generation headphones for social music listening</title>
+		<meta name="author" content="Wearhaus Inc.">
 		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
@@ -102,16 +104,20 @@
 
 		<!-- Nav bar content -->
 		<div class="nav">
-			<div class="logo-container">
-				<div class="logo-thumb"></div>
-				<p>WEARHAUS</p>
-			</div>
-			<div id="preorder-container">
-				<div id="button-outer">
-					<div id="button" onclick="window.open('https://checkout.wearhaus.com/preorder/checkout/amount')">
-						<h1>PRE-ORDER NOW</h1>
-					</div>
+			<a href="/">
+				<div class="logo-container">
+					<div class="logo-thumb"></div>
+					<p>WEARHAUS</p>
 				</div>
+			</a>
+			<div id="preorder-container">
+				<a href="https://checkout.wearhaus.com/preorder/checkout/amount">
+					<div id="button-outer">
+						<div id="button">
+							<h1>PRE-ORDER NOW</h1>
+						</div>
+					</div>
+				</a>
 				<!--<p id="savings-text">Get yours early. Save $50</p>-->
 			</div>
 			<div class="meter-container">
