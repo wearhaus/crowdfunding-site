@@ -111,4 +111,16 @@ promo = {
         "code": "AKI",
         "amount": 30
         },
+    "techcruch": {
+        "code": "TECHCRUNCH",
+        "amount": 30
+        },
+    "coolhunting": {
+        "code": "COOLHUNTING",
+        "amount": 30
+        },
+    "recode": {
+        "code": "RECODE",
+        "amount": 30
+        },
     }
