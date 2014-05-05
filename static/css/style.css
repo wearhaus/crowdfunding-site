@@ -484,7 +484,8 @@ video {
 
 .headphone-stage {
 	background-position: center center;
-	background-size: auto 800px;
+	background-repeat: no-repeat;
+	background-size: auto 560px;
 	width: 400px;
 	height: 100%;
 	float: left;

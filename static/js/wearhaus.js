@@ -26,6 +26,12 @@ $(document).ready(function() {
 		$("p.interface").css("color", "none");
 	});
 
+	$(".inner.touch").hover(function(){
+		$("p.touch").css("color", "white");
+	}, function(){
+		$("p.touch").css("color", "none");
+	});
+
 	$(".inner.details").hover(function(){
 		$("p.details").css("color", "white");
 	}, function(){

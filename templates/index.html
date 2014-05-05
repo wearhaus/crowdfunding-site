@@ -22,7 +22,7 @@
 				var currentLightColor = "cyan", currentBaseColor = "black";
 				$(".headphone-stage").css(
 					"background-image",
-					"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".jpg')"
+					"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".png')"
 				);
 
 				function LED(color) {
@@ -30,7 +30,7 @@
 					currentLightColor = color_words[color];
 					$(".headphone-stage").css(
 						"background-image",
-						"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".jpg')"
+						"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".png')"
 					);
 				}
 
@@ -98,7 +98,7 @@
 					currentBaseColor = $(this).is(":checked") ? "white" : "black";
 					$(".headphone-stage").css(
 						"background-image",
-						"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".jpg')"
+						"url('../static/img/headphones/WH_" + currentBaseColor + "_side_" + currentLightColor + ".png')"
 					);
 				});           
             });
