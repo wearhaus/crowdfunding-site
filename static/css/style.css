@@ -17,6 +17,12 @@ p {
 	margin: 0;
 }
 
+video {
+	height: 100%;
+	object-fit: cover;
+	object-position: center 60%;
+}
+
 /* Nav bar */
 
 .nav {
@@ -540,14 +546,14 @@ p {
 /* Touch slide */
 #touch {
 	overflow: hidden;
+	min-height: 70%;
 }
 
 #cinemagraph {
 	display: inline-block; 
 	z-index: 0; 
 	position: absolute; 
-	left: 0; 
-	bottom: 30%; 
+	left: 0;
 	width: 100%; 
 	height: 100%;
 }
