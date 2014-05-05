@@ -1,4 +1,8 @@
 promo = {
+    "shareandenjoy": {
+        "code": "SHAREANDENJOY",
+        "amount": 30
+        },
     "berkeley": {
         "code": "GOBEARS",
         "amount": 30
@@ -111,7 +115,7 @@ promo = {
         "code": "AKI",
         "amount": 30
         },
-    "techcruch": {
+    "techcrunch": {
         "code": "TECHCRUNCH",
         "amount": 30
         },
