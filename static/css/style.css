@@ -85,6 +85,7 @@ p {
 	border-radius: 25px;
 	border-style: solid;
 	border-width: 2px;
+	overflow: hidden;
 }
 
 .meter > span {
@@ -98,7 +99,6 @@ p {
 	         border-bottom-left-radius: 20px;
 	background-color: #00bccc;
 	position: relative;
-	overflow: hidden;
 }
 
 
@@ -238,6 +238,20 @@ p {
 	background-size: cover;
 	height: 700px;
 	width: 100%;
+}
+
+#cta {
+	height: auto;
+	position: absolute;
+	right: 20px;
+	top: 140px;
+	width: 320px;
+}
+
+#cta p {
+	font-size: 12pt;
+	letter-spacing: 1px;
+	text-align: center;
 }
 
 /* Main slide - play button */

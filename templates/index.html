@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
@@ -114,7 +115,7 @@
 			</div>
 			<div id="preorder-container">
 				<div id="button-outer">
-					<div id="button">
+					<div id="button" onclick="window.open('https://checkout.wearhaus.com/preorder/checkout/amount')">
 						<h1>PRE-ORDER NOW</h1>
 					</div>
 				</div>
@@ -122,12 +123,12 @@
 			</div>
 			<div class="meter-container">
 				<div id="stats">
-					<div class="stat"><p><strong>1337</strong></p><p>BACKERS</p></div>
-					<div class="stat"><p><strong>$133,370</strong><p>OF $50,000</p></div>
-					<div class="stat"><p><strong>30</strong></p><p>DAYS LEFT</p></div>
+					<div class="stat"><p><strong>{{backers}}</strong></p><p>BACKERS</p></div>
+					<div class="stat"><p><strong>${{raised}}</strong><p>OF ${{goal}}</p></div>
+					<div class="stat"><p><strong>{{days_remaining}}</strong></p><p>DAYS LEFT</p></div>
 				</div>
 				<div class="meter">
-					<span style="width:37%"></span>
+					<span style="width:{{progress}}%"></span>
 				</div>
 			</div>
 		</div>
@@ -177,6 +178,13 @@
 					<div id="video-container">
 						<iframe id="campaign-video" width="853" height="480" src="" frameborder="0" allowfullscreen></iframe>
 						<div class="x"></div>
+					</div>
+					<div id="cta">
+						{% if code %}
+						<p>ENTER THE CODE <strong>{{code}}</strong> AT CHECKOUT AND SAVE ${{50 + discount}} OR MORE</p>
+						{% else %}
+						<p>SAVE $50 OR MORE</p>
+						{% endif %}
 					</div>
 				</div>
 			</div>
@@ -333,7 +341,7 @@
 					</div>
 					<div id="bottom-preorder-container">
 						<div id="bottom-button-outer">
-							<div id="bottom-button">
+							<div id="bottom-button" onclick="window.open('https://checkout.wearhaus.com/preorder/checkout/amount')">
 								<h1>PRE-ORDER NOW</h1>
 							</div>
 						</div>
@@ -348,10 +356,15 @@
 				<ul>
 					<li><a href="/press"><p>PRESS</p></a></li>
 					<li><a href="/faq"><p>FAQ</p></a></li>
-					<li><a href="http://jobs.wearhaus.com/"><p>JOBS</p></a></li>
+					<li><a href="http://jobs.wearhaus.com/" target="_blank"><p>JOBS</p></a></li>
 					<li><a href="mailto:team@wearhaus.com"><p>CONTACT</p></a></li>
 				</ul>
 			</div>
 		</div>
+		<script type="text/javascript"> 
+			var ftRandom = Math.random()*1000000; 
+
+			document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/4943;29237;3452;iframe/?spotName=Homepage&cachebuster='+ftRandom+'"></iframe>');
+		</script>
 	</body>
 </html>

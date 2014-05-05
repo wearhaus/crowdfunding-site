@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+	</head>
+	<body>
+
+		<!-- Nav bar content -->
+		<div class="nav">
+			<div class="logo-container">
+				<div class="logo-thumb"></div>
+				<p>WEARHAUS</p>
+			</div>
+		</div>
+		<h1 style="color: black;"> {{email}} {{code}} </h1>
+		<script type="text/javascript"> 
+
+			var ftRandom = Math.random()*1000000; 
+
+			document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/4943;29240;3452;iframe/?spotName=Thank_You_Page&cachebuster='+ftRandom+'"></iframe>'); 
+		</script>
+	</body>
+</html>
