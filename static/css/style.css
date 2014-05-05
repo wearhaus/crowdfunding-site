@@ -700,7 +700,9 @@ p.details-text {
 #faqtitle {
 	background-color: #111;
 	padding-top: 60px;
-	height: 200%;
+	height: auto;
+	min-height: 100%;
+	display: block;
 }
 
 #faq-title-container {
@@ -721,20 +723,31 @@ p.details-text {
 
 #faqs-container {
 	position: relative;
-	top: 300px;
-	height: 800px;
+	overflow: auto;
 	width: 60%;
 	display: block;
 	margin-left: auto;
     margin-right: auto;
+    padding-top: 300px;
 }
 
-.faq-row {
+.faq-row, .faq-header {
 	position: relative;
 	width: 100%;
 	font-family: 'Lato', sans-serif;
-	font-weight: 300;
 	color: white;
+}
+
+.faq-header {
+	background-color: #666;
+}
+
+.faq-header > h2 {
+	font-size: 18pt;
+	font-weight: 600;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .faqs {
@@ -758,26 +771,20 @@ p.details-text {
 .faqs h3 { 
 	cursor: pointer;
 	font-size: 18pt;
+	font-weight: 400;
 }
 
 .faqs div { 
 	height: 0; 
 	overflow: hidden; 
 	position: relative;
-	font-size: 16pt;
+	font-size: 15pt;
+	font-weight: 100;
 }
 
 .faqs div p	{ 
 	padding: 0; 
 	margin-bottom: 15px; 
-}
-
-/* FAQ */
-#qa {
-	background-image: url('../img/social.jpg');
-	background-position: center;
-	background-size: cover;
-	height: 800px;
 }
 
 
