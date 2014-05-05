@@ -1,22 +1,71 @@
 <html>
 	<head>
 		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/thankyou.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+		<script>
+			function loadEmail() {
+				var email = document.getElementById('input').value;
+				window.location = "/thankyou?email=" + email;
+			}
+
+			function pressed(e) {
+            // Has the enter key been pressed?
+            if ( (window.event ? event.keyCode : e.which) == 13) { 
+				var email = document.getElementById('input').value;
+				window.location = "/thankyou?email=" + email;
+            }
+        }
+
+		</script>
 	</head>
 	<body>
-
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		<!-- Nav bar content -->
 		<div class="nav">
-			<div class="logo-container">
-				<div class="logo-thumb"></div>
-				<p>WEARHAUS</p>
+				<div class="logo-container">
+					<a href="/">
+						<div class="logo-thumb"></div>
+					</a>
+				</div>
+		</div>
+		<div id="content">
+			<div id="text-container">
+				<h1 id="thankyou">THANK YOU</h1>
+				<br>
+				<p>Welcome to the Wearhaus community! We're super excited to have you on board. We've always been firm believers that music connects people, and Wearhaus ARC provides an awesome new way to do so.</p>
+				<p>The more people that join our community, the more fun Wearhaus ARC will be! That's why we're going to help you get all of your friends on board. Here's how it works.</p>
+				<ul>
+					<li><p>We'll give you a unique promo code to share with your friends.</p></li>
+					<li><p>Any friend that uses your code will instantly get <strong>$15 off</strong> their order of headphones.</p></li>
+					<li><p>If a friend uses your code, you will get $15 off your order as well!</p></li>
+					<li><p>That means if you refer enough friends, you can get your entire order for <strong>free</strong>!</p></li>
+				</ul>
+				{% if code %}
+					<p class="center normal">Your unique referral link is:</p>
+					<p class="center link"><strong>http://campaign.wearhaus.com/{{code}}</strong></p>
+					<div class="social-container">
+						<a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=http://campaign.wearhaus.com/{{code}}','','width=555,height=368');void(0)"><div class="fb share"><p>Share on Facebook</p></div></a>
+						<div id="like-container">
+							<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwearhausinc&amp;width&amp;height=62&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=237669639598620" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:62px;" allowTransparency="true"></iframe>
+						</div>
+					</div>
+					<div class="social-container">
+						<a href="javascript:window.open('http://twitter.com/home?status=Check%C2%A0out%C2%A0Wearhaus%C2%A0ARC!%C2%A0New%C2%A0headphones%C2%A0for%C2%A0social%C2%A0music%C2%A0listening.%C2%A0Use%C2%A0my%C2%A0referral%C2%A0link%C2%A0for%C2%A0$15%C2%A0off! @WearhausInc+http%3A%2F%2Fcampaign.wearhaus.com/{{code}}','','width=550,height=257');void(0)"><div class="twitter share"><p>Post on Twitter</p></div></a>
+						<div id="follow-container"><a href="https://twitter.com/wearhausinc" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @wearhausinc</a></div>
+					</div>
+				{% else %}
+					<div id="email-input"> 
+						<input id="input" type="email" name="email" placeholder="Enter your email" onkeydown="pressed(event)">
+						<div id="submit" onclick=loadEmail()><p>GO</p></div>
+					</div>
+				{% endif %}
+
 			</div>
 		</div>
-		<h1 style="color: black;"> {{email}} {{code}} </h1>
 		<script type="text/javascript"> 
 
 			var ftRandom = Math.random()*1000000; 
