@@ -66,7 +66,6 @@ def thank_you():
 def main_special(referral):
     print referral
     if promo.get(referral):
-        print "awesome"
         data = grab_campaign_data()
         return render_template('index.html', code=promo.get(referral)['code'], discount=promo.get(referral)['amount'], **data)
     return redirect('/')

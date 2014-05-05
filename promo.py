@@ -131,4 +131,12 @@ promo = {
         "code": "XCJ",
         "amount": 30
         },
+    "incubator": {
+        "code": "NQB8R",
+        "amount": 30
+        },
+    "verge": {
+        "code": "VERGE",
+        "amount": 30
+        },
     }
