@@ -221,6 +221,7 @@ p {
 .slide {
 	background-color: #222;
 	height: 640px;
+	position: relative;
 	width: 100%;
 }
 
