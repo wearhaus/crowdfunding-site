@@ -568,7 +568,7 @@ video {
 }
 
 #touch-text-container {
-	float: right;
+	float: left;
 	height: 600px;
 	width: 600px;
 }
