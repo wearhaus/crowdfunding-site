@@ -487,10 +487,16 @@ video {
 	background-repeat: no-repeat;
 	background-size: auto 560px;
 	width: 400px;
-	height: 100%;
+	height: 600px;
 	float: left;
 	margin-right: 50px;
-	transition: .5s;
+	padding-top: 40px;
+}
+
+.headphone-stage img {
+	opacity: 0;
+	position: absolute;
+	transition: .5s ease;
 }
 
 /* Interface slide */
