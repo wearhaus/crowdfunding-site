@@ -127,4 +127,8 @@ promo = {
         "code": "RECODE",
         "amount": 30
         },
+    "xcj": {
+        "code": "XCJ",
+        "amount": 30
+        },
     }
