@@ -65,9 +65,16 @@ def thank_you():
 @app.route('/<referral>')
 def main_special(referral):
     print referral
+    referral = referral.lower()
     if promo.get(referral):
         data = grab_campaign_data()
         return render_template('index.html', code=promo.get(referral)['code'], discount=promo.get(referral)['amount'], **data)
+    else:
+        referral = referral.upper()
+        if ReferralCode.query.filter(ReferralCode.referral_code == referral).first():
+            data = grab_campaign_data()
+            referral.upper()
+            return render_template('index.html', code=referral, discount=15, **data)
     return redirect('/')
 
 
