@@ -590,9 +590,18 @@ h1.title-large {
 }
 
 #interface-text {
+	font-size: 24pt;
 	font-weight: 400;
 	letter-spacing: 3px;
+	margin-bottom: 10px;
 }
+
+#interface-desc {
+	font-size: 14pt;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
 
 /* Touch slide */
 #touch {
