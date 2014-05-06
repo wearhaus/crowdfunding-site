@@ -21,6 +21,11 @@ def main():
     data = grab_campaign_data()
     return render_template('index.html', **data)
 
+@app.route('/faq')
+def faq():
+    data = grab_campaign_data()
+    return render_template('faq.html', **data)
+
 @app.route('/thankyou', methods=['GET'])
 def thank_you():
     print "Thank you page"
