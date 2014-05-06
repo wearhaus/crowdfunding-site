@@ -651,17 +651,17 @@ h1.touch-title {
 }
 
 .touch-desc {
-	width: 300px;
+	width: 200px;
 	float: left;
-	text-align: right;
+	text-align: left;
 }
 
 p.touch-text {
-	font-size: 20pt;
+	font-size: 16pt;
 	font-weight: 300px;
 	line-height: 35px;
 	width: 300px;
-	cursor: pointer;
+	cursor: default;
 	transition: 0.35s ease;
 	letter-spacing: 3px;
 }
@@ -671,7 +671,7 @@ p.touch-text {
 	width: 150px;
 	height: 175px;
 	float: left;
-	margin-right: 40px;
+	margin-right: 60px;
 	margin-top: -10px;
 }
 
