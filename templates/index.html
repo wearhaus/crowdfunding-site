@@ -29,11 +29,14 @@
 				$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
 
 				function LED(color) {
-					console.log(color);
-					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "0");
+					var prevBaseColor = currentBaseColor;
+					var prevLightColor = currentLightColor;
 
 					currentLightColor = color_words[color];
 					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
+					setTimeout(function() {
+						$(".headphone-stage #" + prevBaseColor + "-" + prevLightColor).css("opacity", "0");
+					}, 200);
 				}
 
 				$("input.wheel")
