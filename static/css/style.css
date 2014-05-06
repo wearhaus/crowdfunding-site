@@ -409,7 +409,8 @@ h1.title-large {
 }
 
 #personalize-text-container {
-	margin-top: 40px;
+	float: left;
+	margin-top: 200px;
 	width: 320px;
 }
 
@@ -417,11 +418,13 @@ h1.title-large {
 	font-size: 22pt;
 	font-weight: 400;
 	letter-spacing: 3px;
+	margin-bottom: 14px;
 	text-align: center;
 }
 
 #personalize-desc {
 	font-size: 14pt;
+	margin-bottom: 10px;
 	text-align: justify;
 }
 
@@ -507,7 +510,8 @@ h1.title-large {
 
 .palette-container {
 	float: left;
-	margin-top: 60px;
+	margin-right: 40px;
+	margin-top: 100px;
 	width: 320px;
 }
 
@@ -519,8 +523,8 @@ h1.title-large {
 }
 
 .personalize-container {
-	left: 20%;
-	width: 900px;
+	left: 10%;
+	width: 1200px;
 	height: 640px;
 	position: absolute;
 }
@@ -532,7 +536,6 @@ h1.title-large {
 	width: 400px;
 	height: 600px;
 	float: left;
-	margin-right: 50px;
 	padding-top: 80px;
 }
 
