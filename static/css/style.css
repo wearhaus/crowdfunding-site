@@ -523,10 +523,10 @@ h1.title-large {
 }
 
 .personalize-container {
-	left: 10%;
-	width: 1200px;
 	height: 640px;
-	position: absolute;
+	margin: auto;
+	position: relative;
+	width: 1080px;
 }
 
 .headphone-stage {
