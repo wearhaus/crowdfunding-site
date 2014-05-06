@@ -10,7 +10,7 @@
         <script>
             $(function($) {
 				var	colors = ["#fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33", "#fe00fe"]//, "8070FA"],
-					color_words = ["white", "cyan", "green", "yellow", "orange", "red", "red"]//, "red"],
+					color_words = ["white", "cyan", "green", "yellow", "orange", "red", "magenta"]//, "red"],
 					bodybg = "#1b1b1b",
 					start = 1;
 					
@@ -191,7 +191,7 @@
 			<div class="slide" id="social">
 				<div id="social-text-container">
 					<p id="social-text">SHARE YOUR TASTE IN MUSIC.</p>
-					<p id="social-desc">Instantly sync multiple headphones and listen together. Discover new artists, and connect with the people around you.</p>
+					<p id="social-desc">Instantly sync multiple Arc headphones and listen together. Discover new artists, and connect with the people around you.</p>
 				</div>
 			</div>
 			<!-- Personalization slide -->
@@ -280,8 +280,9 @@
 					</div>
 					<div id="interface-text-container">
 						<div id="interface-text-vertical-align">
-							<h1 id="interface-text">BROWSE WHAT SONGS YOUR NEARBY FRIENDS ARE LISTENING TO.
-							</h1>
+							<h1 id="interface-text">HEAR AND BE HEARD.</h1>
+							<p id="interface-desc">The Wearhaus App is exceptionally simple. <br> See what people around you are listening to, <br> join them in real time, or broadcast your own playlist.
+								<br><br>It's never been easier to share and enjoy music.</p>
 						</div>
 					</div>
 				</div>
@@ -310,11 +311,19 @@
 							<div id="details-text-center">
 								<h1 class="details-text">INTUITIVE TOUCH CONTROLS</h1>
 								<br>
-								<p class="details-text">Volume</p>
-								<p class="details-text">Play/Pause</p>
-								<p class="details-text">Next/Prev</p>
-								<p class="details-text">Broadcast</p>
-								<p class="details-text">Join</p>
+								<div class="touch-desc">
+									<p class="details-text">Easily control volume, playback, and sharing with touch gestures.</p>
+									<!--
+									<p class="details-text">Volume</p>
+									<p class="details-text">Play/Pause</p>
+									<p class="details-text">Next/Prev</p>
+									<p class="details-text">Broadcast</p>
+									<p class="details-text">Join</p>
+									-->
+								</div>
+								<div class="touch icon">
+									
+								</div>
 							</div>
 						</div>
 					</div>
@@ -323,27 +332,39 @@
 
 			<!-- Details slide -->
 			<div class="slide" id="details">
-				<div id="details-container">
 					<div id="details-headphone-container">
-						<div id="details-headphone-image">
-						</div>
-					</div>
+						
+						
+						
+						
+					<div style="display: block;">
+							<img src="../static/img/closeups/chevron.jpg">
+						</div><div style="display: none;">
+							<img src="../static/img/closeups/band.jpg">
+						</div><div style="display: none;">
+							<img src="../static/img/closeups/cushion.jpg">
+						</div><div style="display: none;">
+							<img src="../static/img/closeups/cables.jpg">
+						</div></div>
 					<div id="details-text-container">
 						<div id="details-text-table">
 							<div id="details-text-center">
 								<h1 class="details-text">SUPERIOR SOUND,</h1>
 								<h1 class="details-text">COMFORT, AND DURABILITY</h1>
 								<br>
-								<p class="details-text">40mm dual diaphragm drivers</p>
-								<p class="details-text">Memory foam cushions</p>
-								<p class="details-text">Capacitive touch playback controls</p>
-								<p class="details-text">30m Bluetooth range</p>
-								<p class="details-text">16 hours individual playback. 12 hours while sharing.</p>
-								<p class="details-text">Backup AUX cable included.</p>
+								<p class="details-text"><div class="icon" id="spkr"></div>40mm dual diaphragm drivers</p>
+								<p>Smooth 20Hz to 20kHz frequency response</p>
+								<p>Noise isolation and mic functionality</p>
+								<p class="details-text"><div class="icon" id="foam"></div>Memory foam cushioning</p>
+								<p>Ergonomic headband - stress tested against bends, drops, temperature, humidity, water</p>
+								<p class="details-text"><div class="icon" id="capsense"></div>Capacitive touch playback control</p>
+								<p class="details-text"><div class="icon" id="BT"></div>30m syncing range</p>
+								<p>Bluetooth 4.0 with aptX ® Codec</p>								
+								<p class="details-text"><div class="icon" id="battery"></div>16 hours individual playback. 10 hours while sharing.</p>
+								<p class="details-text"><div class="icon" id="cable"></div>USB charging and 3.5mm aux cable included.</p>
 							</div>
 						</div>
 					</div>
-				</div>	
 			</div>
 
 			<!-- Story slide -->
