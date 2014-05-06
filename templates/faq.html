@@ -1,0 +1,350 @@
+<html>
+	<head>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+        <script>
+            $(document).ready(function() {
+				$('.faqs h3').each(function() {
+					var tis = $(this), state = false, answer = tis.next('div').hide().css('height','auto').slideUp();
+					tis.click(function() {
+						state = !state;
+						answer.slideToggle(state);
+						tis.toggleClass('active',state);
+					});
+				});
+			});
+        </script>
+	</head>
+	<body>
+
+		<!-- Nav bar content -->
+		<div class="nav">
+			<div class="logo-container">
+				<div class="logo-thumb"></div>
+				<p>WEARHAUS</p>
+			</div>
+			<div id="preorder-container">
+				<div id="button-outer">
+					<div id="button" onclick="window.open('https://checkout.wearhaus.com/preorder/checkout/amount')">
+						<h1>PRE-ORDER NOW</h1>
+					</div>
+				</div>
+				<!--<p id="savings-text">Get yours early. Save $50</p>-->
+			</div>
+			<div class="meter-container">
+				<div id="stats">
+					<div class="stat"><p><strong>{{backers}}</strong></p><p>BACKERS</p></div>
+					<div class="stat"><p><strong>${{raised}}</strong><p>OF ${{goal}}</p></div>
+					<div class="stat"><p><strong>{{days_remaining}}</strong></p><p>DAYS LEFT</p></div>
+				</div>
+				<div class="meter">
+					<span style="width:{{progress}}%"></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main carousel content -->
+		<div class="carousel">
+			
+			<!-- FAQ Slide -->
+			<div class="slide" id="faqtitle">
+				<div id="faq-background">
+					<div id="faq-title-container">
+						<h1>Frequently Asked Questions</h1>
+					</div>
+					<div id="faqs-container">
+						<div class="faq-header">
+							<h2>The Headphones</h2>
+						</div>
+						
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>What exactly does Wearhaus Arc do?</h3>
+								<div>
+									<p>Arc is a pair of wireless headphones that allows you to seamlessly share</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>How much will a pair cost?</h3>
+								<div>
+									<p>Wearhaus Arc will retail at MSRP $200, but pre-order during the crowdfunding campaign and you'll get $50 off! You can save even more on the cost of an Arc by sharing referral codes (see Referrals/Discounts below)</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>How does sharing work?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>How many people can I share with?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Comfort</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>Sound quality</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Durability</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>What colors does Arc come in?</h3>
+								<div>
+									<p>There are two base colors, black and white, in matte polycarbonate plastic.</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Can I choose the color/brightness of the ring?</h3>
+								<div>
+									<p>Yes! You can easily change these settings from the mobile app. You can also set your backlights to pulse to the music, in sync with friends, or turn off lighting entirely if you want to stay low-key.</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>How long does the battery last?</h3>
+								<div>
+									<p>Our current units last 10 hours with heavy usage, and we're still working on incorporating an even larger battery!</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-header">
+							<h2>The App</h2>
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Which platforms does the app support?</h3>
+								<div>
+									<p>Both iOS and Android will be supported by the time Wearhaus Arc ships. The app will become available on other platforms depending on demand.</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>How does the app work?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Do I have to use the Wearhaus app to play music?</h3>
+								<div>
+									<p>No - we don't stream or provide any music to you; Arc will work on top of any app playing audio, and the Wearhaus app simply controls sharing and tuning in with other people.</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>Which music apps are supported?</h3>
+								<div>
+									<p>We are not targeting any specific music service, so you can play music from whatever source you prefer - even use Arc to watch YouTube with friends!</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Is it legal to listen to music across multiple headphones?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>Where do I get the app?</h3>
+								<div>
+									<p>The app will be available on the App Store and Google Play, just before the first batch of Arcs ship.</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-header">
+							<h2>The Experience</h2>
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Why is sharing music so important?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>What can I get out of the Wearhaus experience?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>What if nobody is nearby?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>Why require headphones, instead of just an app?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-header">
+							<h2>Logistics</h2>
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>When are you shipping?</h3>
+								<div>
+									<p>We'll be shipping the first batch of Arcs in December 2014. The order of shipping will depend on when you ordered your unit - so the earlier the better! You'll also get an update from us in the fall as soon as your unit's shipping date is set.</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>Does Wearhaus ship internationally?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>What stage of production are you in?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>When will my credit card be charged?</h3>
+								<div>
+									<p>Your credit card won't be charged unless we reach our funding goal - if we do reach it, your payment will take around 1-2 days afterwards to process.</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Why can't I enter shipping information now?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>When will my credit card be charged?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Will I get charged sales tax or VAT?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>What will the funds go towards?</h3>
+								<div>
+									<p>All of the pre-order funds will go towards setting up our production lines manufacturing your units!</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>Can I order multiple units?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-header">
+							<h2>Referrals/Discounts</h2>
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>I can get discounts?</h3>
+								<div>
+									<p>	</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>I have a referral code. What do I do with it?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>How does the referral program work? Are there rules?</h3>
+								<div>
+									<p>This is the answer to question #2.  Pellentesque habitant morbisd fad adfa dfasd fas af fsdf df....</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>How do I collect my referral credit?</h3>
+								<div>
+									<p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<br class="clear" />
+					</div>
+					<br class="clear" />
+				</div>
+				<br class="clear" />
+			</div>
+
+		
+		<!-- Footer -->
+		<div class="footer">
+			<div id="footer-nav">
+				<ul>
+					<li><a href="/press"><p>PRESS</p></a></li>
+					<li><a href="/faq"><p>FAQ</p></a></li>
+					<li><a href="http://jobs.wearhaus.com/" target="_blank"><p>JOBS</p></a></li>
+					<li><a href="mailto:team@wearhaus.com"><p>CONTACT</p></a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+			var ftRandom = Math.random()*1000000; 
+
+			document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/4943;29237;3452;iframe/?spotName=Homepage&cachebuster='+ftRandom+'"></iframe>');
+		</script>
+	</body>
+</html>
