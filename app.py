@@ -25,8 +25,14 @@ def main():
 def thank_you():
     print "Thank you page"
     email = str(request.args.get('email'))
+    if email == "None":
+        print "No email"
+        return render_template('thankyou.html')
     # Check if we already have that email stored, if so just return
     user = User.query.filter_by(email=email).first()
+
+    if email and not user:
+        return render_template('thankyou.html', unrecognized_email=True, email=email)
 
     if user and user.referral_code:
         return render_template('thankyou.html', email=user.email, code=user.referral_code)
