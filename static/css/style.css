@@ -727,6 +727,97 @@ p.details-text {
 	text-align: center;
 }
 
+/*FAQ Title*/
+#faqtitle {
+	background-color: #111;
+	padding-top: 60px;
+	height: auto;
+	min-height: 100%;
+	display: block;
+}
+
+#faq-title-container {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	display: table;
+}
+
+#faq-title-container > h1 {
+	font-size: 60px;
+	font-weight: 400px;
+	display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 60px;
+}
+
+#faqs-container {
+	position: relative;
+	overflow: auto;
+	width: 60%;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    padding-top: 300px;
+}
+
+.faq-row, .faq-header {
+	position: relative;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+.faq-header {
+	background-color: #666;
+}
+
+.faq-header > h2 {
+	font-size: 18pt;
+	font-weight: 600;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.faqs {
+	position: relative;
+    width: 40%;
+    display: block;
+    padding-left: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.faq {
+	width: 50%;
+}
+
+.clear { 
+	clear: both; 
+}
+
+.faqs h3 { 
+	cursor: pointer;
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+.faqs div { 
+	height: 0; 
+	overflow: hidden; 
+	position: relative;
+	font-size: 15pt;
+	font-weight: 100;
+}
+
+.faqs div p	{ 
+	padding: 0; 
+	margin-bottom: 15px; 
+}
+
 
 /* Footer */
 .footer {
