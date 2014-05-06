@@ -17,14 +17,14 @@
 		<script>
 			function loadEmail() {
 				var email = document.getElementById('input').value;
-				window.location = "/thankyou?email=" + email;
+				window.location = "/thankyou?email=" + encodeURIComponent(email);
 			}
 
 			function pressed(e) {
             // Has the enter key been pressed?
             if ( (window.event ? event.keyCode : e.which) == 13) { 
 				var email = document.getElementById('input').value;
-				window.location = "/thankyou?email=" + email;
+				window.location = "/thankyou?email=" + encodeURIComponent(email);
             }
         }
 
