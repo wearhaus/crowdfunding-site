@@ -605,7 +605,42 @@ video {
 /* Details slide */
 #details {	
 	background-color: #111;
-	height: 600px;
+	background-image: url('../img/chevron-background.jpg');
+	background-position: top;
+	background-size: cover;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	float: left;
+	display: inline-block;
+	background-size: contain;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+#spkr {
+	background-image: url('../img/spec-icons/audio.png');
+	margin-top: 20px;
+}
+
+#foam {
+	background-image: url('../img/spec-icons/comfort.png');
+}
+
+#BT {
+	background-image: url('../img/spec-icons/bluetooth.png');
+}
+
+#battery {
+	background-image: url('../img/spec-icons/battery.png');
+	height: 25px;
+}
+
+#cable {
+	background-image: url('../img/spec-icons/cable.png');
+	height: 25px;
 }
 
 #details-container {
@@ -614,14 +649,14 @@ video {
 	margin: 20px auto;
 	position: relative;
 	float: left;
-	width: 45%;
-	margin-left: 10%;
+	width: 600px;
+	margin-left: 11%;
 }
 
 #details-headphone-container {
 	float: left;
 	height: 600px;
-	width: 600px;
+	width: 400px;
 }
 
 #details-headphone-image {
@@ -636,8 +671,7 @@ video {
 #details-text-container {
 	float: left;
 	height: 600px;
-	margin-left: 40px;
-	width: 600px;
+	width: 100%;
 }
 
 #details-text-table {
