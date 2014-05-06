@@ -730,7 +730,6 @@ p.details-text {
 /*FAQ Title*/
 #faqtitle {
 	background-color: #111;
-	padding-top: 60px;
 	height: auto;
 	min-height: 100%;
 	display: block;
@@ -744,12 +743,13 @@ p.details-text {
 }
 
 #faq-title-container > h1 {
+	color: #00bccc;
 	font-size: 60px;
 	font-weight: 400px;
 	display: table-cell;
     text-align: center;
     vertical-align: bottom;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 #faqs-container {
@@ -763,14 +763,15 @@ p.details-text {
 }
 
 .faq-row, .faq-header {
+	color: white;
 	position: relative;
 	width: 100%;
 	font-family: 'Lato', sans-serif;
-	color: white;
 }
 
 .faq-header {
-	background-color: #666;
+	background-color: #00bccc;
+	margin-top: 40px;
 }
 
 .faq-header > h2 {
@@ -801,19 +802,19 @@ p.details-text {
 
 .faqs h3 { 
 	cursor: pointer;
-	font-size: 18pt;
-	font-weight: 400;
+	font-size: 16pt;
+	font-weight: 300;
 }
 
 .faqs div { 
 	height: 0; 
 	overflow: hidden; 
 	position: relative;
-	font-size: 15pt;
-	font-weight: 100;
 }
 
 .faqs div p	{ 
+	font-size: 12pt;
+	font-weight: 100;
 	padding: 0; 
 	margin-bottom: 15px; 
 }
