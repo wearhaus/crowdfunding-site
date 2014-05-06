@@ -139,4 +139,12 @@ promo = {
         "code": "VERGE",
         "amount": 30
         },
+    "chile": {
+        "code": "CHILE",
+        "amount": 30
+        },
+    "bostinno": {
+        "code": "BOSTINNO",
+        "amount": 30
+        },
     }
