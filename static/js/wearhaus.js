@@ -129,4 +129,16 @@ $(document).ready(function() {
 		$("#campaign-video").attr("src", "");
 		$("#play-button").fadeIn("fast");
 	});
+
+	/* Details slideshow */
+	$("#details-headphone-container > div:gt(0)").hide();
+
+	setInterval(function() { 
+		$('#details-headphone-container > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#details-headphone-container');
+	},  3000);
 });

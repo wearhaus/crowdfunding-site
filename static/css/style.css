@@ -625,35 +625,24 @@ h1.title-large {
 /* Details slide */
 #details {	
 	background-color: #111;
-}
-
-#details-container {
 	height: 600px;
-	left: 0;
-	margin: 20px auto;
-	position: absolute;
-	right: 0;
-	width: 1000px;
 }
 
 #details-headphone-container {
+	background-size: cover;
 	float: left;
 	height: 600px;
-	width: 400px;
+	width: 600px;
 }
 
-#details-headphone-image {
-	background-image: url("../img/closeups/chevron.jpg");
-	background-position: ;
-	background-size: cover;
-	height: 360px;
-	margin-top: 100px;
-	width: 360px;
+#details-headphone-container  > div{
+	position: absolute;
 }
 
 #details-text-container {
 	float: left;
 	height: 600px;
+	margin-left: 40px;
 	width: 600px;
 }
 
