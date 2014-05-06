@@ -118,7 +118,7 @@ $(document).ready(function() {
 		$("#play-button").fadeOut("fast", function() {
 			$("#video-container").css("opacity", "1");
 			setTimeout(function() {
-				$("#campaign-video").attr("src", "http://www.youtube.com/embed/_Fo8CYQ2lpk?list=PLs0rLWE-xlJDJ14C0fJVMVLMgkcuGBRgC&rel=0&autoplay=1&color=white&showinfo=0");
+				$("#campaign-video").attr("src", "http://www.youtube.com/embed/_Fo8CYQ2lpk?list=PLs0rLWE-xlJDJ14C0fJVMVLMgkcuGBRgC&rel=0&loop=1&autoplay=1&color=white&showinfo=0");
 			}, 250);
 		});
 	});

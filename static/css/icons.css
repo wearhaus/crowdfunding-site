@@ -15,8 +15,8 @@ div.x {
 }
 
 div.x:hover {
-	background-image: url('../img/x-hover.png');
 	cursor: pointer;
+	opacity: .5;
 }
 
 #shortcuts li .inner.home {
