@@ -283,6 +283,13 @@ h1.title-large {
 	letter-spacing: 4px;
 }
 
+p.title-tagline {
+	color: white;
+	font-size: 14pt;
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
 #headphone-img {
 	background-image: url('../img/headphones/WH_black_Blue.jpg');
 	background-position: center;
