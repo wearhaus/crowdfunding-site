@@ -103,6 +103,16 @@
 					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "0");
 					currentBaseColor = $(this).is(":checked") ? "white" : "black";
 					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
+				});
+				
+				$(".touch-text").hover(
+				function() {
+						$(this).css("font-weight", 400);
+						$(".touch-stage #" + $(this).data('gesture')).css("opacity", "1");
+				},
+				function() {
+						$(this).css("font-weight", 300);
+						$(".touch-stage #" + $(this).data('gesture')).css("opacity", "0");
 				});           
             });
         </script>
@@ -324,9 +334,30 @@
 
 			<!-- Touch control slide -->
 			<div class="slide" id="touch">
-				<div id="touch-text-container">
-					<p id="touch-text">INTUITIVE TOUCH CONTROLS</p>
-					<p id="touch-desc">Control volume, playback, and music syncing with just a few simple swipe gestures</p>
+				<div id="touch-container">
+					<div id="touch-text-container">
+						<div id="touch-text-table">
+							<div id="touch-text-center">
+								<h1 class="touch-title">INTUITIVE TOUCH CONTROLS</h1>
+								<br>
+								<div class="touch-desc">
+										<p class="touch-text" data-gesture="tap">Play/Pause</p>
+										<p class="touch-text" data-gesture="updown">Volume</p>
+										<p class="touch-text" data-gesture="leftright">Next/Previous</p>
+										<p class="touch-text" data-gesture="spread">Broadcast</p>
+										<p class="touch-text" data-gesture="hold">Join</p>
+								</div>
+								<div class="touch-stage">
+										<img id="tap" src="../static/img/gestures/tap.png" />
+										<img id="updown" src="../static/img/gestures/updown.png" />
+										<img id="leftright" src="../static/img/gestures/leftright.png" />
+										<img id="spread" src="../static/img/gestures/spread.png" />
+										<img id="hold" src="../static/img/gestures/hold.png" />
+								</div>
+								
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
