@@ -609,7 +609,8 @@ h1.title-large {
 /* Touch slide */
 #touch {
 	background-image: url("../img/touch.jpg");
-	background-position: center;
+	background-position-x: 50%;
+	background-position-y: 30%;
 	background-size: cover;
 	overflow: hidden;
 }
