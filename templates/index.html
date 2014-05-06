@@ -150,6 +150,16 @@
 			</div>
 		</div>
 
+		<div id="cta">
+			<a href="https://checkout.wearhaus.com/preorder/checkout/amount">
+				{% if code %}
+				<p>ENTER THE CODE <strong>{{code}}</strong> AT CHECKOUT AND SAVE ${{50 + discount}} OR MORE</p>
+				{% else %}
+				<p>SAVE $50 OR MORE</p>
+				{% endif %}
+			</a>
+		</div>
+
 		<!-- Shortcut icons -->
 		<div id="shortcuts">
 			<ul>
@@ -203,15 +213,6 @@
 					<div id="video-container">
 						<iframe id="campaign-video" width="853" height="480" src="" frameborder="0" allowfullscreen></iframe>
 						<div class="x"></div>
-					</div>
-					<div id="cta">
-						<a href="https://checkout.wearhaus.com/preorder/checkout/amount">
-							{% if code %}
-							<p>ENTER THE CODE <strong>{{code}}</strong> AT CHECKOUT AND SAVE ${{50 + discount}} OR MORE</p>
-							{% else %}
-							<p>SAVE $50 OR MORE</p>
-							{% endif %}
-						</a>
 					</div>
 				</div>
 			</div>

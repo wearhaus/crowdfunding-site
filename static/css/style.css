@@ -168,6 +168,23 @@ video {
 	text-align: center;
 }
 
+/* Call to action */
+
+#cta {
+	height: 200px;
+	position: fixed;
+	right: 20px;
+	top: 140px;
+	width: 320px;
+	z-index: 2;
+}
+
+#cta p {
+	font-size: 12pt;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
 /* Shortcuts */
 
 #shortcuts {
@@ -276,20 +293,6 @@ h1.title-large {
 
 #headphone-img img {
 
-}
-
-#cta {
-	height: auto;
-	position: absolute;
-	right: 20px;
-	top: 140px;
-	width: 320px;
-}
-
-#cta p {
-	font-size: 12pt;
-	letter-spacing: 1px;
-	text-align: center;
 }
 
 /* Main slide - play button */

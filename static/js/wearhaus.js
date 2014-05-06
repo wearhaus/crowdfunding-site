@@ -141,4 +141,21 @@ $(document).ready(function() {
 		.end()
 		.appendTo('#details-headphone-container');
 	},  3000);
+
+	/* Call to action */
+	$("#button").hover(function () {
+		$("#cta").fadeIn("fast");
+	}, function() {
+		if ($(window).scrollTop() > 200) {
+			$("#cta").fadeOut("fast");
+		}
+	});
+
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > 200) {
+			$("#cta").fadeOut("fast");
+		} else {
+			$("#cta").fadeIn("fast");
+		}
+	});
 });
