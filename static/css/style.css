@@ -246,6 +246,27 @@ video {
 	height:700px;
 }
 
+#title-container {
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 420px;
+	z-index: 999;
+}
+
+h1.title-small {
+	color: #00bccc;
+	font-size: 18pt;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+h1.title-large {
+	color: #00bccc;
+	font-size: 28pt;
+	font-weight: 700;
+	letter-spacing: 4px;
+}
+
 #headphone-img {
 	background-image: url('../img/headphones/WH_black_Blue.jpg');
 	background-position: center;

@@ -175,6 +175,10 @@
 		<div class="carousel">
 			<!-- Video slide -->
 			<div class="slide" id="home">
+				<div id="title-container">
+					<h1 class="title-small">INTRODUCING</h1>
+					<h1 class="title-large">WEARHAUS ARC</h1>
+				</div>
 				<div id="headphone-img">
 					<div id="play-button">
 						<div class="outer-play">
@@ -188,11 +192,13 @@
 						<div class="x"></div>
 					</div>
 					<div id="cta">
-						{% if code %}
-						<p>ENTER THE CODE <strong>{{code}}</strong> AT CHECKOUT AND SAVE ${{50 + discount}} OR MORE</p>
-						{% else %}
-						<p>SAVE $50 OR MORE</p>
-						{% endif %}
+						<a href="https://checkout.wearhaus.com/preorder/checkout/amount">
+							{% if code %}
+							<p>ENTER THE CODE <strong>{{code}}</strong> AT CHECKOUT AND SAVE ${{50 + discount}} OR MORE</p>
+							{% else %}
+							<p>SAVE $50 OR MORE</p>
+							{% endif %}
+						</a>
 					</div>
 				</div>
 			</div>
