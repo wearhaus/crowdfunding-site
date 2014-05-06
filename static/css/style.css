@@ -572,6 +572,7 @@ h1.title-large {
 	margin-left: 20px;
 	margin-top: 82px;
 	position: absolute;
+	pointer-events: none;
 	width: 223px;
 }
 
@@ -602,7 +603,7 @@ h1.title-large {
 
 #touch-text-container {
 	background-color: rgba(255, 255, 255, 0.2);
-	height: 100px;
+	height: 90px;
 	margin-top: 420px;
 	margin-left: 60px;
 	padding: 20px;
