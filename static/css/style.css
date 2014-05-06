@@ -812,7 +812,7 @@ p.details-text {
 .faqs h3 { 
 	cursor: pointer;
 	font-size: 16pt;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .faqs div { 
@@ -822,8 +822,8 @@ p.details-text {
 }
 
 .faqs div p	{ 
-	font-size: 12pt;
-	font-weight: 100;
+	font-size: 14pt;
+	font-weight: 300;
 	padding: 0; 
 	margin-bottom: 15px; 
 }
