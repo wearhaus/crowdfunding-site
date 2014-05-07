@@ -151,4 +151,8 @@ promo = {
         "code": "LEAGUEMEME",
         "amount": 30
         },
+    "hackforums": {
+        "code": "HACKFORUMS",
+        "amount": 30
+        },
     }
