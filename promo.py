@@ -147,4 +147,8 @@ promo = {
         "code": "BOSTINNO",
         "amount": 30
         },
+    "leaguememe": {
+        "code": "LEAGUEMEME",
+        "amount": 30
+        },
     }
