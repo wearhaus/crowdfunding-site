@@ -163,4 +163,16 @@ promo = {
         "code": "WINGSOFDEATH",
         "amount": 20
         },
+    "northwestern": {
+        "code": "NORTHWESTERN",
+        "amount": 30
+        },
+    "northeastern": {
+        "code": "NORTHEASTERN",
+        "amount": 30
+        },
+    "bc": {
+        "code": "BC",
+        "amount": 30
+        },
     }
