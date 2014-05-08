@@ -157,10 +157,10 @@ promo = {
         },
     "gosu": {
         "code": "GOSU",
-        "amount": 30
+        "amount": 20
         },
     "wingsofdeath": {
         "code": "WINGSOFDEATH",
-        "amount": 30
+        "amount": 20
         },
     }
