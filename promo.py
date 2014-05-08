@@ -164,11 +164,11 @@ promo = {
         "amount": 20
         },
     "northwestern": {
-        "code": "NORTHWESTERN",
+        "code": "NORTHWEST",
         "amount": 30
         },
     "northeastern": {
-        "code": "NORTHEASTERN",
+        "code": "NORTHEAST",
         "amount": 30
         },
     "bc": {
