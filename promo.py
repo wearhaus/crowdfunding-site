@@ -155,4 +155,12 @@ promo = {
         "code": "HACKFORUMS",
         "amount": 30
         },
+    "gosu": {
+        "code": "GOSU",
+        "amount": 30
+        },
+    "wingsofdeath": {
+        "code": "WINGSOFDEATH",
+        "amount": 30
+        },
     }
