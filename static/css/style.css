@@ -305,14 +305,14 @@ p.title-tagline {
 /* Main slide - play button */
 
 #play-button {
-	height: 120px;
+	height: 160px;
 	left: 0;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 240px;
 	position: absolute;
 	right: 0;
-	width: 120px;
+	width: 160px;
 	z-index: 100;
 }
 
@@ -324,6 +324,8 @@ p.title-tagline {
 	cursor: pointer;
 	display: table;
 	height: 102px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 7px;
 	-webkit-user-select: none;
 	user-select: none;
@@ -362,6 +364,14 @@ p.title-tagline {
 
 #play-button div.inner-play:hover #play-symbol {
 	border-left-color: white;
+}
+
+#play-button p {
+	color: #00bccc;
+	font-weight: 700;
+	letter-spacing: 3px;
+	padding-top: 10px;
+	text-align: center;
 }
 
 
