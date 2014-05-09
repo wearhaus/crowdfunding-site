@@ -30,15 +30,16 @@ def faq():
 def thank_you():
     print "Thank you page"
     email = str(request.args.get('email'))
+    confirmation_id = str(request.args.get('confirmation_id'))
     print email
     if email == "None":
         print "No email"
-        return render_template('thankyou.html')
+        return render_template('thankyou.html', confirmation_id=confirmation_id)
     # Check if we already have that email stored, if so just return
     user = User.query.filter_by(email=email).first()
 
     if user and user.referral_code:
-        return render_template('thankyou.html', email=user.email, code=user.referral_code)
+        return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id)
 
     j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
     payments = json.load(j)
@@ -67,13 +68,13 @@ def thank_you():
                 print "User commit failed. Rolling back"
                 db.session.rollback()
             print User.query.all()
-            return render_template('thankyou.html', email=user.email, code=user.referral_code)
+            return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id)
 
     user = User.query.filter_by(email=email).first()
     if email and not user:
-        return render_template('thankyou.html', unrecognized_email=True, email=email)
+        return render_template('thankyou.html', unrecognized_email=True, email=email, confirmation_id=confirmation_id)
 
-    return render_template('thankyou.html', error=True)
+    return render_template('thankyou.html', error=True, confirmation_id=confirmation_id)
 
 
 @app.route('/<referral>')
