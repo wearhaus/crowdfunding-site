@@ -6,10 +6,9 @@ from app import User
 def send_emails():
     users = User.query.all()
     for user in users:
-        if user.email == "richie@wearhaus.com":
-            print user.email, type(user.email)
-            print user.referral_code, type(user.referral_code)
-            send_halfway_message(user.email, user.referral_code)
+        print user.email, type(user.email)
+        print user.referral_code, type(user.referral_code)
+        send_halfway_message(user.email, user.referral_code)
 
 def send_halfway_message(email, code):
     return requests.post(
