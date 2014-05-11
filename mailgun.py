@@ -6,8 +6,10 @@ from app import User
 def send_emails():
     users = User.query.all()
     for user in users:
-        print user.email, type(user.email)
-        print user.referral_code, type(user.referral_code)
+        if user.email == "richie@wearhaus.com":
+            print user.email, type(user.email)
+            print user.referral_code, type(user.referral_code)
+            send_halfway_message(user.email, user.referral_code)
 
 def send_halfway_message(email, code):
     return requests.post(
@@ -29,6 +31,5 @@ def send_halfway_message(email, code):
 <h3 style="font-family:verdana; text-align:center; color:#00bccc;">http://wearhaus.com/{0}</h3>
 <div style="width:250px; margin-left:auto; margin-right:auto;">
     <a href="https://www.facebook.com/sharer/sharer.php?u=http://campaign.wearhaus.com/{0}"><p style="float:left;">Share on Facebook</p></a>
-        <a href="https://twitter.com/home?status=Check%20out%20Arc%20social%20music%20listening%20headphones%20by%20@WearhausInc!%20Use%20this%20link%20for%20$15!%20http://wearhaus.com/{0}%20%23WearhausArc"><p style="float:right;">Share on Twitter</p></a>
+        <a href="https://twitter.com/home?status=Check%20out%20Arc%20social%20music%20listening%20headphones%20by%20@WearhausInc!%20Use%20this%20link%20for%20$15%20off!%20http://wearhaus.com/{0}%20%23WearhausArc"><p style="float:right;">Share on Twitter</p></a>
         </div>""".format(code)})
-print send_halfway_message("richzeng@gmail.com", "TEMPP")
