@@ -175,4 +175,8 @@ promo = {
         "code": "BC",
         "amount": 30
         },
+    "kairos": {
+        "code": "KAIROS",
+        "amount": 30
+        },
     }
