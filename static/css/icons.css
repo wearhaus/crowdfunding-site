@@ -14,6 +14,20 @@ div.x {
 	width: 30px;
 }
 
+div.app-store {
+	background-image: url('../img/mobile-app/app_store.png');
+	background-size: cover;
+	height: 60px;
+	width: 179px;
+}
+
+div.play-store {
+	background-image: url('../img/mobile-app/play_store.png');
+	background-size: cover;
+	height: 60px;
+	width: 171px;
+}
+
 div.x:hover {
 	cursor: pointer;
 	opacity: .5;

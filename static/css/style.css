@@ -602,7 +602,7 @@ p.title-tagline {
 #interface-text-container {
 	display: table;
 	float: left;
-	height: 100%;
+	height: 90%;
 	margin-left: 80px;
 	width: 480px;
 }
@@ -625,6 +625,12 @@ p.title-tagline {
 	margin-bottom: 10px;
 }
 
+#app-store-container {
+	float: left;
+	height: 80px;
+	margin-left: 80px;
+	width: 540px;
+}
 
 /* Touch slide */
 #touch {
