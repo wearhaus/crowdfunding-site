@@ -21,10 +21,25 @@ def main():
     data = grab_campaign_data()
     return render_template('index.html', **data)
 
+
 @app.route('/faq')
 def faq():
     data = grab_campaign_data()
     return render_template('faq.html', **data)
+
+
+@app.route('/referral', methods=['GET'])
+def referral():
+    email = str(request.args.get('email'))
+    if email == "None":
+        return render_template('referral.html')
+
+    user = User.query.filter_by(email=email).first()
+    if user:
+        return render_template('referral.html', email=user.email, code=user.referral_code)
+    else:
+        return render_template('referral.html', unrecognized_email=True)
+
 
 @app.route('/thankyou', methods=['GET'])
 def thank_you():

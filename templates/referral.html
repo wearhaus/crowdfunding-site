@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>Wearhaus ARC - Headphones reinvented. Social listening redefined.</title>
+		<meta name="author" content="Wearhaus Inc." />
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_blackwhite_cyan.jpg"/>
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_black_Blue.jpg"/>
+		<meta property="og:title" content="Wearhaus ARC - Headphones reinvented. Social listening redefined"/>
+		<meta property="og:url" content="http://campaign.wearhaus.com/"/>
+		<meta property="og:description" content="Hear and be heard. Tune in with friends and listen in sync. Share your sound and connect with people through the music you love."/>
+
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/thankyou.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+		<script>
+			function loadEmail() {
+				var email = document.getElementById('input').value;
+				window.location = "/referral?email=" + encodeURIComponent(email);
+			}
+
+			function pressed(e) {
+            // Has the enter key been pressed?
+            if ( (window.event ? event.keyCode : e.which) == 13) { 
+				var email = document.getElementById('input').value;
+				window.location = "/referral?email=" + encodeURIComponent(email);
+            }
+        }
+
+		</script>
+	</head>
+	<body>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<!-- Nav bar content -->
+		<div class="nav">
+				<div class="logo-container">
+					<a href="/">
+						<div class="logo-thumb"></div>
+					</a>
+				</div>
+		</div>
+		<div id="content">
+			<div id="text-container">
+				<p style="margin-top:60px;">The more people that join our community, the more fun Wearhaus ARC will be! That's why we're going to help you get all of your friends on board. Here's how it'll work.</p>
+				<br>
+				<p><strong>Refer a friend and both of you can save $15!</strong></p>
+				<ul>
+					<li><p>After you make a purchase, we'll give you a unique referral code to share with your friends.</p></li>
+					<li><p>Any friend that uses your code will instantly get <strong>$15 off</strong> their order of headphones.</p></li>
+					<li><p>If a friend uses your code, you will get $15 off your order as well!</p></li>
+					<li><p>If you refer enough friends, you can <strong>get your entire order for free</strong>!</p></li>
+				</ul>
+				{% if code %}
+					<p class="center normal">Your unique referral link is:</p>
+					<p class="center link"><strong>http://campaign.wearhaus.com/{{code}}</strong></p>
+					<div class="social-container">
+						<a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=http://campaign.wearhaus.com/{{code}}','','width=555,height=368');void(0)"><div class="fb share"><p>Share on Facebook</p></div></a>
+						<div id="like-container">
+							<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwearhausinc&amp;width&amp;height=62&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=237669639598620" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:62px;" allowTransparency="true"></iframe>
+						</div>
+					</div>
+					<div class="social-container">
+						<a href="javascript:window.open('http://twitter.com/home?status=Check%C2%A0out%C2%A0Wearhaus%C2%A0ARC!%C2%A0Headphones%C2%A0for%C2%A0social%C2%A0music%C2%A0listening.%C2%A0Use%C2%A0my%C2%A0referral%C2%A0link%C2%A0for%C2%A0$15%C2%A0off! @WearhausInc+http%3A%2F%2Fcampaign.wearhaus.com/{{code}}','','width=550,height=257');void(0)"><div class="twitter share"><p>Post on Twitter</p></div></a>
+						<div id="follow-container"><a href="https://twitter.com/wearhausinc" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @wearhausinc</a></div>
+					</div>
+				{% elif unrecognized_email %}
+					<br>
+					<br>
+					<p class="center">Sorry, we don't see a purchase associated with <strong>{{email}}</strong> in our system. Double check and make sure you have the same email you used in the checkout process. If you still have issues, send us an email at <strong>team@wearhaus.com</strong></p>
+				{% else %}
+					<p>Have you already made a purchase? Enter you email here to get your referral code!</p>
+					<div id="email-input"> 
+						<input id="input" type="email" name="email" placeholder="Enter your email" onkeydown="pressed(event)">
+						<div id="submit" onclick=loadEmail()><p>GO</p></div>
+					</div>
+				{% endif %}
+
+			</div>
+		</div>
+		<!-- Secure Conditional Container Tag: Wearhaus (4943) | Thank You Page (29240) | Wearhaus 2014 (3452) | Expected URL: http://campaign.wearhaus.com/thankyou --> 
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-47387009-1', 'wearhaus.com');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
