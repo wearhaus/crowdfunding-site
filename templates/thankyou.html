@@ -85,7 +85,7 @@
 
 		<script type="text/javascript"> 
 		var ftRandom = Math.random()*1000000; 
-		document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="https://servedby.flashtalking.com/container/4943;29240;3452;iframe/?spotName=Thank_You_Page&ftXRef={{confirmation_id}}&ftXValue=[%INSERT_TRANSACTION_VALUE_HERE%]&ftXNumItems=[%INSERT_TRANSACTION_QUANTITY_HERE%]&cachebuster='+ftRandom+'"></iframe>'); 
+		document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="https://servedby.flashtalking.com/container/4943;29240;3452;iframe/?spotName=Thank_You_Page&ftXRef={{confirmation_id}}&ftXValue={{transaction_amount}}&ftXNumItems=[%INSERT_TRANSACTION_QUANTITY_HERE%]&cachebuster='+ftRandom+'"></iframe>'); 
 		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

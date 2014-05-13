@@ -31,18 +31,29 @@ def thank_you():
     print "Thank you page"
     email = str(request.args.get('email'))
     confirmation_id = str(request.args.get('confirmation_id'))
+    transaction_amount = 0;
     print email
     if email == "None":
         print "No email"
-        return render_template('thankyou.html', confirmation_id=confirmation_id)
+        return render_template('thankyou.html', confirmation_id=confirmation_id, transaction_amount=transaction_amount)
     # Check if we already have that email stored, if so just return
     user = User.query.filter_by(email=email).first()
 
-    if user and user.referral_code:
-        return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id)
-
     j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
     payments = json.load(j)
+
+    for payment in payments:
+        if payment.get('ct_payment_id') == confirmation_id:
+            amount = payment.get('amount')
+            if amount:
+                amount = str(amount)
+                transaction_amount = amount[:3] + '.' + amount[3:]
+
+    print transaction_amount
+
+    if user and user.referral_code:
+        return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id, transaction_amount=transaction_amount)
+
     for payment in payments:
         if payment['email'] == email:
             print payment
@@ -68,13 +79,13 @@ def thank_you():
                 print "User commit failed. Rolling back"
                 db.session.rollback()
             print User.query.all()
-            return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id)
+            return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id, transaction_amount=transaction_amount)
 
     user = User.query.filter_by(email=email).first()
     if email and not user:
-        return render_template('thankyou.html', unrecognized_email=True, email=email, confirmation_id=confirmation_id)
+        return render_template('thankyou.html', unrecognized_email=True, email=email, confirmation_id=confirmation_id, transaction_amount=transaction_amount)
 
-    return render_template('thankyou.html', error=True, confirmation_id=confirmation_id)
+    return render_template('thankyou.html', error=True, confirmation_id=confirmation_id, transaction_amount=transaction_amount)
 
 
 @app.route('/<referral>')
