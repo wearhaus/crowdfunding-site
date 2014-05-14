@@ -298,8 +298,10 @@ p.title-tagline {
 	width: 100%;
 }
 
-#headphone-img img {
-
+#social-icon-container {
+	height: 50px;
+	margin-top: 10px;
+	width: 100%;
 }
 
 /* Main slide - play button */
