@@ -14,6 +14,56 @@ div.x {
 	width: 30px;
 }
 
+div.x:hover {
+	cursor: pointer;
+	opacity: .5;
+}
+
+div.press-logo {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	float: left;
+	margin: 10px 20px;
+	transition: .25s;
+}
+
+div.press-logo:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
+#bostinno {
+	background-image: url('../img/press/bostinno.png');
+	height: 39px;
+	width: 200px;
+}
+
+#coolhunting {
+	background-image: url('../img/press/coolhunting.png');
+	height: 50px;
+	width: 130px;
+}
+
+#crowdfundinsider {
+	background-image: url('../img/press/crowdfundinsider.png');
+	height: 40px;
+	width: 198px;
+}
+
+#techcrunch {
+	background-image: url('../img/press/techcrunch.png');
+	height: 30px;
+	margin-top: 15px;
+	width: 209px;
+}
+
+#yankodesign {
+	background-image: url('../img/press/yankodesign.png');
+	height: 50px;
+	width: 130px;
+}
+
 div.social-icon {
 	background-size: cover;
 	float: left;
@@ -51,11 +101,6 @@ div.play-store {
 	background-size: cover;
 	height: 60px;
 	width: 171px;
-}
-
-div.x:hover {
-	cursor: pointer;
-	opacity: .5;
 }
 
 #shortcuts li .inner.home {

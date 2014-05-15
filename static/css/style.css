@@ -213,8 +213,8 @@ video {
 	float:right;
 	line-height: 32px;
 	transition: 0.25s ease-in-out;
-    -webkit-user-select:none;
-    user-select:none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #shortcuts li .inner {
@@ -252,7 +252,6 @@ video {
 	height: 640px;
 	position: relative;
 	width: 100%;
-	position: relative;
 }
 
 /* Main slide */
@@ -396,6 +395,23 @@ p.title-tagline {
 	background-color: black;
 	margin-left: 40px;
 	position: absolute;
+}
+
+/* Press bar */
+#press {
+	background-color: #111;
+	min-height: 50px;
+    overflow: auto;
+	padding: 50px 0;
+	position: relative;
+	width: 100%;
+}
+
+#press-logo-container {
+	display: table;
+	margin: auto;
+	min-height: 50px;
+	overflow: auto;
 }
 
 /* Social slide */
