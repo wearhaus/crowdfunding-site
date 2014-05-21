@@ -1,92 +1,55 @@
 $(document).ready(function() {
 
+	var slideNames = ["home", "social", "customize", "interface", "touch", "details", "story"];
+
 	/* Shortcut hover */
 
-	$(".inner.home").hover(function(){
-		$("p.home").css("color", "white");
-	}, function(){
-		$("p.home").css("color", "none");
-	});
+	function onMouseHoverGenerator(s) {
+		return function() {
+			$("p." + s).css("color", "white");
+		};
+	};
 
-	$(".inner.social").hover(function(){
-		$("p.social").css("color", "white");
-	}, function(){
-		$("p.social").css("color", "none");
-	});
+	function onMouseExitGenerator(s) {
+		return function() {
+			$("p." + s).css("color", "none");
+		};
+	}
 
-	$(".inner.customize").hover(function(){
-		$("p.customize").css("color", "white");
-	}, function(){
-		$("p.customize").css("color", "none");
-	});
+	for (var i = 0; i < slideNames.length; i++) {
+		var slideName = slideNames[i];
 
-	$(".inner.interface").hover(function(){
-		$("p.interface").css("color", "white");
-	}, function(){
-		$("p.interface").css("color", "none");
-	});
+		$(".inner." + slideName).hover(
+			onMouseHoverGenerator(slideName),
+			onMouseExitGenerator(slideName)
+		);
+	};
 
-	$(".inner.touch").hover(function(){
-		$("p.touch").css("color", "white");
-	}, function(){
-		$("p.touch").css("color", "none");
-	});
-
-	$(".inner.details").hover(function(){
-		$("p.details").css("color", "white");
-	}, function(){
-		$("p.details").css("color", "none");
-	});
-
-	$(".inner.story").hover(function(){
-		$("p.story").css("color", "white");
-	}, function(){
-		$("p.story").css("color", "none");
-	});
 
 	/* Shortcut click */
 
 	var currentActiveShortcut = null;
 
 	function makeShortcutActive(shortcut) {
-		if (currentActiveShortcut) {
-			$(".inner." + currentActiveShortcut).css(
-				"background-image", "url('../static/img/" + currentActiveShortcut + "-blue-outline.png')"
+		return function() {
+			if (currentActiveShortcut) {
+				$(".inner." + currentActiveShortcut).css(
+					"background-image", "url('../static/img/" + currentActiveShortcut + "-blue-outline.png')"
+				);
+			}
+			$(".inner." + shortcut).css(
+				"background-image", "url('../static/img/" + shortcut + "-blue-fill.png')"
 			);
-		}
-		$(".inner." + shortcut).css(
-			"background-image", "url('../static/img/" + shortcut + "-blue-fill.png')"
-		);
-		currentActiveShortcut = shortcut;
+			currentActiveShortcut = shortcut;
+		};
 	}
 
-	$(".inner.home").click(function() {
-		makeShortcutActive("home");
-	});
+	for (var i = 0; i < slideNames.length; i++) {
+		$(".inner." + slideNames[i]).click(makeShortcutActive(slideNames[i]));
+	}
 
-	$(".inner.social").click(function() {
-		makeShortcutActive("social");
-	});
-
-	$(".inner.customize").click(function() {
-		makeShortcutActive("customize");
-	});
-
-	$(".inner.interface").click(function() {
-		makeShortcutActive("interface");
-	});
-
-	$(".inner.details").click(function() {
-		makeShortcutActive("details");
-	});
-
-	$(".inner.story").click(function() {
-		makeShortcutActive("story");
-	});
 
 	/* Scroll handler */
-	var slideNames = ["home", "social", "customize", "interface", "touch", "details", "story"];
-
 	function updateShortCutOnScroll() {
 		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 640);
 		if (slideNames[slideIndex] != currentActiveShortcut) {
@@ -96,6 +59,7 @@ $(document).ready(function() {
 	updateShortCutOnScroll();
 
 	$( window ).scroll(updateShortCutOnScroll);
+
 
 	/* Smooth transition on shortcut click */
 	$(document).ready(function(){
@@ -107,7 +71,7 @@ $(document).ready(function() {
 
 		    $('html, body').stop().animate({
 		        'scrollTop': $target.offset().top - 100
-		    }, 900, 'swing', function () {
+		    }, 500, 'swing', function () {
 		        window.location.hash = target;
 		    });
 		});
