@@ -114,33 +114,54 @@ div.play-store {
 	background-image: url('../img/home-blue-outline.png');
 	background-size: 18px;
 }
+#shortcuts li .inner.home:hover {
+	background-image: url('../img/home-blue-fill.png');
+}
 
 #shortcuts li .inner.social {
 	background-image: url('../img/social-blue-outline.png');
 	background-size: 19px;
+}
+#shortcuts li .inner.social:hover {
+	background-image: url('../img/social-blue-fill.png');
 }
 
 #shortcuts li .inner.customize {
 	background-image: url('../img/customize-blue-outline.png');
 	background-size: 22px;
 }
+#shortcuts li .inner.customize:hover {
+	background-image: url('../img/customize-blue-fill.png');
+}
 
 #shortcuts li .inner.interface {
 	background-image: url('../img/interface-blue-outline.png');
 	background-size: 20px;
+}
+#shortcuts li .inner.interface:hover {
+	background-image: url('../img/interface-blue-fill.png');
 }
 
 #shortcuts li .inner.touch {
 	background-image: url('../img/touch-blue-outline.png');
 	background-size: 20px;
 }
+#shortcuts li .inner.touch:hover {
+	background-image: url('../img/touch-blue-fill.png');
+}
 
 #shortcuts li .inner.details {
 	background-image: url('../img/details-blue-outline.png');
 	background-size: 22px;
 }
+#shortcuts li .inner.details:hover {
+	background-image: url('../img/details-blue-fill.png');
+}
 
 #shortcuts li .inner.story {
 	background-image: url('../img/story-blue-outline.png');
 	background-size: 20px;
+}
+#shortcuts li .inner.story:hover {
+	background-image: url('../img/story-blue-fill.png');
 }

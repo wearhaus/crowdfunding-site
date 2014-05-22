@@ -7,6 +7,8 @@ $(document).ready(function() {
 	function onMouseHoverGenerator(s) {
 		return function() {
 			$("p." + s).css("color", "white");
+			$(".inner." + s).css("background-image", "url('../static/img/" + shortcut + "-blue-fill.png')");
+
 		};
 	};
 
@@ -53,11 +55,11 @@ $(document).ready(function() {
 	function updateShortCutOnScroll() {
 		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 640);
 		if (slideNames[slideIndex] != currentActiveShortcut) {
-			makeShortcutActive(slideNames[slideIndex]);
+			makeShortcutActive(slideNames[slideIndex])();
 		}
 	};
-	updateShortCutOnScroll();
 
+	updateShortCutOnScroll();
 	$( window ).scroll(updateShortCutOnScroll);
 
 
