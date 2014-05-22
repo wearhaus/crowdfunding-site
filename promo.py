@@ -149,7 +149,7 @@ promo = {
         },
     "leaguememe": {
         "code": "LEAGUEMEME",
-        "amount": 30
+        "amount": 20
         },
     "hackforums": {
         "code": "HACKFORUMS",
@@ -178,5 +178,9 @@ promo = {
     "kairos": {
         "code": "KAIROS",
         "amount": 30
+        },
+    "nightblue": {
+        "code": "NB3",
+        "amount": 20
         },
     }
