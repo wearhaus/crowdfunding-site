@@ -183,4 +183,8 @@ promo = {
         "code": "NB3",
         "amount": 20
         },
+    "supportlocal": {
+        "code": "SUPPORTLOCAL",
+        "amount": 30
+        },
     }
