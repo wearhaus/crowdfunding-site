@@ -172,6 +172,7 @@ video {
 
 #cta {
 	height: 200px;
+	opacity: 1;
 	position: fixed;
 	right: 20px;
 	top: 140px;
@@ -206,13 +207,13 @@ video {
 }
 
 #shortcuts li p {
-	color: transparent;
+	color: white;
 	cursor: default;
 	font-size: 12pt;
 	font-weight: 300;
 	float:right;
 	line-height: 32px;
-	transition: 0.25s ease-in-out;
+	opacity: 1;
     -webkit-user-select: none;
     user-select: none;
 }

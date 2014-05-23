@@ -6,15 +6,15 @@ $(document).ready(function() {
 
 	function onMouseHoverGenerator(s) {
 		return function() {
-			$("p." + s).css("color", "white");
-			$(".inner." + s).css("background-image", "url('../static/img/" + shortcut + "-blue-fill.png')");
-
+			$("p." + s).fadeIn("fast");
 		};
 	};
 
 	function onMouseExitGenerator(s) {
 		return function() {
-			$("p." + s).css("color", "none");
+			if ($(window).scrollTop() > 200) {
+				$("p." + s).fadeOut("fast");
+			}
 		};
 	}
 
@@ -49,6 +49,16 @@ $(document).ready(function() {
 	for (var i = 0; i < slideNames.length; i++) {
 		$(".inner." + slideNames[i]).click(makeShortcutActive(slideNames[i]));
 	}
+
+	/* Shortcut scroll handler */
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > 200) {
+			$("#shortcuts li p").fadeOut("fast");
+		} else {
+			$("#shortcuts li p").fadeIn("fast");
+		}
+	});
+
 
 
 	/* Scroll handler */
@@ -114,13 +124,13 @@ $(document).ready(function() {
 	$("#button").hover(function () {
 		$("#cta").fadeIn("fast");
 	}, function() {
-		if ($(window).scrollTop() > 200) {
+		if ($(window).scrollTop() > 50) {
 			$("#cta").fadeOut("fast");
 		}
 	});
 
 	$(window).scroll(function() {
-		if ($(window).scrollTop() > 200) {
+		if ($(window).scrollTop() > 50) {
 			$("#cta").fadeOut("fast");
 		} else {
 			$("#cta").fadeIn("fast");
