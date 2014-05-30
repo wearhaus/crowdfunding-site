@@ -36,7 +36,17 @@ def referral():
 
     user = User.query.filter_by(email=email).first()
     if user:
-        return render_template('referral.html', email=user.email, code=user.referral_code)
+        code_users = []
+        j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
+        payments = json.load(j)
+        for payment in payments:
+            promo = payment.get('promo_code')
+            if promo:
+                used_code = promo.get('code')
+                if used_code == user.referral_code:
+                    name = payment.get('fullname').split(' ')[0]
+                    code_users.append(name)
+        return render_template('referral.html', email=user.email, code=user.referral_code, code_users=len(code_users))
     else:
         return render_template('referral.html', unrecognized_email=True)
 

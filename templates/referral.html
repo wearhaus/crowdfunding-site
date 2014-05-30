@@ -54,6 +54,13 @@
 				{% if code %}
 					<p class="center normal">Your unique referral link is:</p>
 					<p class="center link"><strong>http://campaign.wearhaus.com/{{code}}</strong></p>
+					{% if code_users == 0 %}
+					<p>Looks like you haven't had anyone use your promo code yet! Share your promo code with your friends to get discounts for both of you!</p>
+					{% elif code_users == 1 %}
+					<p>So far you've had one friend use your promo code. Let's get some more on board! Click the buttons below to share your promo code on Facebook and Twitter!</p>
+					{% elif code_users > 1 %}
+					<p>So far you've had {{code_users}} friends use your promo code. Let's get some more on board! Click the buttons below to share your promo code on Facebook and Twitter!</p>
+					{% endif %}
 					<div class="social-container">
 						<a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=http://campaign.wearhaus.com/{{code}}','','width=555,height=368');void(0)"><div class="fb share"><p>Share on Facebook</p></div></a>
 						<div id="like-container">
