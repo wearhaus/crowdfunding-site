@@ -21,16 +21,20 @@ def main():
     data = grab_campaign_data()
     return render_template('index.html', **data)
     
-@app.route('/zh', methods=['GET'])
-def main():
+@app.route('/zh')
+def main_zh():
     print "Loaded front page in Chinese"
     data = grab_campaign_data()
     data['raised'] = data['raised']*6.25
     return render_template('index_zh.html', **data)
 
+@app.route('/faq')
+def faq():
+    data = grab_campaign_data()
+    return render_template('faq.html', **data)
 
 @app.route('/zh/faq')
-def faq():
+def faq_zh():
     data = grab_campaign_data()
     data['raised'] = data['raised']*6.25
     return render_template('faq_zh.html', **data)
