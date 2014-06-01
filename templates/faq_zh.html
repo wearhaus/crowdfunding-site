@@ -1,0 +1,243 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/style_zh.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus_zh.js"></script>
+        <script>
+            $(document).ready(function() {
+				$('.faqs h3').each(function() {
+					var tis = $(this), state = false, answer = tis.next('div').hide().css('height','auto').slideUp();
+					tis.click(function() {
+						state = !state;
+						answer.slideToggle(state);
+						tis.toggleClass('active',state);
+					});
+				});
+			});
+        </script>
+	</head>
+	<body>
+
+		<!-- Nav bar content -->
+		<div class="nav">
+			<a href="/">
+				<div class="logo-container">
+					<div class="logo-thumb"></div>
+					<p>WEARHAUS</p>
+				</div>
+			</a>
+			<div id="preorder-container">
+				<div id="button-outer">
+					<div id="button" onclick="window.open('http://wearhaus.vasee.com')">
+						<h1>立即预订</h1>
+					</div>
+				</div>
+				<!--<p id="savings-text">Get yours early. Save $50</p>-->
+			</div>
+			<div class="meter-container">
+				<div id="stats">
+					<div class="stat"><p><strong>{{backers}}</strong></p><p>支持者</p></div>
+					<div class="stat"><p><strong>{{raised}}元</strong><p>金额</p></div>
+					<div class="stat"><p><strong>{{days_remaining}}天</strong></p><p>剩余时间</p></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main carousel content -->
+		<div class="carousel">
+			
+			<!-- FAQ Slide -->
+			<div class="slide" id="faqtitle">
+				<div id="faq-background">
+					<div id="faq-title-container">
+						<h1>常见问题</h1>
+					</div>
+					<div id="faqs-container">
+						<div class="faq-header">
+							<h2><b>耳机</b></h2>
+						</div>
+						
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- Wearhaus ARC的功能是什么？</h3>
+								<div>
+									<p>ARC是一副无线耳机，能让您和周围的ARC一起无缝聆听音乐。结合移动应用软件，ARC提供了一种全新的音乐欣赏方式——可以独自聆听、可以和朋友一起聆听、也可以和刚遇到的人一起聆听。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 这样一副耳机要花多少钱？</h3>
+								<div>
+									<p>Wearhaus ARC的厂商零售价是1200元，但筹资期间你会得到300元的折扣！</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 分享如何实现？</h3>
+								<div>
+									<p>我们研发了mesh网络技术，将网络中所有耳机的音频彼此中继，使每一个人无需传送任何文件就可以聆听同一首歌——就像是私密的音响。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 我可以和多少人分享？</h3>
+								<div>
+									<p>每个mesh网络可以支持任意数量的聆听者，但还会受制于蓝牙技术和物理原理！我们目前的设计设置在30个同时用户。我们请6个聆听者进行了测试。几个月后当我们有了更多的样机并进行大规模测试后，我们会向您报告。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 它的舒适性如何？</h3>
+								<div>
+									<p>ARC的设计时紧贴您的头型，用带记忆功能的泡沫耳垫来隔离噪音。头箍可以延长，以适合头大的人。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 音质如何?</h3>
+								<div>
+									<p>我们的生产商具有20多年的耳机制造经验，为各种高质量品牌制造耳机，采用专利驱动器设计以达到对所有频率的清脆响应。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- ARC有几种颜色?</h3>
+								<div>
+									<p>有两种黑、白基本色，亚光聚碳酸酯塑料。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 我可以选择灯环的颜色和亮度吗?</h3>
+								<div>
+									<p>是的！您可以在移动应用软件里轻易地改变这些设置。和朋友同步时，您还可以将背景光设置到和音乐节拍一起脉动。如果您想保持低调，也可以把灯光完全关闭。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 电池可以持续多久？</h3>
+								<div>
+									<p>我们现在的耳机可以播放16小时音频，重度使用可持续10小时。我们还在努力采用更大的电池！</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 电池耗尽时我还能使用耳机吗？</h3>
+								<div>
+									<p>能！我们提供了备用的辅助线。您可以用来连接你的耳机和音频播放设备。您可以把您的耳机当作常规有线耳机来播放音频，但灯环、触控和分享功能则不能使用。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-header">
+							<h2><b>APP 软件</b></h2>
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- Wearhaus APP 支持何种平台？</h3>
+								<div>
+									<p>Wearhaus ARC交货时能支持iOS和安卓。我们会根据需求推出适用于其他平台的APP。
+</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- APP如何工作？</h3>
+								<div>
+									<p>APP采用蓝牙串行口与耳机通信。我们同时使用蓝牙和音乐提供商提供应用程序接口抓取歌曲的元数据。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 我必须使用Wearhaus的APP来播放音乐吗？</h3>
+								<div>
+									<p>否。我们不下传或提供音乐。ARC是在任何音频播放软件之上工作的。Wearhaus APP只是控制和调制与别人的分享。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 它支持哪些音乐软件？</h3>
+								<div>
+									<p>我们不面向任何一种音乐服务，所以您可以从任何你喜欢的来源播放音乐——甚至可以用ARC和朋友一起观看Youku/Tudou视频!</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 我可以从哪里获取APP？</h3>
+								<div>
+									<p>在第一批ARC发运之前，您可以从App Store和Google Play上获得应用软件。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-header">
+							<h2><b>物流</b></h2>
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 你们什么时候发货？</h3>
+								<div>
+									<p>第一批ARC将在2014年12月发运。订单的发运时间也取决于您的订货时间——所以越早订货越好。我们将在秋季时确定您的订单的具体发运时间，然后马上向您报告。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 筹资经费会用在哪里？</h3>
+								<div>
+									<p>预订经费会全部用于准备生产线以制造您的耳机！</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="faq-row">
+							<div class="faqs">
+								<h3>- 你们的生产处于什么阶段？</h3>
+								<div>
+									<p>我们完成了原型制作阶段，现在进入工厂预生产——工装制模和电子元件采购。在今后的几个月里，我们将对我们的设计进行严格的测试，预定在秋季开始批量生产。</p>
+								</div>
+							</div>
+							<div class="faqs">
+								<h3>- 我为什么现在不能输入发运信息？</h3>
+								<div>
+									<p>我们的发运时间是12月。在此之前有些人可能会改变地址。为了减少修改发货地址的麻烦，我们将在临近发运日期前和您联系。</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+						<br class="clear" />
+					</div>
+					<br class="clear" />
+				</div>
+				<br class="clear" />
+			</div>
+
+		
+		<!-- Footer -->
+		<div class="footer">
+			<div id="footer-nav">
+				<ul>
+					<li><a href="/faq_zh"><p>常见问题</p></a></li>
+					<li><a href="http://jobs.wearhaus.com/" target="_blank"><p>职位</p></a></li>
+					<li><a href="mailto:team@wearhaus.com"><p>联络</p></a></li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-47387009-1', 'wearhaus.com');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>

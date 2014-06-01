@@ -20,12 +20,20 @@ def main():
     print "Loaded front page"
     data = grab_campaign_data()
     return render_template('index.html', **data)
+    
+@app.route('/zh')
+def main():
+    print "Loaded front page in Chinese"
+    data = grab_campaign_data()
+    data['raised'] = data['raised']*6.25
+    return render_template('index_zh.html', **data)
 
 
-@app.route('/faq')
+@app.route('/zh/faq')
 def faq():
     data = grab_campaign_data()
-    return render_template('faq.html', **data)
+    data['raised'] = data['raised']*6.25
+    return render_template('faq_zh.html', **data)
 
 
 @app.route('/referral', methods=['GET'])
