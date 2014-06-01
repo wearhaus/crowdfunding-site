@@ -21,7 +21,7 @@ def main():
     data = grab_campaign_data()
     return render_template('index.html', **data)
     
-@app.route('/zh')
+@app.route('/zh', methods=['GET'])
 def main():
     print "Loaded front page in Chinese"
     data = grab_campaign_data()
