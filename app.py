@@ -25,7 +25,7 @@ def main():
 def main_zh():
     print "Loaded front page in Chinese"
     data = grab_campaign_data()
-    data['raised'] = data['raised']*6.25
+    data['raised'] = int(data['raised']*6.25)
     return render_template('index_zh.html', **data)
 
 @app.route('/faq')
@@ -36,7 +36,7 @@ def faq():
 @app.route('/zh/faq')
 def faq_zh():
     data = grab_campaign_data()
-    data['raised'] = data['raised']*6.25
+    data['raised'] = int(data['raised']*6.25)
     return render_template('faq_zh.html', **data)
 
 
