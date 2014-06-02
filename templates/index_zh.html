@@ -1,0 +1,459 @@
+<html>
+	<head>
+		<title>Wearhaus ARC - Headphones reinvented. Social listening redefined.</title>
+		<meta name="author" content="Wearhaus Inc." />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_blackwhite_cyan.jpg"/>
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_black_Blue.jpg"/>
+		<meta property="og:title" content="Wearhaus ARC - Headphones reinvented. Social listening redefined."/>
+		<meta property="og:url" content="http://campaign.wearhaus.com/"/>
+		<meta property="og:description" content="Hear and be heard. Tune in with friends and listen in sync. Share your sound and connect with people through the music you love."/>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/style_zh.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="../static/js/jquery.knob.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus_zh.js"></script>
+        <script>
+            $(function($) {
+				var	colors = ["#fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33", "#fe00fe"]//, "8070FA"],
+					color_words = ["white", "cyan", "green", "yellow", "orange", "red", "magenta"]//, "red"],
+					bodybg = "#1b1b1b",
+					start = 1;
+					
+				var	sections = colors.length,
+					arcAngle = 360/sections,
+					fillBorder = 2;
+
+				var currentLightColor = "cyan", currentBaseColor = "black";
+				$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
+
+				function LED(color) {
+					var prevBaseColor = currentBaseColor;
+					var prevLightColor = currentLightColor;
+
+					currentLightColor = color_words[color];
+					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
+					setTimeout(function() {
+						$(".headphone-stage #" + prevBaseColor + "-" + prevLightColor).css("opacity", "0");
+					}, 200);
+				}
+
+				$("input.wheel")
+				.attr("value", start)
+				.knob({
+					width:			240,
+					height:			240,
+					thickness:		.07,
+					cursor:			36,
+					angleOffset:	25.71,
+					min : 			0,
+					max : 			sections,
+					bgColor:		bodybg,
+					fgColor:		colors[start],
+					stopper: 		false,
+					displayInput:	false,
+
+					//Handler functions for click/scroll - will call transition function
+					change : function (v) {
+						v %= sections;
+						this.o.fgColor = colors[v];
+						LED(v);
+					},
+
+					release : function (v) {
+						this.o.fgColor = colors[this.cv % sections];
+						this._draw();
+					}
+				});
+
+                $("input.color")
+                .each(
+					function(i, e) {
+						$(e).attr('data-bgColor', colors[$(e).data('index')]);
+						$(e).attr('data-angleOffset', arcAngle*parseInt($(e).data('index')));
+					})
+                .knob({
+					width:			200,
+					height:			200,
+					thickness:		.3,
+					angleArc:		arcAngle,
+					displayInput:	false,
+					readonly:		true,
+				});
+
+                $("input.fill")
+                .each(
+					function(i, e) {
+						$(e).attr('data-angleOffset', arcAngle*parseInt($(e).data('index')) + fillBorder);
+					})
+				.knob({
+					width:			196,
+					height:			196,
+					thickness:		.27,
+					angleArc:		arcAngle - 2*fillBorder,
+					bgColor:		bodybg,
+					displayInput:	false,
+					readonly:		true,
+				});
+
+				$("input.blackwhite-checkbox")
+				.change(function() {
+					//console.log($(this).is(":checked") ? "white" : "black");
+					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "0");
+					currentBaseColor = $(this).is(":checked") ? "white" : "black";
+					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
+				});
+				
+				$(".touch-text").hover(
+				function() {
+						$(this).css("font-size", '18pt');
+						$(".touch-stage #" + $(this).data('gesture')).css("opacity", "1");
+				},
+				function() {
+						$(this).css("font-size", '16pt');
+						$(".touch-stage #" + $(this).data('gesture')).css("opacity", "0");
+				});           
+            });
+        </script>
+
+	</head>
+	<body>
+
+		<!-- Nav bar content -->
+		<div class="nav">
+			<a href="/">
+				<div class="logo-container">
+					<div class="logo-thumb"></div>
+					<p>WEARHAUS</p>
+				</div>
+			</a>
+			<div id="preorder-container">
+				<a href="https://wearhaus.vasee.com">
+					<div id="button-outer">
+						<div id="button">
+							<h1><b>立即预订</b></h1>
+						</div>
+					</div>
+				</a>
+				<!--<p id="savings-text">Get yours early. Save $50</p>-->
+			</div>
+			<div class="meter-container">
+				<div id="stats">
+					<div class="stat"><p><strong>{{backers}}</strong></p><p>支持者</p></div>
+					<div class="stat"><p><strong>{{raised}}元</strong><p>金额</p></div>
+					<div class="stat"><p><strong>{{days_remaining}}天</strong></p><p>剩余时间</p></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cta">
+			<a href="http://wearhaus.vasee.com">
+				<p><strike>1200元</strike><br> 限时特价 <b>900元!</b></p>
+			</a>
+		</div>
+
+		<!-- Shortcut icons -->
+		<div id="shortcuts">
+			<ul>
+				<li>
+					<a href="#home" class="inner home"></a>
+					<p class="home">ARC社交耳机</p>
+				</li>
+				<li>
+					<a href="#social" class="inner social"></a>
+					<p class="social">音质同步</p>
+				</li>
+				<li>
+					<a href="#customize" class="inner customize"></a>
+					<p class="customize">个性色彩</p>
+				</li>
+				<li>
+					<a href="#interface" class="inner interface"></a>
+					<p class="interface">手机 APP</p>
+				</li>
+				<li>
+					<a href="#touch" class="inner touch"></a>
+					<p class="touch">触摸控制</p>
+				</li>
+				<li>
+					<a href="#details" class="inner details"></a>
+					<p class="details">声音和设计</p>
+				</li>
+				<li>
+					<a href="#story" class="inner story"></a>
+					<p class="story">我们的故事</p>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Main carousel content -->
+		<div class="carousel">
+			<!-- Video slide -->
+			<div class="slide" id="home">
+				<div id="title-container">
+					<h1 class="title-small">INTRODUCING</h1>
+					<h1 class="title-large">WEARHAUS ARC</h1>
+					<p class="title-tagline">无线耳机的再发明</p>
+					<p class="title-tagline">社交聆听的再定义</p>
+					<div id="social-icon-container">
+						<a href="https://www.facebook.com/wearhausinc" target="_blank"><div class="social-icon" id="facebook"></div></a>
+						<a href="https://twitter.com/intent/user?screen_name=WearhausInc" target="_blank"><div class="social-icon" id="twitter"></div></a>
+						<a href="http://www.youtube.com/subscription_center?add_user=wearhausinc" target="_blank"><div class="social-icon" id="youtube"></div></a>
+					</div>
+				</div>
+				<div id="headphone-img">
+					<div id="play-button">
+						<div class="outer-play">
+							<div class="inner-play">
+								<div id="play-symbol"></div>
+							</div>
+						</div>
+						<p>&nbsp;播放视频</p>
+					</div>
+					<div id="video-container">
+						<iframe id="campaign-video" width="853" height="480" src="" frameborder="0" allownetworking="internal" allowfullscreen></iframe>
+						<div class="x"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Press bar -->
+			<div id="press">
+				<div id="press-logo-container">
+					<a href="http://bostinno.streetwise.co/2014/05/06/wearhaus-arc-wireless-headphones-share-music-with-friends/" target="_blank"><div class="press-logo" id="bostinno"></div></a>
+					<a href="http://www.engadget.com/2014/05/15/wearhaus-social-headphones/" target="_blank"><div class="press-logo" id="engadget"></div></a>
+					<a href="http://www.coolhunting.com/tech/wearhaus-arc-headphones.php" target="_blank"><div class="press-logo" id="coolhunting"></div></a>
+					<a href="http://techcrunch.com/2014/05/14/share-the-music-with-the-wearhaus-arc/" target="_blank"><div class="press-logo" id="techcrunch"></div></a>
+					<a href="http://www.yankodesign.com/2014/05/14/express-yourself-through-music/" target="_blank"><div class="press-logo" id="yankodesign"></div></a>
+				</div>
+			</div>
+			<!-- Social slide -->
+			<div class="slide" id="social">
+				<div id="social-text-container">
+					<h1 id="social-text"><b>分享你的音乐品味</b></p>
+					<p id="social-desc">无线同步多个耳机，共同聆听<br>发现新音乐家，联络周围的人</p>
+				</div>
+			</div>
+			<!-- Personalization slide -->
+			<div class="slide" id="customize">
+				<div class="personalize-container">
+					<div class="headphone-stage">
+						<img id="black-white" src="../static/img/headphones/WH_black_side_white.png" height="80%"></img>
+						<img id="black-cyan" src="../static/img/headphones/WH_black_side_cyan.png" height="80%"></img>
+						<img id="black-green" src="../static/img/headphones/WH_black_side_green.png" height="80%"></img>
+						<img id="black-yellow" src="../static/img/headphones/WH_black_side_yellow.png" height="80%"></img>
+						<img id="black-orange" src="../static/img/headphones/WH_black_side_orange.png" height="80%"></img>
+						<img id="black-red" src="../static/img/headphones/WH_black_side_red.png" height="80%"></img>
+						<img id="black-magenta" src="../static/img/headphones/WH_black_side_magenta.png" height="80%"></img>
+						<img id="white-white" src="../static/img/headphones/WH_white_side_white.png" height="80%"></img>
+						<img id="white-cyan" src="../static/img/headphones/WH_white_side_cyan.png" height="80%"></img>
+						<img id="white-green" src="../static/img/headphones/WH_white_side_green.png" height="80%"></img>
+						<img id="white-yellow" src="../static/img/headphones/WH_white_side_yellow.png" height="80%"></img>
+						<img id="white-orange" src="../static/img/headphones/WH_white_side_orange.png" height="80%"></img>
+						<img id="white-red" src="../static/img/headphones/WH_white_side_red.png" height="80%"></img>
+						<img id="white-magenta" src="../static/img/headphones/WH_white_side_magenta.png" height="80%"></img>
+					</div>
+					<div class="palette-container">
+						<div class="palette">	
+							<div class="color-container">
+								<input class="color" data-index=0>
+							</div>	
+							<div class="color-container">
+								<input class="color" data-index=1>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=2>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=3>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=4>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=5>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=6>
+							</div>
+							<div class="color-container">
+								<input class="color" data-index=7>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=0>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=1>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=2>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=3>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=4>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=5>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=6>
+							</div>
+							<div class="fill-container">
+								<input class="fill" data-index=7>
+							</div>
+							<div class="wheel-container">
+								<input class="wheel">
+							</div>
+						</div>
+						<div class="blackwhite">
+							<input type="checkbox" name="blackwhite" class="blackwhite-checkbox" id="basecolor">
+							<label class="blackwhite-label" for="basecolor">
+								<div class="blackwhite-inner"></div>
+								<div class="blackwhite-switch"></div>
+							</label>
+						</div>
+					</div>
+						<div id="personalize-text-container">
+							<h1 id="personalize-text"><b>用色彩展现你自己</b></p>
+							<p id="personalize-desc">ARC 展现您的一切。 您的风范、您的个性、您喜爱的音乐。</p>
+							<p id="personalize-desc">随时用软件设置您个性化的光环，让您真实的色彩闪光</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Interface slide -->
+			<div class="slide" id="interface">
+				<div id="interface-container">
+					<div id="iphone-background">
+						<div id="iphone-app">
+							<iframe src="http://gfycat.com/iframe/ElegantAcidicHarborseal" frameborder="0" scrolling="no" width="237" height="403"></iframe>
+						</div>
+					</div>
+					<div id="interface-text-container">
+                        <div id="interface-text-vertical-align">
+                            <h1 id="interface-text"><b>聆听与被聆听</b></h1>
+                            <p id="interface-desc">Wearhaus的应用软件极其简单。看周围那些人在听音乐，实时同步到他们的ARC，或广播你的播放列表。</p>
+                            <p id="interface-desc">App上还有各种私密设置，可以选择向周围的ARC广播、只对朋友分享、或完全关闭音乐分享功能。</p>
+                            <p id="interface-desc">分享和欣赏音乐从来没有如此简单。</p>
+                        </div>
+                    </div>
+                    <div id="app-store-container">
+                    	<div class="app-store" style="float:left;"></div>
+                    	<div class="play-store" style="margin-left:20px; float:left;"></div>
+                    </div>
+                </div>
+			</div>
+
+			<!-- Touch control slide -->
+			<div class="slide" id="touch">
+				<div id="touch-container">
+					<div id="touch-text-container">
+						<div id="touch-text-table">
+							<div id="touch-text-center">
+								<h1 class="touch-title"><b>直观触控</b></h1>
+								<br>
+								<div class="touch-desc">
+										<p class="touch-text" data-gesture="tap">播放/暂停</p>
+										<p class="touch-text" data-gesture="updown">音量</p>
+										<p class="touch-text" data-gesture="leftright">下一首/前一首</p>
+										<p class="touch-text" data-gesture="spread">广播</p>
+										<p class="touch-text" data-gesture="hold">加入</p>
+								</div>
+								<div class="touch-stage">
+										<img id="tap" src="../static/img/gestures/tap.png" />
+										<img id="updown" src="../static/img/gestures/updown.png" />
+										<img id="leftright" src="../static/img/gestures/leftright.png" />
+										<img id="spread" src="../static/img/gestures/spread.png" />
+										<img id="hold" src="../static/img/gestures/hold.png" />
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Details slide -->
+			<div class="slide" id="details">
+					<div id="details-headphone-container">
+						<div>
+							<img src="../static/img/closeups/chevron.jpg">
+						</div>
+						<div>
+							<img src="../static/img/closeups/band.jpg">
+						</div>
+						<div>
+							<img src="../static/img/closeups/cushion.jpg">
+						</div>
+						<div>
+							<img src="../static/img/closeups/cables.jpg">
+						</div>
+					</div>
+					<div id="details-text-container">
+						<div id="details-text-table">
+							<div id="details-text-center">
+								<h1 class="details-text"><b>优美的音质、舒适、耐久</b></h1>
+								<br>
+								<div class="icon" id="spkr"></div><p class="details-text">40毫米双模片驱动器<br>
+								流畅的20赫兹至20赫兹频率响应<br>
+								噪音隔离和麦克风功能</p><br>
+								<div class="icon" id="foam"></div><p class="details-text">记忆泡沫耳垫<br>
+								伸缩头带，以适合您的头部大小</p><br>
+								<div class="icon" id="BT"></div><p class="details-text">30米同步范围<br>
+								带aptX®解码器的蓝牙4.0</p><br>
+								<div class="icon" id="battery"></div><p class="details-text">16小时个人播放，10小时分享时间</p><br>
+								<div class="icon" id="cable"></div><p class="details-text">附送USB充电线和3.5毫米辅助线</p>
+							</div>						</div>
+					</div>
+			</div>
+
+			<!-- Story slide -->
+			<div class="slide" id="story">
+				<div id="story-container">
+					<div id="story-video-container">
+						<iframe width="853" height="480" src="http://static.youku.com/v/swf/qplayer.swf?winType=1&VideoIDS=XNzEyNTc2ODQ4=&isAutoPlay=false&isShowRelatedVideo=false" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div id="bottom-preorder-container">
+						<div id="bottom-button-outer">
+							<div id="bottom-button" onclick="window.open('http://wearhaus.vasee.com')">
+								<h1>立即预订</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<div class="footer">
+			<div id="footer-nav">
+				<ul>
+					<li><a href="/faq_zh"><p>常见问题</p></a></li>
+					<li><a href="http://jobs.wearhaus.com/" target="_blank"><p>职位</p></a></li>
+					<li><a href="mailto:team@wearhaus.com"><p>联络</p></a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+			var ftRandom = Math.random()*1000000; 
+
+			document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="http://servedby.flashtalking.com/container/4943;29237;3452;iframe/?spotName=Homepage&cachebuster='+ftRandom+'"></iframe>');
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-47387009-1', 'wearhaus.com');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>

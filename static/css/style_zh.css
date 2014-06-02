@@ -1,0 +1,1012 @@
+body {
+	margin: 0;
+}
+
+h1 {
+	color: #00bccc;
+	font-family: 'Microsoft Yahei', 'Lato', sans-serif;
+	font-size: 28pt;
+	font-weight: 300;
+	margin: 0;
+}
+
+p {
+	color: white;
+	font-family: 'Microsoft Yahei', 'Lato', sans-serif;
+	font-weight: 300;
+	margin: 0;
+}
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+video {
+	height: 100%;
+	object-fit: cover;
+	object-position: center 60%;
+}
+
+/* Nav bar */
+
+.nav {
+	background: rgba(0, 0, 0, 0.75);
+	height: 80px;
+	padding: 20px 0 20px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+
+/* Logo stuff */
+.logo-container {
+	float: left;
+	height: 80px;
+	overflow: hidden;
+	position: absolute;
+	left: 50px;
+	width: 110px;
+}
+
+.logo-container > p {
+	font-size: 12pt;
+	font-weight: 300;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Meter stuff */
+
+.meter-container {
+	height: 80px;
+	margin: auto;
+	width: 450px;
+}
+
+#stats {
+	height: 50px;
+	width: 100%;
+}
+
+.stat {
+	float: left;
+	width: 150px;
+}
+
+.stat > p > strong {
+	color: #00bccc;
+	font-size: 18pt;
+	font-weight: 700;
+	text-align: center;
+}
+
+.stat > p {
+	font-size: 12pt;
+	font-weight: 300;
+	text-align: center;
+}
+
+.meter { 
+	height: 24px;
+	position: relative;
+	border-color: #00bccc;
+	border-radius: 25px;
+	border-style: solid;
+	border-width: 2px;
+	overflow: hidden;
+}
+
+.meter > span {
+	display: block;
+	height: 100%;
+	    -webkit-border-top-left-radius: 20px;
+	 -webkit-border-bottom-left-radius: 20px;
+	        -moz-border-radius-topleft: 20px;
+	     -moz-border-radius-bottomleft: 20px;
+	            border-top-left-radius: 20px;
+	         border-bottom-left-radius: 20px;
+	background-color: #00bccc;
+	position: relative;
+}
+
+
+/* Preorder button stuff */
+
+#preorder-container {
+	height: 70px;
+	padding-top: 10px;
+	position: absolute;
+	right: 50px;
+	width: auto;
+}
+
+#button-outer {
+	border-color: #00bccc;
+	border-radius: 35px;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+	height: 58px;
+	padding: 5px;
+	width: 240px;
+}
+
+#button {
+	background-color: #00bccc;
+	border-radius: 28px;
+	cursor: pointer;
+	height: 58px;
+	width: 240px;
+	transition: .25s;
+}
+
+#button:hover {
+	background-color: #007c8c;
+}
+
+#button > h1 {
+	color: white;
+	font-size: 20pt;
+	line-height: 46pt;
+	text-align: center;
+}
+
+#button > p {
+	color: white;
+	font-size: 12pt;
+	text-align: center;
+}
+
+#savings-text {
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* Call to action */
+
+#cta {
+	height: 200px;
+	opacity: 1;
+	position: fixed;
+	right: 20px;
+	top: 140px;
+	width: 320px;
+	z-index: 2;
+}
+
+#cta p {
+	font-size: 16pt;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+/* Shortcuts */
+
+#shortcuts {
+	bottom: 80px;
+	height: auto;
+	position: fixed;
+	right: 40px;
+	width: auto;
+	z-index: 10;
+}
+
+#shortcuts ul {
+	list-style-type: none;
+}
+
+#shortcuts li {
+	height: 32px;
+	margin: 10px 0;
+}
+
+#shortcuts li p {
+	color: white;
+	cursor: default;
+	font-size: 12pt;
+	font-weight: 300;
+	float:right;
+	line-height: 32px;
+	opacity: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#shortcuts li .inner {
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-color: #00bccc;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	float: right;
+	height: 28px;
+	margin-left: 15px;
+	transition: .25s ease-in-out;
+	width: 28px;
+}
+
+#shortcuts li .inner:hover {
+	border-color: #007c8c;
+	cursor: pointer;
+}
+
+
+/* Basic slide structure */
+
+.carousel {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	transition: 1s;
+	width: 100%;
+}
+
+.slide {
+	background-color: #222;
+	height: 640px;
+	position: relative;
+	width: 100%;
+}
+
+/* Main slide */
+
+#home {
+	background-color: #111;
+	padding-top: 60px;
+	height:700px;
+}
+
+#title-container {
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 420px;
+}
+
+h1.title-small {
+	color: #00bccc;
+	font-size: 18pt;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+h1.title-large {
+	color: #00bccc;
+	font-size: 28pt;
+	font-weight: 700;
+	letter-spacing: 4px;
+}
+
+p.title-tagline {
+	color: white;
+	font-size: 14pt;
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
+#headphone-img {
+	background-image: url('../img/headphones/WH_black_Blue.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+}
+
+#social-icon-container {
+	height: 50px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+/* Main slide - play button */
+
+#play-button {
+	height: 160px;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 240px;
+	position: absolute;
+	right: 0;
+	width: 160px;
+	z-index: 100;
+}
+
+#play-button div.outer-play {
+	border-color: #00bccc;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+	display: table;
+	height: 102px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 7px;
+	-webkit-user-select: none;
+	user-select: none;
+	width: 102px;
+}
+
+#play-button div.inner-play {
+	border-color: #00bccc;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	display: table-cell;
+	height: 92px;
+	padding: 5px;
+	vertical-align: middle;
+	transition: .25s ease-in-out;
+    -webkit-user-select: none;
+	user-select: none;
+	width: 92px;
+}
+
+#play-button div.inner-play:hover {
+	background-color: #00bccc;
+}
+
+#play-symbol {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 28px solid #00bccc;
+    height: 0;
+    left: 40%;
+    position: relative;
+   	transition: .25s ease-in-out;
+    width: 0;
+}
+
+#play-button div.inner-play:hover #play-symbol {
+	border-left-color: white;
+}
+
+#play-button p {
+	color: #00bccc;
+	font-weight: 700;
+	letter-spacing: 3px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+
+/* Main slide video */
+#video-container {
+	height: 480px;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	position: absolute;
+	top: 25%;
+	transition: .25s;
+	right: 0;
+	opacity: 0;
+	width: 933px;
+}
+
+#campaign-video {
+	background-color: black;
+	margin-left: 40px;
+	position: absolute;
+}
+
+/* Press bar */
+#press {
+	background-color: #111;
+	min-height: 50px;
+    overflow: auto;
+	padding: 50px 0;
+	position: relative;
+	width: 100%;
+}
+
+#press-logo-container {
+	display: table;
+	margin: auto;
+	min-height: 50px;
+	overflow: auto;
+}
+
+/* Social slide */
+#social {
+	background-image: url('../img/social.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 640px;
+}
+
+#social-text-container {
+	background-color: rgba(0,0,0,0.3);
+	margin-left: 120px;
+	margin-top: 440px;
+	padding: 20px;
+	position: absolute;
+	width: 400px;
+}
+
+#social-text {
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+#social-desc {
+	font-size: 16pt;
+}
+
+/* Customization slide */
+#customize {
+	background-color: #1b1b1b;
+}
+
+#personalize-text-container {
+	float: left;
+	margin-top: 200px;
+	width: 340px;
+}
+
+#personalize-text {
+	font-weight: 400;
+	letter-spacing: 3px;
+	margin-bottom: 14px;
+	text-align: left;
+}
+
+#personalize-desc {
+	font-size: 16pt;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.blackwhite {
+	position: relative; width: 165px;
+	margin: auto;
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.blackwhite-checkbox {
+	display: none;
+}
+
+.blackwhite-label {
+	display: block; overflow: hidden; cursor: pointer;
+	border: 2px solid #999999; border-radius: 50px;
+}
+
+.blackwhite-inner {
+	width: 200%; margin-left: -100%;
+	-moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+	-o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.blackwhite-inner:before, .blackwhite-inner:after {
+	float: left; width: 50%; height: 40px; padding: 0; line-height: 40px;
+	font-size: 27px; color: white; font-family: Microsoft Yahei, Trebuchet, Arial, sans-serif; font-weight: bold;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.blackwhite-inner:before {
+	content: "白";
+	padding-left: 60px;
+	background-color: #999999; color: #fff;
+}
+
+.blackwhite-inner:after {
+	content: "黑";
+	padding-right: 60px;
+	background-color: #999999; color: #444444;
+	text-align: right;
+}
+
+.blackwhite-inner:hover {
+	text-color: #444444;
+}
+
+.blackwhite-switch {
+	width: 40px; margin: 0px;
+	background: #444444;
+	border: 2px solid #999999; border-radius: 50px;
+	position: absolute; top: 0; bottom: 0; right: 121px;
+	-moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+	-o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+
+.blackwhite-checkbox:checked + .blackwhite-label .blackwhite-inner {
+	margin-left: 0;
+}
+
+.blackwhite-checkbox:checked + .blackwhite-label .blackwhite-switch {
+	right: 0px; 
+	background-color: #eee; 
+}
+
+.color-container {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+}
+
+.fill-container {
+	position: absolute;
+	top: 62px;
+	left: 62px;
+}
+
+.wheel-container {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+
+.palette-container {
+	float: left;
+	margin-top: 100px;
+	width: 320px;
+}
+
+.palette {
+	position: relative;
+	width: 320px;
+	height: 300px;
+	margin: auto;
+}
+
+.personalize-container {
+	height: 640px;
+	margin: auto;
+	position: relative;
+	width: 1080px;
+}
+
+.headphone-stage {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: auto 560px;
+	width: 330px;
+	height: 600px;
+	float: left;
+	padding-top: 80px;
+}
+
+.headphone-stage img {
+	opacity: 0;
+	position: absolute;
+	transition: .5s ease;
+}
+
+/* Interface slide */
+#interface {
+	background-color: #111;
+	background-image: url("../img/dark_wood/dark_wood.png");
+	background-repeat: repeat;
+}
+
+#interface-container {
+	left: 0;
+	margin: 40px auto 0 auto;
+	height: 560px;
+	position: absolute;
+	right: 0;
+	width: 900px;
+}
+
+#iphone-background {
+	background-image: url("../img/iphone_black.png");
+	background-position: center center;
+	background-size: cover;
+	float: left;
+	height: 557px;
+	width: 271px;
+}
+
+#iphone-app {
+	height: 396px;
+	margin-left: 20px;
+	margin-top: 82px;
+	position: absolute;
+	pointer-events: none;
+	width: 223px;
+}
+
+#interface-text-container {
+	display: table;
+	float: left;
+	height: 90%;
+	margin-left: 80px;
+	width: 480px;
+}
+
+#interface-text-vertical-align {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#interface-text {
+	font-weight: 400;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+}
+
+#interface-desc {
+	font-size: 16pt;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+#app-store-container {
+	float: left;
+	height: 80px;
+	margin-left: 80px;
+	width: 540px;
+}
+
+/* Touch slide */
+#touch {
+	background-image: url("../img/touch.jpg");
+	background-position-x: 50%;
+	background-position-y: 30%;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#touch-container {
+	height: 260px;
+	z-index: 1;
+	padding-left: 25px;
+	padding-right: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin-top: 250px;
+	margin-left: 15%;
+	position: absolute;
+	width: 400px;
+}
+
+#touch-text-table {
+	display: table;
+	height: 400px;
+	width: 100%;
+}
+
+h1.touch-title {
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+#touch-text-container {
+	float: left;
+	height: 600px;
+	width: 600px;
+}
+
+#touch-text-center {
+	display: table-cell;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+.touch-desc {
+	width: 200px;
+	float: left;
+	text-align: left;
+}
+
+p.touch-text {
+	font-size: 16pt;
+	font-weight: 300px;
+	line-height: 35px;
+	width: 300px;
+	cursor: default;
+	transition: 0.35s ease;
+	letter-spacing: 3px;
+}
+
+.touch-stage {
+	background-image: url('../img/gestures/empty.png');
+	width: 150px;
+	height: 175px;
+	float: left;
+	margin-right: 60px;
+	margin-top: -10px;
+}
+
+.touch-stage img {
+	opacity: 0;
+	position: absolute;
+	transition: .35s ease;
+}
+
+
+/* Details slide */
+#details {	
+	background-color: #111;
+	height: 600px;
+}
+
+#details-headphone-container {
+	background-size: cover;
+	float: left;
+	height: 600px;
+	width: 600px;
+}
+
+#details-headphone-container  > div{
+	position: absolute;
+}
+
+#details-text-container {
+	float: left;
+	height: 600px;
+	margin-left: 40px;
+	width: 600px;
+}
+
+#details-text-table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+#details-text-center {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+h1.details-text {
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+p.details-text {
+	font-size: 16pt;
+	font-weight: 400px;
+	line-height: 30px;
+}
+
+.icon {
+        width: 50px;
+        height: 50px;
+        float: left;
+        display: inline-block;
+        background-size: contain;
+        margin-right: 10px;
+        margin-top: 5px;
+}
+ 
+#spkr {
+        background-image: url('../img/spec-icons/audio.png');
+        margin-top: 20px;
+}
+ 
+#foam {
+        background-image: url('../img/spec-icons/comfort.png');
+}
+ 
+#BT {
+        background-image: url('../img/spec-icons/bluetooth.png');
+}
+ 
+#battery {
+        background-image: url('../img/spec-icons/battery.png');
+        height: 25px;
+}
+ 
+#cable {
+        background-image: url('../img/spec-icons/cable.png');
+        height: 25px;
+}
+
+
+/* Story slide */
+#story-container {
+	height: 600px;
+	left: 0;
+	margin: 20px auto;
+	position: absolute;
+	right: 0;
+	width: 853px;
+}
+
+#story-video-container {
+	height: 480px;
+	width: 853px;
+}
+
+#bottom-preorder-container {
+	bottom: 20px;
+	height: 100px;
+	margin: 20px auto 0 auto;
+	width: 324px;
+}
+
+#bottom-button-outer {
+	border-color: #00bccc;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+	height: 76px;
+	padding: 10px;
+	width: 300px;
+}
+
+#bottom-button {
+	border-color: #00bccc;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+	height: 72px;
+	width: 296px;
+	transition: .5s;
+}
+
+#bottom-button:hover {
+	background-color: #00bccc;
+}
+
+#bottom-button > h1 {
+	color: #00bccc;
+	font-size: 20pt;
+	font-weight: 700;
+	line-height: 56pt;
+	text-align: center;
+	transition: .5s;
+}
+
+#bottom-button:hover > h1{
+	color: white;
+}
+
+
+#bottom-button > p {
+	color: white;
+	font-size: 12pt;
+	text-align: center;
+}
+
+/*FAQ Title*/
+#faqtitle {
+	background-color: #111;
+	height: auto;
+	min-height: 100%;
+	display: block;
+}
+
+#faq-title-container {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	display: table;
+}
+
+#faq-title-container > h1 {
+	color: #00bccc;
+	font-size: 60px;
+	font-weight: 400px;
+	display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 40px;
+}
+
+#faqs-container {
+	position: relative;
+	overflow: auto;
+	width: 60%;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    padding-top: 300px;
+    font-family: 'Microsoft Yahei';
+}
+
+.faq-row, .faq-header {
+	color: white;
+	position: relative;
+	width: 100%;
+	font-family: 'Microsoft Yahei, Lato', sans-serif;
+}
+
+.faq-header {
+	background-color: #00bccc;
+	margin-top: 40px;
+}
+
+.faq-header > h2 {
+	font-size: 20pt;
+	font-weight: 600;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.faqs {
+	position: relative;
+    width: 40%;
+    display: block;
+    padding-left: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.faq {
+	width: 50%;
+}
+
+.clear { 
+	clear: both; 
+}
+
+.faqs h3 { 
+	cursor: pointer;
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+.faqs div { 
+	height: 0; 
+	overflow: hidden; 
+	position: relative;
+}
+
+.faqs div p	{ 
+	font-size: 14pt;
+	font-weight: 300;
+	padding: 0; 
+	margin-bottom: 15px; 
+}
+
+
+/* Footer */
+.footer {
+	background-color: #00bccc;
+	height: 80px;
+}
+
+#footer-nav {
+	height: 30px;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 34px;
+	position: absolute;
+	right: 0;
+	width: 270px;
+	font-size: 16pt;
+}
+
+#footer-nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer-nav ul li {
+	float: left;
+	padding: 0 15px;
+}
+
+#footer-nav ul li a {
+	text-decoration: none;
+}
+
+#footer-nav ul li a p {
+	color: white;
+	font-weight: 300;
+	letter-spacing: 1px;
+	transition: .25s;
+}
+
+#footer-nav ul li a p:hover {
+	color: #ddd;
+	font-weight: 300;
+}
