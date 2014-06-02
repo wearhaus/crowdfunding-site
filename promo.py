@@ -187,4 +187,8 @@ promo = {
         "code": "SUPPORTLOCAL",
         "amount": 30
         },
+    "scottandbrendo": {
+        "code": "SCOTTANDBRENDO",
+        "amount": 30
+        },
     }
