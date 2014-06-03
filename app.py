@@ -4,7 +4,7 @@ import urllib2
 
 from flask import Flask, redirect, render_template, request, send_from_directory, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, func
 
 from promo import promo
 from util import days_until, grab_campaign_data, parse_date
@@ -46,7 +46,7 @@ def referral():
     if email == "None":
         return render_template('referral.html')
 
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter(func.lower(User.email) == func.lower(email)).first()
     if user:
         code_users = []
         j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
@@ -74,7 +74,7 @@ def thank_you():
         print "No email"
         return render_template('thankyou.html', confirmation_id=confirmation_id, transaction_amount=transaction_amount)
     # Check if we already have that email stored, if so just return
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter(func.lower(User.email) == func.lower(email)).first()
 
     j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
     payments = json.load(j)
@@ -99,7 +99,7 @@ def thank_you():
             print payment_id
             referral_code = ReferralCode.query.all()[payment_id].referral_code
             print referral_code
-            user = User.query.filter_by(email=email).first()
+            user = User.query.filter(func.lower(User.email) == func.lower(email)).first()
             print user
 
             if user:
@@ -118,7 +118,7 @@ def thank_you():
             print User.query.all()
             return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id, transaction_amount=transaction_amount)
 
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter(func.lower(User.email) == func.lower(email)).first()
     if email and not user:
         return render_template('thankyou.html', unrecognized_email=True, email=email, confirmation_id=confirmation_id, transaction_amount=transaction_amount)
 
