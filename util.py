@@ -18,7 +18,7 @@ def days_until(year, month, day):
 
 def hours_until_end():
     seconds = 1402210799 - time.time() # Epoch time of Jun 7 11:59:59
-    return int(seconds/3600)
+    return max(0, int(seconds/3600))
 
 def grab_campaign_data():
     try:
