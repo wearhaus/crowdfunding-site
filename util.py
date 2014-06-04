@@ -16,6 +16,10 @@ def days_until(year, month, day):
     difference = abs(target_date - today)
     return difference.days
 
+def hours_until_end():
+    seconds = 1402210799 - time.time() # Epoch time of Jun 7 11:59:59
+    return int(seconds/3600)
+
 def grab_campaign_data():
     try:
         j = urllib2.urlopen('https://checkout.wearhaus.com/api/campaigns/3?api_key=d2e5116bb53855961394')
@@ -25,6 +29,7 @@ def grab_campaign_data():
             'raised' : int(campaign.get('stats_raised_amount', '75000')),
             'backers' : int(campaign.get('stats_number_of_contributions')),
             'days_remaining' : days_until(*parse_date(campaign.get('expiration_date'))),
+            'hours_remaining' : hours_until_end(),
         }
     except:
         data = {
@@ -32,6 +37,7 @@ def grab_campaign_data():
             'raised': 999999,
             'backers': 9999,
             'days_remaining': 30,
+            'hours_remaining': 0,
         }
 
     data['percent'] = float(data.get('raised')) / data.get('goal') * 100
