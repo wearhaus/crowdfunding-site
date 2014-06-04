@@ -191,4 +191,8 @@ promo = {
         "code": "SCOTTANDBRENDO",
         "amount": 30
         },
+    "microsoft": {
+        "code": "MSFT",
+        "amount": 30
+        },
     }
