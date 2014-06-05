@@ -238,6 +238,18 @@ p.title-tagline {
 	letter-spacing: 3px;
 }
 
+p.progress {
+	color: white;
+	font-size: 16pt;
+	font-weight: 300;
+	left: 0;
+	letter-spacing: 1px;
+	margin: 20px auto;
+	position: absolute;
+	right: 0;
+	text-align: center;
+}
+
 #headphone-img {
 	background-image: url('../img/headphones/WH_black_Blue.jpg');
 	background-position: center;
@@ -929,7 +941,7 @@ p.details-text {
 	margin-top: 34px;
 	position: absolute;
 	right: 0;
-	width: 380px;
+	width: 330px;
 }
 
 #footer-nav ul {
