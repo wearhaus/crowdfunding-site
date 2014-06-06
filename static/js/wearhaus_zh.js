@@ -95,7 +95,7 @@ $(document).ready(function() {
 			$("#video-container").css("opacity", "1");
 			$("#video-container").css("z-index", "3");
 			setTimeout(function() {
-				$("#campaign-video").attr("src", "http://static.youku.com/v/swf/qplayer.swf?playMode=mp4&winType=1&VideoIDS=XNzEyNTc2ODgw=&isAutoPlay=true&isShowRelatedVideo=false");
+				$("#campaign-video").attr("src", "http://player.youku.com/embed/XNzEyNTc2ODgw");
 			}, 250);
 		});
 	});
