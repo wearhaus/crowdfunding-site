@@ -82,7 +82,7 @@ $(document).ready(function() {
 		    $target = $(target);
 
 		    $('html, body').stop().animate({
-		        'scrollTop': $target.offset().top - 100
+		        'scrollTop': $target.offset().top - 40
 		    }, 500, 'swing', function () {
 		        window.location.hash = target;
 		    });
@@ -131,9 +131,13 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > 50) {
+			$(".nav").css("background", "rgba(0,0,0,.8)");
 			$("#cta").fadeOut("fast");
+			$(".logo-container > p").fadeOut("fast");
 		} else {
 			$("#cta").fadeIn("fast");
+			$(".nav").css("background", "transparent");
+			$(".logo-container > p").fadeIn("fast");
 		}
 	});
 });
