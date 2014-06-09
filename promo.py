@@ -195,4 +195,8 @@ promo = {
         "code": "MSFT",
         "amount": 30
         },
+    "everyoneisdirty": {
+        "code": "EVERYONEISDIRTY",
+        "amount": 30
+        },
     }
