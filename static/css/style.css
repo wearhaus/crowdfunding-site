@@ -345,7 +345,7 @@ p.progress {
 	margin-right: auto;
 	overflow: hidden;
 	position: absolute;
-	top: 25%;
+	top: 15%;
 	transition: .25s;
 	right: 0;
 	opacity: 0;
