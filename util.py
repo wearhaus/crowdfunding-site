@@ -43,3 +43,10 @@ def grab_campaign_data():
     data['percent'] = float(data.get('raised')) / data.get('goal') * 100
     data['progress'] = min(data.get('percent'), 100)
     return data
+
+def payments_by_promo_code(code):
+    j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
+    payments = json.load(j)
+    promo_code_payments = filter(lambda x: x.get('promo_code') and x.get('status') == 'charged', payments)
+    filtered_payments = filter(lambda x: x.get('promo_code').get('code') == code, promo_code_payments)
+    return filtered_payments

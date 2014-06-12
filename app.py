@@ -7,7 +7,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, func
 
 from promo import promo
-from util import days_until, grab_campaign_data, parse_date
+from util import days_until, grab_campaign_data, parse_date, payments_by_promo_code
 
 
 app = Flask(__name__)
@@ -39,6 +39,20 @@ def faq_zh():
     data['raised'] = int(data['raised']*6.25)
     return render_template('faq_zh.html', **data)
 
+@app.route('/promocode')
+def promocode():
+    code = str(request.args.get('code'))
+    if code == "None":
+        return render_template('promocode.html')
+    else:
+        payments = payments_by_promo_code(code)
+        print payments
+        dollar_total = sum([payment.get('amount') for payment in payments])/100
+        single_unit_total = len(filter(lambda p: p.get('reward_id')==10, payments))
+        couples_pack_total = len(filter(lambda p: p.get('reward_id')==11, payments))
+        unit_total = single_unit_total + (2 * couples_pack_total)
+        return render_template('promocode.html', code=code, payments=payments, dollar_total=dollar_total, unit_total=unit_total)
+
 
 @app.route('/referral', methods=['GET'])
 def referral():
@@ -48,17 +62,8 @@ def referral():
 
     user = User.query.filter(func.lower(User.email) == func.lower(email)).first()
     if user:
-        code_users = []
-        j = urllib2.urlopen('https://wearhaus.crowdhoster.com/api/campaigns/3/payments?api_key=d2e5116bb53855961394')
-        payments = json.load(j)
-        for payment in payments:
-            promo = payment.get('promo_code')
-            if promo:
-                used_code = promo.get('code')
-                if used_code == user.referral_code:
-                    name = payment.get('fullname').split(' ')[0]
-                    code_users.append(name)
-        return render_template('referral.html', email=user.email, code=user.referral_code, code_users=len(code_users))
+        payments = payments_by_promo_code(user.referral_code)
+        return render_template('referral.html', email=user.email, code=user.referral_code, code_users=len(payments))
     else:
         return render_template('referral.html', unrecognized_email=True)
 
@@ -85,8 +90,6 @@ def thank_you():
             if amount:
                 amount = str(amount)
                 transaction_amount = amount[:3] + '.' + amount[3:]
-
-    print transaction_amount
 
     if user and user.referral_code:
         return render_template('thankyou.html', email=user.email, code=user.referral_code, confirmation_id=confirmation_id, transaction_amount=transaction_amount)

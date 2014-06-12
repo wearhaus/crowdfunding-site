@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Wearhaus ARC - Headphones reinvented. Social listening redefined.</title>
+		<meta name="author" content="Wearhaus Inc." />
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_blackwhite_cyan.jpg"/>
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_black_Blue.jpg"/>
+		<meta property="og:title" content="Wearhaus ARC - Headphones reinvented. Social listening redefined"/>
+		<meta property="og:url" content="http://campaign.wearhaus.com/"/>
+		<meta property="og:description" content="Hear and be heard. Tune in with friends and listen in sync. Share your sound and connect with people through the music you love."/>
+
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/thankyou.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+		<script>
+			function loadCode() {
+				var code = document.getElementById('input').value;
+				window.location = "/promocode?code=" + encodeURIComponent(code);
+			}
+
+			function pressed(e) {
+            // Has the enter key been pressed?
+            if ( (window.event ? event.keyCode : e.which) == 13) { 
+				var code = document.getElementById('input').value;
+				window.location = "/promocode?code=" + encodeURIComponent(code);
+            }
+        }
+
+		</script>
+	</head>
+	<body>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<!-- Nav bar content -->
+		<div class="nav">
+				<div class="logo-container">
+					<a href="/">
+						<div class="logo-thumb"></div>
+					</a>
+				</div>
+		</div>
+		<div id="content">
+			<div id="text-container">
+				{% if code %}
+					<p class="center link"><strong>Sales report for {{code}}</strong></p>
+
+					<p>Total transactions: {{payments|length}}</p>
+					<p>Dollar amount total: ${{dollar_total}}</p>
+					<p>Unit total: {{unit_total}} headphones sold</p>
+				{% else %}
+					<p style="margin-top:60px;">Use this page to check who and how many people used your promo code!</p>
+					<div id="email-input"> 
+						<input id="input" type="text" name="code" placeholder="Enter your promo code" onkeydown="pressed(event)">
+						<div id="submit" onclick=loadCode()><p>GO</p></div>
+					</div>
+				{% endif %}
+
+			</div>
+		</div>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-47387009-1', 'wearhaus.com');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
