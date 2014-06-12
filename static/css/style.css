@@ -363,7 +363,7 @@ p.progress {
 	background-color: #111;
 	min-height: 50px;
     overflow: auto;
-	padding: 50px 0;
+	padding: 25px 0;
 	position: relative;
 	width: 100%;
 }

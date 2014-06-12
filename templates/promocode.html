@@ -45,9 +45,9 @@
 				{% if code %}
 					<p class="center link"><strong>Sales report for {{code}}</strong></p>
 
-					<p>Total transactions: {{payments|length}}</p>
-					<p>Dollar amount total: ${{dollar_total}}</p>
-					<p>Unit total: {{unit_total}} headphones sold</p>
+					<p><strong>Total transactions:</strong> {{payments|length}}</p>
+					<p><strong>Dollar amount total:</strong> ${{dollar_total}}</p>
+					<p><strong>Unit total:</strong> {{unit_total}} headphones sold</p>
 				{% else %}
 					<p style="margin-top:60px;">Use this page to check who and how many people used your promo code!</p>
 					<div id="email-input"> 

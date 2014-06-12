@@ -41,8 +41,8 @@ div.press-logo:hover {
 
 #coolhunting {
 	background-image: url('../img/press/coolhunting.png');
-	height: 50px;
-	width: 130px;
+	height: 40px;
+	width: 104px;
 }
 
 #crowdfundinsider {
@@ -51,24 +51,30 @@ div.press-logo:hover {
 	width: 198px;
 }
 
+#digitaltrends {
+	background-image: url('../img/press/digitaltrends.png');
+	height: 34px;
+	margin-top: 20px;
+	width: 200px;
+}
+
 #engadget {
 	background-image: url('../img/press/engadget.png');
-	height: 50px;
-	margin-top: 0px;
-	width: 150px;
+	height: 40px;
+	width: 120px;
 }
 
 #techcrunch {
 	background-image: url('../img/press/techcrunch.png');
 	height: 30px;
-	margin-top: 15px;
+	margin-top: 20px;
 	width: 209px;
 }
 
 #yankodesign {
 	background-image: url('../img/press/yankodesign.png');
-	height: 50px;
-	width: 130px;
+	height: 40px;
+	width: 104px;
 }
 
 div.social-icon {
