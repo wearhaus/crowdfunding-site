@@ -48,6 +48,12 @@
 					<p><strong>Total transactions:</strong> {{payments|length}}</p>
 					<p><strong>Dollar amount total:</strong> ${{dollar_total}}</p>
 					<p><strong>Unit total:</strong> {{unit_total}} headphones sold</p>
+
+					<ul>
+					{% for payment in payments %}
+						<li><strong>Date:</strong> {{payment.created_at[:-15]}} <strong>Name:</strong> {{payment.fullname}} <strong>Email:</strong> {{payment.email}} <strong>Amt:</strong> {{payment.amount / 100}}</li>
+					{% endfor %}
+					</ul>
 				{% else %}
 					<p style="margin-top:60px;">Use this page to check who and how many people used your promo code!</p>
 					<div id="email-input"> 

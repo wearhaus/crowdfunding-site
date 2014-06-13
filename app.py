@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import urllib2
 
 from flask import Flask, redirect, render_template, request, send_from_directory, url_for
@@ -46,6 +47,7 @@ def promocode():
         return render_template('promocode.html')
     else:
         payments = payments_by_promo_code(code)
+        payments.sort(key=lambda payment: time.strptime(payment.get('created_at'), '%Y-%m-%dT%H:%M:%S+00:00'))
         print payments
         dollar_total = sum([payment.get('amount') for payment in payments])/100
         single_unit_total = len(filter(lambda p: p.get('reward_id')==10, payments))
