@@ -199,4 +199,8 @@ promo = {
         "code": "EVERYONEISDIRTY",
         "amount": 30
         },
+    "youngbloodhawke": {
+        "code": "YOUNGBLOODHAWKE",
+        "amount": 30
+        },
     }
