@@ -203,4 +203,8 @@ promo = {
         "code": "YOUNGBLOODHAWKE",
         "amount": 30
         },
+    "riorio": {
+        "code": "RIORIO",
+        "amount": 30
+        },
     }
