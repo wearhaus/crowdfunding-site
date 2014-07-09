@@ -46,7 +46,7 @@ def promocode():
     if code == "None":
         return render_template('promocode.html')
     else:
-        payments = payments_by_promo_code(code)
+        payments = payments_by_promo_code(code.upper())
         payments.sort(key=lambda payment: time.strptime(payment.get('created_at'), '%Y-%m-%dT%H:%M:%S+00:00'))
         print payments
         dollar_total = sum([payment.get('amount') for payment in payments])/100
