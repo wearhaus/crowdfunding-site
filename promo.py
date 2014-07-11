@@ -207,4 +207,8 @@ promo = {
         "code": "RIORIO",
         "amount": 30
         },
+    "tkaytv": {
+        "code": "TKAYTV",
+        "amount": 30
+        },
     }
