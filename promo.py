@@ -211,4 +211,8 @@ promo = {
         "code": "TKAYTV",
         "amount": 30
         },
+    "rpgiveaway": {
+        "code": "RPGIVEAWAY",
+        "amount": 30
+        },
     }
