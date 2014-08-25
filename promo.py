@@ -215,4 +215,8 @@ promo = {
         "code": "RPGIVEAWAY",
         "amount": 30
         },
+    "eskimo": {
+        "code": "ESKIMO",
+        "amount": 20
+        },
     }
