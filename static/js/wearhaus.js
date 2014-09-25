@@ -128,7 +128,7 @@ $(document).ready(function() {
 			$("#cta").fadeOut("fast");
 		}
 	});
-
+/*
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > 50) {
 			$(".nav").css("background", "rgba(0,0,0,.8)");
@@ -139,5 +139,5 @@ $(document).ready(function() {
 			$(".nav").css("background", "transparent");
 			$(".logo-container > p").fadeIn("fast");
 		}
-	});
+	});*/
 });

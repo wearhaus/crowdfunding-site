@@ -1,0 +1,31 @@
+.navbar-default {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent);
+  border: none;
+  height: 80px;
+}
+.navbar-default .navbar-toggle {
+  border-color: #00bccc;
+  background-color: transparent;
+  transition: .25s;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #00bccc;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #00bccc;
+  transition: .25s;
+}
+.navbar-toggle:hover > .icon-bar,
+.navbar-toggle:focus > .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
+}

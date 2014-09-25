@@ -1,8 +1,10 @@
 div.logo-thumb {
 	background-image: url('../img/logo_cyan_transparent_small.png');
-	height: 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 40px;
 	margin: auto;
-	width: 93px;
+	width: 74px;
 }
 
 div.x {

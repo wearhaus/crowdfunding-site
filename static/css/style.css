@@ -29,7 +29,7 @@ video {
 }
 
 /* Nav bar */
-
+/*
 .nav {
 	background: transparent;
 	height: 60px;
@@ -39,25 +39,18 @@ video {
 	transition: .5s;
 	width: 100%;
 	z-index: 999;
-}
+}*/
 
 
 /* Logo stuff */
 .logo-container {
 	float: left;
-	height: 80px;
+	height: 40px;
 	overflow: hidden;
 	padding-top: 5px;
 	position: absolute;
 	left: 50px;
-	width: 110px;
-}
-
-.logo-container > p {
-	font-size: 12pt;
-	font-weight: 300;
-	margin-top: 10px;
-	text-align: center;
+	width: 80px;
 }
 
 /* Preorder button stuff */
