@@ -1,16 +1,50 @@
-.navbar-default {
-  background: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent);
-  border: none;
-  height: 80px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
 }
+
+.navbar {
+  min-height: 60px;
+}
+
+.navbar-brand {
+  height: 60px;
+  padding: 10px 10px;
+}
+
+.navbar-nav {
+  margin: 5px 0;
+}
+
+.navbar-default {
+  /*background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
+  background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
+  background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));*/
+  background: #111;
+  border: none;
+  height: 60px;
+}
+
 .navbar-default .navbar-toggle {
   border-color: #00bccc;
   background-color: transparent;
   transition: .25s;
 }
+
+.navbar-default .navbar-collapse {
+  border: none;
+  border-color: transparent;
+}
+
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #00bccc;
@@ -28,4 +62,16 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  transition: .25s;
+  user-select: none;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #00bccc;
 }
