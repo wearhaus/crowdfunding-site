@@ -21,62 +21,32 @@ div.x:hover {
 	opacity: .5;
 }
 
-div.press-logo {
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	float: left;
-	margin: 10px 20px;
-	transition: .25s;
-}
-
-div.press-logo:hover {
-	cursor: pointer;
-	opacity: .8;
-}
-
 #bostinno {
 	background-image: url('../img/press/bostinno.png');
-	height: 39px;
-	width: 200px;
 }
 
 #coolhunting {
 	background-image: url('../img/press/coolhunting.png');
-	height: 40px;
-	width: 104px;
 }
 
 #crowdfundinsider {
 	background-image: url('../img/press/crowdfundinsider.png');
-	height: 40px;
-	width: 198px;
 }
 
 #digitaltrends {
 	background-image: url('../img/press/digitaltrends.png');
-	height: 34px;
-	margin-top: 20px;
-	width: 200px;
 }
 
 #engadget {
 	background-image: url('../img/press/engadget.png');
-	height: 40px;
-	width: 120px;
 }
 
 #techcrunch {
 	background-image: url('../img/press/techcrunch.png');
-	height: 30px;
-	margin-top: 20px;
-	width: 209px;
 }
 
 #yankodesign {
 	background-image: url('../img/press/yankodesign.png');
-	height: 40px;
-	width: 104px;
 }
 
 div.social-icon {
