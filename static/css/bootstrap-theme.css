@@ -43,6 +43,7 @@ a {
 .navbar-default .navbar-collapse {
   border: none;
   border-color: transparent;
+  background-color: #111;
 }
 
 .navbar-default .navbar-toggle:hover,

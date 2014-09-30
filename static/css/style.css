@@ -41,48 +41,41 @@ video {
 
 /* Preorder button stuff */
 
-#preorder-container {
-	height: 46px;
-	padding-top: 0px;
-	position: absolute;
-	right: 60px;
-	width: auto;
+.preorder-container {
+	height: 50px;
+	margin: 5px 0 5px 20px;
 }
 
 #button-outer {
+	background-color: transparent;
 	border-color: #00bccc;
-	border-radius: 35px;
+	border-radius: 23px;
 	border-style: solid;
 	border-width: 2px;
 	cursor: pointer;
-	height: 44px;
-	padding: 5px;
-	width: 200px;
+	height: 46px;
+	padding: 4px;
+	width: 180px;
 }
 
-#button {
+#button-inner {
 	background-color: #00bccc;
-	border-radius: 28px;
+	border-radius: 17px;
 	cursor: pointer;
-	height: 44px;
-	width: 200px;
+	height: 34px;
+	padding-top: 5px;
 	transition: .25s;
+	width: 168px;
 }
 
-#button:hover {
+#button-inner:hover {
 	background-color: #007c8c;
 }
 
-#button > h1 {
+#button-inner p {
 	color: white;
-	font-size: 12pt;
-	line-height: 34pt;
-	text-align: center;
-}
-
-#button > p {
-	color: white;
-	font-size: 12pt;
+	font-size: 1.2em;
+	margin: auto;
 	text-align: center;
 }
 
