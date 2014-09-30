@@ -292,26 +292,12 @@ p.progress {
 	background-image: url('../img/social.jpg');
 	background-position: center;
 	background-size: cover;
-	height: 640px;
 }
 
 #social-text-container {
 	background-color: rgba(0,0,0,0.3);
-	margin-left: 120px;
-	margin-top: 440px;
+	margin-top: 24em;
 	padding: 20px;
-	position: absolute;
-	width: 540px;
-}
-
-#social-text {
-	font-size: 24pt;
-	font-weight: 400;
-	letter-spacing: 3px;
-}
-
-#social-desc {
-	font-size: 14pt;
 }
 
 /* Customization slide */
