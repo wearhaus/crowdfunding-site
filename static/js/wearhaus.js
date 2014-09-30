@@ -110,6 +110,13 @@ $(document).ready(function() {
 		$("#video-container").css("display", "none");
 	});
 
+	/* Color picker */
+	$("#customize .circle").click(function() {
+		$("#customize .circle").removeClass("active");
+		$(this).addClass("active");
+	});
+
+
 	/* Details slideshow */
 	$("#details-headphone-container > div:gt(0)").hide();
 

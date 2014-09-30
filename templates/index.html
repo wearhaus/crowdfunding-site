@@ -14,112 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="../static/js/jquery.knob.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/js/bootstrap.js"></script>
-        <script>
-            $(function($) {
-				var	colors = ["#fff", "#0ff", "#0f0", "#ff0", "#fa0", "#f33", "#fe00fe"]//, "8070FA"],
-					color_words = ["white", "cyan", "green", "yellow", "orange", "red", "magenta"]//, "red"],
-					bodybg = "#1b1b1b",
-					start = 1;
-					
-				var	sections = colors.length,
-					arcAngle = 360/sections,
-					fillBorder = 2;
-
-				var currentLightColor = "cyan", currentBaseColor = "black";
-				$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
-
-				function LED(color) {
-					var prevBaseColor = currentBaseColor;
-					var prevLightColor = currentLightColor;
-
-					currentLightColor = color_words[color];
-					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
-					setTimeout(function() {
-						$(".headphone-stage #" + prevBaseColor + "-" + prevLightColor).css("opacity", "0");
-					}, 200);
-				}
-
-				$("input.wheel")
-				.attr("value", start)
-				.knob({
-					width:			240,
-					height:			240,
-					thickness:		.07,
-					cursor:			36,
-					angleOffset:	25.71,
-					min : 			0,
-					max : 			sections,
-					bgColor:		bodybg,
-					fgColor:		colors[start],
-					stopper: 		false,
-					displayInput:	false,
-
-					//Handler functions for click/scroll - will call transition function
-					change : function (v) {
-						v %= sections;
-						this.o.fgColor = colors[v];
-						LED(v);
-					},
-
-					release : function (v) {
-						this.o.fgColor = colors[this.cv % sections];
-						this._draw();
-					}
-				});
-
-                $("input.color")
-                .each(
-					function(i, e) {
-						$(e).attr('data-bgColor', colors[$(e).data('index')]);
-						$(e).attr('data-angleOffset', arcAngle*parseInt($(e).data('index')));
-					})
-                .knob({
-					width:			200,
-					height:			200,
-					thickness:		.3,
-					angleArc:		arcAngle,
-					displayInput:	false,
-					readonly:		true,
-				});
-
-                $("input.fill")
-                .each(
-					function(i, e) {
-						$(e).attr('data-angleOffset', arcAngle*parseInt($(e).data('index')) + fillBorder);
-					})
-				.knob({
-					width:			196,
-					height:			196,
-					thickness:		.27,
-					angleArc:		arcAngle - 2*fillBorder,
-					bgColor:		bodybg,
-					displayInput:	false,
-					readonly:		true,
-				});
-
-				$("input.blackwhite-checkbox")
-				.change(function() {
-					//console.log($(this).is(":checked") ? "white" : "black");
-					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "0");
-					currentBaseColor = $(this).is(":checked") ? "white" : "black";
-					$(".headphone-stage #" + currentBaseColor + "-" + currentLightColor).css("opacity", "1");
-				});
-				
-				$(".touch-text").hover(
-				function() {
-						$(this).css("font-weight", 400);
-						$(".touch-stage #" + $(this).data('gesture')).css("opacity", "1");
-				},
-				function() {
-						$(this).css("font-weight", 300);
-						$(".touch-stage #" + $(this).data('gesture')).css("opacity", "0");
-				});           
-            });
-        </script>
-
 	</head>
 	<body>
 
@@ -263,7 +159,7 @@
 			</section>
 
 			<!-- Social slide -->
-			<section class="slide" id="social">
+			<section id="social">
 				<div class="container">
 					<div class="col-sm-6" id="social-text-container">
 						<h2>SHARE YOUR TASTE IN MUSIC</h2>
@@ -273,6 +169,36 @@
 			</section>
 
 			<!-- Personalization slide -->
+			<section id="customize">
+				<div class="container">
+	        <div class="row">
+	          <div class="col-sm-4 col-sm-offset-1">
+	            <img class="margin-top margin-bottom img-responsive" style="margin-left:auto; margin-right:auto;" src="../static/img/headphones/WH_white_side_cyan.png" width="280px">
+	          </div>
+	          <div class="col-sm-4 col-sm-offset-1">
+	              <h2 style="text-align: center;">EXPRESS YOURSELF THROUGH COLOR</h2>
+	              <h4 style="text-align: center;">Choose your headphone color</h3>
+	              <div class="row">
+	                <div class="rectangle white"></div>
+	                <div class="rectangle black"></div>
+	              </div>
+	              <h4 style="text-align: center;">Choose from many light colors</h3>
+	              <div class="row">
+	                <div class="circle white"></div>
+	                <div class="circle red"></div>
+	                <div class="circle orange"></div>
+	                <div class="circle yellow"></div>
+	              </div>
+	              <div class="row">
+	                <div class="circle green"></div>
+	                <div class="circle cyan"></div>
+	                <div class="circle blue"></div>
+	                <div class="circle magenta"></div>
+	              </div>
+	        </div>
+	      </div>
+			</section>
+			<!--
 			<div class="slide" id="customize">
 				<div class="personalize-container">
 					<div class="headphone-stage">
@@ -362,7 +288,7 @@
 					</div>
 				</div>
 
-			</div>
+			</div>-->
 
 			<!-- Interface slide -->
 			<div class="slide" id="interface">
