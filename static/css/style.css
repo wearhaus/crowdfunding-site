@@ -72,7 +72,7 @@ video {
 	position: fixed;
 	right: 40px;
 	width: auto;
-	z-index: 10;
+	z-index: 1;
 }
 
 #shortcuts ul {
@@ -126,46 +126,22 @@ video {
 	width: 100%;
 }
 
-.slide {
+section {
 	background-color: #222;
-	height: 640px;
-	position: relative;
-	width: 100%;
+	padding: 2em 0;
+  position: relative;
 }
 
 /* Main slide */
 
 #home {
-	background-color: #111;
-	padding-top: 0px;
-	height:700px;
+	background-image: url('../img/headphones/WH_black_Blue.jpg');
+	background-position: center;
+	background-size: cover;
 }
 
 #title-container {
-	position: absolute;
-	margin-left: 20px;
-	margin-top: 420px;
-}
-
-h1.title-small {
-	color: #00bccc;
-	font-size: 18pt;
-	font-weight: 400;
-	letter-spacing: 3px;
-}
-
-h1.title-large {
-	color: #00bccc;
-	font-size: 28pt;
-	font-weight: 700;
-	letter-spacing: 4px;
-}
-
-p.title-tagline {
-	color: white;
-	font-size: 14pt;
-	font-weight: 300;
-	letter-spacing: 3px;
+	margin-top: 26em;
 }
 
 p.progress {
@@ -178,14 +154,6 @@ p.progress {
 	position: absolute;
 	right: 0;
 	text-align: center;
-}
-
-#headphone-img {
-	background-image: url('../img/headphones/WH_black_Blue.jpg');
-	background-position: center;
-	background-size: cover;
-	height: 700px;
-	width: 100%;
 }
 
 #social-icon-container {
@@ -201,11 +169,11 @@ p.progress {
 	left: 0;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 240px;
+	top: 35%;
 	position: absolute;
 	right: 0;
 	width: 160px;
-	z-index: 100;
+	z-index: 2;
 }
 
 #play-button div.outer-play {
@@ -216,13 +184,13 @@ p.progress {
 	cursor: pointer;
 	display: table;
 	height: 102px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	padding: 7px;
 	-webkit-user-select: none;
 	user-select: none;
 	width: 102px;
 }
+
 
 #play-button div.inner-play {
 	border-color: #00bccc;
@@ -230,13 +198,11 @@ p.progress {
 	border-style: solid;
 	border-width: 2px;
 	display: table-cell;
-	height: 92px;
 	padding: 5px;
 	vertical-align: middle;
 	transition: .25s ease-in-out;
-    -webkit-user-select: none;
+  -webkit-user-select: none;
 	user-select: none;
-	width: 92px;
 }
 
 #play-button div.inner-play:hover {
@@ -248,7 +214,7 @@ p.progress {
     border-bottom: 15px solid transparent;
     border-left: 28px solid #00bccc;
     height: 0;
-    left: 40%;
+    left: 37%;
     position: relative;
    	transition: .25s ease-in-out;
     width: 0;
@@ -261,7 +227,6 @@ p.progress {
 #play-button p {
 	color: #00bccc;
 	font-weight: 700;
-	letter-spacing: 3px;
 	padding-top: 10px;
 	text-align: center;
 }
@@ -280,6 +245,7 @@ p.progress {
 	right: 0;
 	opacity: 0;
 	width: 933px;
+	z-index: 2;
 }
 
 #campaign-video {

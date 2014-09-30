@@ -92,6 +92,7 @@ $(document).ready(function() {
 	/* Play button click */
 	$("#play-button").click(function() {
 		$("#play-button").fadeOut("fast", function() {
+			$("#video-container").css("display", "block");
 			$("#video-container").css("opacity", "1");
 			$("#video-container").css("z-index", "3");
 			setTimeout(function() {
@@ -106,6 +107,7 @@ $(document).ready(function() {
 		$("#video-container").css("z-index", "1");
 		$("#campaign-video").attr("src", "");
 		$("#play-button").fadeIn("fast");
+		$("#video-container").css("display", "none");
 	});
 
 	/* Details slideshow */
