@@ -118,15 +118,15 @@ $(document).ready(function() {
 
 
 	/* Details slideshow */
-	$("#details-headphone-container > div:gt(0)").hide();
+	$("#details #image-container > div:gt(0)").hide();
 
 	setInterval(function() { 
-		$('#details-headphone-container > div:first')
+		$('#details #image-container > div:first')
 		.fadeOut(1000)
 		.next()
 		.fadeIn(1000)
 		.end()
-		.appendTo('#details-headphone-container');
+		.appendTo('#image-container');
 	},  3000);
 
 	/* Call to action */
