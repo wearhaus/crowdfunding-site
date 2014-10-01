@@ -302,6 +302,9 @@ p.progress {
 
 
 /* Customization slide */
+section#customize {
+	padding: 4em 0;
+}
 #customize .circle {
   border-radius: 50%;
   -webkit-box-shadow: inset 0px 0px 0px 10px;
@@ -409,70 +412,28 @@ p.progress {
 
 /* Interface slide */
 #interface {
-	background-color: #111;
 	background-image: url("../img/dark_wood/dark_wood.png");
 	background-repeat: repeat;
 }
 
-#interface-container {
-	left: 0;
-	margin: 40px auto 0 auto;
-	height: 560px;
-	position: absolute;
-	right: 0;
-	width: 900px;
-}
-
 #iphone-background {
 	background-image: url("../img/iphone_black.png");
-	background-position: center center;
+	background-position: center;
 	background-size: cover;
-	float: left;
-	height: 557px;
-	width: 271px;
+	height: 514px;
+	margin: 0 auto;
+	width: 250px;
 }
 
 #iphone-app {
-	height: 396px;
-	margin-left: 20px;
-	margin-top: 82px;
+	height: 365px;
+	margin-left: 16px;
+	margin-top: 76px;
 	position: absolute;
 	pointer-events: none;
-	width: 223px;
+	width: 210px;
 }
 
-#interface-text-container {
-	display: table;
-	float: left;
-	height: 90%;
-	margin-left: 80px;
-	width: 480px;
-}
-
-#interface-text-vertical-align {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-#interface-text {
-	font-size: 24pt;
-	font-weight: 400;
-	letter-spacing: 3px;
-	margin-bottom: 10px;
-}
-
-#interface-desc {
-	font-size: 14pt;
-	font-weight: 300;
-	margin-bottom: 10px;
-}
-
-#app-store-container {
-	float: left;
-	height: 80px;
-	margin-left: 80px;
-	width: 540px;
-}
 
 /* Touch slide */
 #touch {
