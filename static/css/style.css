@@ -434,6 +434,10 @@ section#customize {
 	width: 210px;
 }
 
+#interface .vertical-align {
+	margin: 180px 0;
+}
+
 
 /* Touch slide */
 #touch {
@@ -449,82 +453,32 @@ section#customize {
 }
 
 /* Details slide */
-#details {	
-	background-color: #111;
-	height: 600px;
+section#details {
+	padding: 0;
 }
 
-#details-headphone-container {
-	background-size: cover;
-	float: left;
-	height: 600px;
-	width: 600px;
+#details .vertical-align {
+	margin: 50px auto;
 }
 
-#details-headphone-container  > div{
-	position: absolute;
+#details .closeup {
+  height: 533px;
+  width: 100%;
+  background: url('../img/closeups/band.jpg') center center no-repeat;
+  background-size: cover;
 }
 
-#details-text-container {
-	float: left;
-	height: 600px;
-	margin-left: 40px;
-	width: 600px;
-}
-
-#details-text-table {
-	display: table;
-	height: 100%;
-	width: 100%;
-}
-
-#details-text-center {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-h1.details-text {
-	font-weight: 400;
-	letter-spacing: 3px;
-}
-
-p.details-text {
-	font-size: 22px;
-	font-weight: 400px;
-	line-height: 30px;
+#details p {
+	margin: 1em 0;
 }
 
 .icon {
-        width: 50px;
-        height: 50px;
-        float: left;
-        display: inline-block;
-        background-size: contain;
-        margin-right: 10px;
-        margin-top: 5px;
-}
- 
-#spkr {
-        background-image: url('../img/spec-icons/audio.png');
-        margin-top: 20px;
-}
- 
-#foam {
-        background-image: url('../img/spec-icons/comfort.png');
-}
- 
-#BT {
-        background-image: url('../img/spec-icons/bluetooth.png');
-}
- 
-#battery {
-        background-image: url('../img/spec-icons/battery.png');
-        height: 25px;
-}
- 
-#cable {
-        background-image: url('../img/spec-icons/cable.png');
-        height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  width: 50px;
 }
 
 

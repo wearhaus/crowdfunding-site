@@ -143,3 +143,28 @@ div.play-store {
 #shortcuts li .inner.story:hover {
 	background-image: url('../img/story-blue-fill.png');
 }
+
+#speaker {
+    background-image: url('../img/spec-icons/audio.png');
+    margin-top: 20px;
+}
+ 
+#foam {
+    background-image: url('../img/spec-icons/comfort.png');
+    margin-top: 0px;
+}
+ 
+#BT {
+    background-image: url('../img/spec-icons/bluetooth.png');
+    margin-top: 0px;
+}
+ 
+#battery {
+    background-image: url('../img/spec-icons/battery.png');
+    height: 25px;
+}
+ 
+#cable {
+    background-image: url('../img/spec-icons/cable.png');
+    height: 25px;
+}
