@@ -41,6 +41,7 @@ video {
 #button-inner p {
 	color: white;
 	font-size: 1.2em;
+	font-weight: 400;
 	margin: auto;
 	text-align: center;
 }
@@ -491,25 +492,14 @@ section#details {
 
 
 /* Story slide */
-#story-container {
-	height: 600px;
-	left: 0;
-	margin: 20px auto;
-	position: absolute;
-	right: 0;
-	width: 853px;
+#story {
+	background: #111;
 }
 
 #story-video-container {
 	height: 480px;
+	margin: 0 auto;
 	width: 853px;
-}
-
-#bottom-preorder-container {
-	bottom: 20px;
-	height: 100px;
-	margin: 20px auto 0 auto;
-	width: 324px;
 }
 
 #bottom-button-outer {
@@ -519,7 +509,8 @@ section#details {
 	border-width: 2px;
 	cursor: pointer;
 	height: 76px;
-	padding: 10px;
+	margin: 20px auto 0 auto;
+	padding: 8px;
 	width: 300px;
 }
 
@@ -529,8 +520,8 @@ section#details {
 	border-style: solid;
 	border-width: 2px;
 	cursor: pointer;
-	height: 72px;
-	width: 296px;
+	height: 56px;
+	width: 280px;
 	transition: .5s;
 }
 
@@ -538,24 +529,16 @@ section#details {
 	background-color: #00bccc;
 }
 
-#bottom-button > h1 {
+#bottom-button > h2 {
 	color: #00bccc;
-	font-size: 20pt;
 	font-weight: 700;
-	line-height: 56pt;
+	line-height: 36pt;
 	text-align: center;
 	transition: .5s;
 }
 
-#bottom-button:hover > h1{
+#bottom-button:hover > h2{
 	color: white;
-}
-
-
-#bottom-button > p {
-	color: white;
-	font-size: 12pt;
-	text-align: center;
 }
 
 /*FAQ Title*/

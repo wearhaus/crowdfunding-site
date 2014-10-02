@@ -93,9 +93,10 @@ p {
   background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
   background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
   background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));*/
-  background: #111;
+  background: transparent;
   border: none;
   height: 60px;
+  transition: background .5s;
 }
 
 .navbar-default .navbar-toggle {
@@ -107,7 +108,8 @@ p {
 .navbar-default .navbar-collapse {
   border: none;
   border-color: transparent;
-  background-color: #111;
+  background: transparent;
+  transition: background .5s;
 }
 
 .navbar-default .navbar-toggle:hover,

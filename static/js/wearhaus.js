@@ -137,16 +137,14 @@ $(document).ready(function() {
 			$("#cta").fadeOut("fast");
 		}
 	});
-/*
+
 	$(window).scroll(function() {
-		if ($(window).scrollTop() > 50) {
-			$(".nav").css("background", "rgba(0,0,0,.8)");
-			$("#cta").fadeOut("fast");
-			$(".logo-container > p").fadeOut("fast");
+		if ($(window).scrollTop() > 200) {
+			$(".navbar-default").css("background", "#111");
+			$(".navbar-collapse").css("background", "#111");
 		} else {
-			$("#cta").fadeIn("fast");
-			$(".nav").css("background", "transparent");
-			$(".logo-container > p").fadeIn("fast");
+			$(".navbar-default").css("background", "transparent");
+			$(".navbar-collapse").css("background", "transparent");
 		}
-	});*/
+	});
 });
