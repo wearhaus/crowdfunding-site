@@ -458,18 +458,20 @@ section#details {
 }
 
 #details .vertical-align {
-	margin: 50px auto;
+	margin: 60px auto 0 auto;
 }
 
 #image-container {
-	height: 533px;
-	overflow:hidden;
+	height: 500px;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
 }
 
 #details img {
+	height: 100%;
   left: 0;
   margin: 0 auto;
-  position: absolute;
   top: 0;
   width: 533px;
 }
