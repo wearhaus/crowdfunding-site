@@ -455,6 +455,7 @@ section#customize {
 
 /* Details slide */
 section#details {
+	background: #111;
 	padding: 0;
 }
 
@@ -492,10 +493,6 @@ section#details {
 
 
 /* Story slide */
-#story {
-	background: #111;
-}
-
 #story-video-container {
 	height: 480px;
 	margin: 0 auto;
