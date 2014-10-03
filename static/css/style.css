@@ -643,45 +643,12 @@ section#details {
 
 
 /* Footer */
-.footer {
-	background-color: #00bccc;
-	height: 80px;
+#footer {
+	background-color: #111;
+	padding: 1em 0;
 }
 
-#footer-nav {
-	height: 30px;
-	left: 0;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 34px;
-	position: absolute;
-	right: 0;
-	width: 330px;
-}
-
-#footer-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-#footer-nav ul li {
-	float: left;
-	padding: 0 15px;
-}
-
-#footer-nav ul li a {
-	text-decoration: none;
-}
-
-#footer-nav ul li a p {
-	color: white;
-	font-weight: 300;
-	letter-spacing: 1px;
-	transition: .25s;
-}
-
-#footer-nav ul li a p:hover {
-	color: #ddd;
-	font-weight: 300;
+#footer #social-icon-container {
+	margin: 0 auto;
+	width: 280px;
 }
