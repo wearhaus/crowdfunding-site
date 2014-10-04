@@ -219,4 +219,8 @@ promo = {
         "code": "ESKIMO",
         "amount": 20
         },
+    "hardlystrictly": {
+        "code": "HARDLYSTRICTLY",
+        "amount": 20
+        },
     }
