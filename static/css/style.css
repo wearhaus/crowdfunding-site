@@ -314,9 +314,24 @@ p.progress {
 
 
 /* Customization slide */
-section#customize {
+#customize {
 	padding: 4em 0;
 }
+
+#customize .headphone-container {
+	display: block;
+	height: 443px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 280px;
+}
+
+#customize img {
+	display: none;
+	position: absolute;
+	width: 280px;
+}
+
 #customize .circle {
   border-radius: 50%;
   border-width: 10px;
@@ -380,12 +395,12 @@ section#customize {
 #customize .circle.cyan.active {
   color: #0ff;
 }
-#customize .circle.blue {
-  color: #009;
+#customize .circle.purple {
+  color: #509;
 }
-#customize .circle.blue:hover,
-#customize .circle.blue.active {
-  color: #11f;
+#customize .circle.purple:hover,
+#customize .circle.purple.active {
+  color: #90f;
 }
 
 #customize .circle.magenta {
@@ -406,6 +421,10 @@ section#customize {
   height: 80px;
   line-height: 2em;
  	text-align: center;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -416,7 +435,8 @@ section#customize {
 	background-color: #555;
   color: #191919;
 }
-#customize .rectangle.black:hover {
+#customize .rectangle.black:hover,
+#customize .rectangle.black:active {
 	background-color: #777;
   color: #111;
 }
@@ -424,10 +444,19 @@ section#customize {
  	background-color: #555;
   color: #ddd;
 }
-#customize .rectangle.white:hover {
+#customize .rectangle.white:hover,
+#customize .rectangle.white:active {
  	background-color: #777;
   color: #fff;
 }
+
+#customize .rectangle.active {
+	background-color: #777;
+  -webkit-box-shadow: 0px 0px 20px 0px #ddd;
+  -moz-box-shadow: 0px 0px 20px 0px #ddd;
+  box-shadow: 0px 0px 20px 0px #ddd;
+}
+
 
 /* Interface slide */
 #interface {
@@ -511,6 +540,10 @@ section#details {
 
 
 /* Story slide */
+#story {
+	padding: 2em 0;
+}
+
 #story-video-container {
 	height: 480px;
 	margin: 0 auto;

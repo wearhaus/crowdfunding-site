@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
 	var slideNames = ["home", "social", "customize", "interface", "touch", "details", "story"];
+	var customizeHeadphoneColor = "black"; // Initial headphone color
+	var customizeLightColor = "cyan"; // Initial light color
 
 	/* Shortcut hover */
 
@@ -112,10 +114,52 @@ $(document).ready(function() {
 
 	/* Color picker */
 	$("#customize .circle").click(function() {
-		$("#customize .circle").removeClass("active");
-		$(this).addClass("active");
+		if ($(this).attr("class").indexOf("active") == -1) {
+			$("#customize .circle").removeClass("active");
+			$(this).addClass("active");
+			if ($(this).attr("class").indexOf("white") > -1) {
+				customizeLightColor = "white";
+			} else if ($(this).attr("class").indexOf("red") > -1) {
+				customizeLightColor = "red";
+			} else if ($(this).attr("class").indexOf("orange") > -1) {
+				customizeLightColor = "orange";
+			} else if ($(this).attr("class").indexOf("yellow") > -1) {
+				customizeLightColor = "yellow";
+			} else if ($(this).attr("class").indexOf("green") > -1) {
+				customizeLightColor = "green";
+			} else if ($(this).attr("class").indexOf("cyan") > -1) {
+				customizeLightColor = "cyan";
+			} else if ($(this).attr("class").indexOf("purple") > -1) {
+				customizeLightColor = "purple";
+			} else if ($(this).attr("class").indexOf("magenta") > -1) {
+				customizeLightColor = "magenta";
+			}
+
+			$("#customize img").fadeOut();
+			$("#" + customizeHeadphoneColor + "-" + customizeLightColor).fadeIn();
+		}
 	});
 
+	$("#customize .rectangle").click(function() {
+		if ($(this).attr("class").indexOf("active") == -1) {
+			$("#customize .rectangle").removeClass("active");
+			$(this).addClass("active");
+			
+			if ($(this).attr("class").indexOf("white") > -1) {
+				customizeHeadphoneColor = "white";
+			} else if ($(this).attr("class").indexOf("black") > -1) {
+				customizeHeadphoneColor = "black";
+			}
+
+			$("#customize img").fadeOut();
+			$("#" + customizeHeadphoneColor + "-" + customizeLightColor).fadeIn();
+		}
+	})
+
+	$("#customize img").fadeOut();
+	$("#" + customizeHeadphoneColor + "-" + customizeLightColor).fadeIn();
+	$("#customize .circle.cyan").addClass("active");
+	$("#customize .rectangle.black").addClass("active");
 
 	/* Details slideshow */
 	$("#details #image-container > div:gt(0)").hide();
