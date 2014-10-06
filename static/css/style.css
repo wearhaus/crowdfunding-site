@@ -333,93 +333,85 @@ p.progress {
 }
 
 #customize .circle {
+	border-color: #fff;
   border-radius: 50%;
-  border-width: 10px;
-  -webkit-box-shadow: inset 0px 0px 0px 10px;
-  -moz-box-shadow: inset 0px 0px 0px 10px;
-  box-shadow: inset 0px 0px 0px 10px;
+  border-style: solid;
+  border-width: 2px;
   cursor: pointer;
   float: left;
-  height: 0;
-  margin: 2%;
-  padding-top: 21%;
+  height: 50px;
+  margin: 5px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  width: 21%;
-}
-#customize .circle.active {
-  -webkit-box-shadow: inset 0px 0px 0px 10px, 0px 0px 20px 0px;
-  -moz-box-shadow: inset 0px 0px 0px 10px, 0px 0px 20px 0px;
-  box-shadow: inset 0px 0px 0px 10px, 0px 0px 20px 0px;
+  width: 50px;
 }
 #customize .circle.white {
-  color: #999;
+  background-color: #aaa;
 }
 #customize .circle.white:hover,
 #customize .circle.white.active {
-  color: #fff;
+  background-color: #ddd;
 }
 #customize .circle.red {
-  color: #900;
+  background-color: #d00;
 }
 #customize .circle.red:hover,
 #customize .circle.red.active {
-  color: #f00;
+  background-color: #f11;
 }
 #customize .circle.orange {
-  color: #940;
+  background-color: #e90;
 }
 #customize .circle.orange:hover,
 #customize .circle.orange.active {
-  color: #f90;
+  background-color: #f93;
 }
 #customize .circle.yellow {
-  color: #990;
+  background-color: #dd0;
 }
 #customize .circle.yellow:hover,
 #customize .circle.yellow.active {
-  color: #ff0;
+  background-color: #ff0;
 }
 #customize .circle.green {
-  color: #090;
+  background-color: #0d0;
 }
 #customize .circle.green:hover,
 #customize .circle.green.active {
-  color: #0f0;
+  background-color: #0f0;
 }
 #customize .circle.cyan {
-  color: #099;
+  background-color: #0cc;
 }
 #customize .circle.cyan:hover,
 #customize .circle.cyan.active {
-  color: #0ff;
+  background-color: #0ff;
 }
 #customize .circle.purple {
-  color: #509;
+  background-color: #70b;
 }
 #customize .circle.purple:hover,
 #customize .circle.purple.active {
-  color: #90f;
+  background-color: #92f;
 }
 
 #customize .circle.magenta {
-  color: #909;
+  background-color: #c0c;
 }
 #customize .circle.magenta:hover,
 #customize .circle.magenta.active {
-  color: #f0f;
+  background-color: #f2f;
 }
 #customize .rectangle {
-  border-radius: 15px;
+	border-color: white;
   border-style: solid;
-  border-width: 10px;
+  border-width: 2px;
   cursor: pointer;
-  float: left;
-  font-size: 2em;
-  font-weight: 700;
-  height: 80px;
-  line-height: 2em;
+  height: 40px;
+  max-width: 240px;
+  min-width: 120px;
+  padding: 0;
  	text-align: center;
 	-webkit-user-select: none;
   -moz-user-select: none;
@@ -431,31 +423,22 @@ p.progress {
   width: 100%;
 }
 
-#customize .rectangle.black {
-	background-color: #555;
-  color: #191919;
-}
-#customize .rectangle.black:hover,
-#customize .rectangle.black:active {
-	background-color: #777;
-  color: #111;
-}
-#customize .rectangle.white {
- 	background-color: #555;
-  color: #ddd;
-}
-#customize .rectangle.white:hover,
-#customize .rectangle.white:active {
- 	background-color: #777;
-  color: #fff;
+#customize .rectangle .check-box {
+	border-right-color: white;
+	border-right-style: solid;
+	border-right-width: 2px;
+	float: left;
+	height: 36px;
+	width: 38px;
 }
 
-#customize .rectangle.active {
-	background-color: #777;
-  -webkit-box-shadow: 0px 0px 20px 0px #ddd;
-  -moz-box-shadow: 0px 0px 20px 0px #ddd;
-  box-shadow: 0px 0px 20px 0px #ddd;
+#customize .rectangle .button-text {
+	color: white;
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 36px;
 }
+
 
 
 /* Interface slide */
