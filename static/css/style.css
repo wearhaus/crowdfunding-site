@@ -356,7 +356,7 @@ p.progress {
 }
 
 #customize .circle .glyphicon {
-  margin: 12px 0;
+  margin: 14px 0;
 }
 
 #customize .circle {
@@ -396,7 +396,7 @@ p.progress {
   background-color: #f93;
 }
 #customize .circle.yellow {
-  background-color: #dd0;
+  background-color: #cc0;
 }
 #customize .circle.yellow:hover,
 #customize .circle.yellow.active {
@@ -414,14 +414,14 @@ p.progress {
 }
 #customize .circle.cyan:hover,
 #customize .circle.cyan.active {
-  background-color: #0ff;
+  background-color: #0ee;
 }
 #customize .circle.purple {
   background-color: #70b;
 }
 #customize .circle.purple:hover,
 #customize .circle.purple.active {
-  background-color: #92f;
+  background-color: #91f;
 }
 
 #customize .circle.magenta {
@@ -429,7 +429,7 @@ p.progress {
 }
 #customize .circle.magenta:hover,
 #customize .circle.magenta.active {
-  background-color: #f2f;
+  background-color: #f1f;
 }
 #customize .rectangle {
 	border-color: white;
