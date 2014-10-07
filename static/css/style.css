@@ -318,6 +318,11 @@ p.progress {
 	padding: 4em 0;
 }
 
+#customize h4 {
+	margin-bottom: 0.5em;
+	margin-top: 1.5em;
+}
+
 #customize .headphone-container {
 	display: block;
 	height: 443px;
@@ -332,6 +337,28 @@ p.progress {
 	width: 280px;
 }
 
+#customize .rectangle .glyphicon,
+#customize .circle .glyphicon {
+  color: white;
+  display: none;
+  -webkit-transition: display 0.25s ease;
+  -moz-transition: display 0.25s ease;
+  transition: display 0.25s ease;
+}
+
+#customize .rectangle .glyphicon.active,
+#customize .circle .glyphicon.active {
+  display: inline-block;
+}
+
+#customize .rectangle .glyphicon {
+  margin: 8px 0;
+}
+
+#customize .circle .glyphicon {
+  margin: 12px 0;
+}
+
 #customize .circle {
 	border-color: #fff;
   border-radius: 50%;
@@ -341,6 +368,7 @@ p.progress {
   float: left;
   height: 50px;
   margin: 5px;
+ 	text-align: center;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -351,7 +379,7 @@ p.progress {
 }
 #customize .circle.white:hover,
 #customize .circle.white.active {
-  background-color: #ddd;
+  background-color: #ccc;
 }
 #customize .circle.red {
   background-color: #d00;
@@ -372,7 +400,7 @@ p.progress {
 }
 #customize .circle.yellow:hover,
 #customize .circle.yellow.active {
-  background-color: #ff0;
+  background-color: #ee0;
 }
 #customize .circle.green {
   background-color: #0d0;

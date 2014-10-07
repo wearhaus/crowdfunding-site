@@ -116,7 +116,9 @@ $(document).ready(function() {
 	$("#customize .circle").click(function() {
 		if ($(this).attr("class").indexOf("active") == -1) {
 			$("#customize .circle").removeClass("active");
+			$("#customize .circle .glyphicon").removeClass("active");
 			$(this).addClass("active");
+			$(this).children(".glyphicon").addClass("active");
 			if ($(this).attr("class").indexOf("white") > -1) {
 				customizeLightColor = "white";
 			} else if ($(this).attr("class").indexOf("red") > -1) {
@@ -143,7 +145,9 @@ $(document).ready(function() {
 	$("#customize .rectangle").click(function() {
 		if ($(this).attr("class").indexOf("active") == -1) {
 			$("#customize .rectangle").removeClass("active");
+			$("#customize .rectangle .glyphicon").removeClass("active");
 			$(this).addClass("active");
+			$(this).find(".glyphicon").addClass("active");
 			
 			if ($(this).attr("class").indexOf("white") > -1) {
 				customizeHeadphoneColor = "white";
@@ -159,7 +163,9 @@ $(document).ready(function() {
 	$("#customize img").fadeOut();
 	$("#" + customizeHeadphoneColor + "-" + customizeLightColor).fadeIn();
 	$("#customize .circle.cyan").addClass("active");
+	$("#customize .circle.cyan .glyphicon").addClass("active");
 	$("#customize .rectangle.black").addClass("active");
+	$("#customize .rectangle.black .glyphicon").addClass("active");
 
 	/* Details slideshow */
 	$("#details #image-container > div:gt(0)").hide();

@@ -66,13 +66,6 @@ p {
   letter-spacing: 0.05em;
 }
 
-
-/* Colors */
-.cyan {
-  color: #00bccc;
-}
-
-
 /* Navbar */
 
 .navbar {
@@ -89,10 +82,6 @@ p {
 }
 
 .navbar-default {
-  /*background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
-  background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
-  background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));
-  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.9));*/
   background: transparent;
   border: none;
   height: 60px;
