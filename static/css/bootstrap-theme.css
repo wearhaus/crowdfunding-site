@@ -66,6 +66,10 @@ p {
   letter-spacing: 0.05em;
 }
 
+.cyan {
+  color: #00bccc;
+}
+
 /* Navbar */
 
 .navbar {

@@ -517,6 +517,10 @@ section#details {
 	padding: 0;
 }
 
+#details .row {
+	margin-right: 0px;
+}
+
 #details .vertical-align {
 	margin: 60px auto 0 auto;
 }
