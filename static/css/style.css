@@ -793,7 +793,7 @@ section#details {
 
 	#social-text-container {
 		background-color: rgba(0,0,0,0.3);
-		margin-top: 14em;
+		margin-top: 12em;
 		padding: 5px;
 		text-align: center;
 	}
@@ -853,5 +853,11 @@ section#details {
 		height: 338px;
 		margin: 0 auto;
 		width: 600px;
+	}
+}
+
+@media (max-width: 600px) {
+	#social h2 {
+		font-size: 1.5em;
 	}
 }
