@@ -160,7 +160,7 @@ p.progress {
 #social-icon-container {
 	height: 50px;
 	margin-top: 10px;
-	width: 100%;
+	width: 240px;
 }
 
 /* Main slide - play button */
@@ -355,6 +355,13 @@ p.progress {
   margin: 8px 0;
 }
 
+#customize #color-container {
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	width: 240px;
+}
+
 #customize .circle .glyphicon {
   margin: 14px 0;
 }
@@ -522,22 +529,20 @@ section#details {
 }
 
 #details .vertical-align {
-	margin: 60px auto 0 auto;
+	margin: 40px auto 0 auto;
 }
 
-#image-container {
-	height: 500px;
+#image {
+	background-image: url("../img/closeups/chevron.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 0;
 	margin: 0;
+	min-height: 440px;
 	overflow: hidden;
+	padding-top: 100%;
 	width: 100%;
-}
-
-#details img {
-	height: 100%;
-  left: 0;
-  margin: 0 auto;
-  top: 0;
-  width: 533px;
 }
 
 #details p {
@@ -563,6 +568,11 @@ section#details {
 	height: 480px;
 	margin: 0 auto;
 	width: 853px;
+}
+
+#story-video-container iframe {
+	height: 100%;
+	width: 100%;
 }
 
 #bottom-button-outer {
@@ -706,4 +716,134 @@ section#details {
 #footer #social-icon-container {
 	margin: 0 auto;
 	width: 280px;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	h1 {
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	#details .vertical-align {
+		margin-top: 20px;
+	}
+
+	#details p {
+		font-size: 1.2em;
+	}
+
+	#story .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#story-video-container {
+		height: 432px;
+		margin: 0 auto;
+		width: 768px;
+	}
+}
+
+@media (max-width: 768px) {
+	#home {
+		background-position-y: -120px;
+		padding: 2em 0;
+	}
+
+	#home h1 {
+		font-size: 2.5em;
+	  letter-spacing: 0.05em;
+	}
+
+	#home h3 {
+	  font-size: 1.5em;
+	  letter-spacing: 0.1em;
+	}
+
+	#home p {
+		font-size: 1.25em;
+	}
+
+	#play-button {
+		top: 25%;
+	}
+
+	#title-container {
+		margin-top: 34em;
+		text-align: center;
+	}
+
+	#title-container #social-icon-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#social {
+		padding: 0;
+	}
+
+	#social-text-container {
+		background-color: rgba(0,0,0,0.3);
+		margin-top: 14em;
+		padding: 5px;
+		text-align: center;
+	}
+
+	#customize h2 {
+		margin-top: 20px;
+	}
+
+	#customize #color-container {
+		margin: 0 auto;
+	}
+
+	#interface .vertical-align {
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+
+	#touch {
+		padding: 0;
+	}
+
+	#touch #social-text-container {
+		margin-top: 20em;
+	}
+
+	#story .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#story-video-container {
+		height: 225px;
+		margin: 0 auto;
+		width: 400px;
+	}
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+	#details .vertical-align {
+		padding: 0 50px;
+	}
+
+	#details h2 {
+		font-size: 2em;
+	}
+
+	#details p {
+		font-size: 1.25em;
+	}
+
+	#story-video-container {
+		height: 338px;
+		margin: 0 auto;
+		width: 600px;
+	}
 }

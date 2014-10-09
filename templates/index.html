@@ -47,12 +47,12 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="wearhaus-navbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li class="visible-xs-block"><a href="#">HOME</a></li>
-		        <li><a href="#">BLOG</a></li>
-		        <li><a href="#">TEAM</a></li>
-		        <li><a href="#">JOBS</a></li>
-		        <li><a href="#">FAQS</a></li>
-		        <li><a href="#">CONTACT</a></li>
+		        <li class="visible-xs-block"><a href="/" target="_blank">HOME</a></li>
+		        <li><a href="http://blog.wearhaus.com/" target="_blank">BLOG</a></li>
+		        <!--<li><a href="#">TEAM</a></li>-->
+		        <li><a href="http://jobs.wearhaus.com/" target="_blank">JOBS</a></li>
+		        <li><a href="/faq" target="_blank">FAQS</a></li>
+		        <li><a href="mailto:team@wearhaus.com" target="_blank">CONTACT</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -195,39 +195,38 @@
 		          </div>
 	          </div>
 	          <div class="col-sm-4 col-sm-offset-1">
-	              <h2>EXPRESS YOURSELF THROUGH COLOR</h2>
-	              <h4>Choose your headphone color</h4>
-	              <div class="row">
-	              	<div class="col-xs-6">
-	                	<div class="rectangle white">
-	                		<div class="check-box">
-	                			<span class="glyphicon glyphicon-ok"></span>
-	                		</div>
-	                		<div class="button-text">WHITE</div>
-	                	</div>
-	                </div>
-	                <div class="col-xs-6">
-	                	<div class="rectangle black">
-	                		<div class="check-box">
-	                			<span class="glyphicon glyphicon-ok"></span>
-											</div>
-	                		<div class="button-text">BLACK</div>
-	                	</div>
-	                </div>
-	              </div>
-	              <h4>Choose from many light colors</h4>
-	              <div class="row">
+              <h2>EXPRESS YOURSELF THROUGH COLOR</h2>
+              <h4>Choose your headphone color</h4>
+              <div class="row">
+              	<div class="col-xs-6">
+                	<div class="rectangle white">
+                		<div class="check-box">
+                			<span class="glyphicon glyphicon-ok"></span>
+                		</div>
+                		<div class="button-text">WHITE</div>
+                	</div>
+                </div>
+                <div class="col-xs-6">
+                	<div class="rectangle black">
+                		<div class="check-box">
+                			<span class="glyphicon glyphicon-ok"></span>
+										</div>
+                		<div class="button-text">BLACK</div>
+                	</div>
+                </div>
+              </div>
+              <h4>Choose from many light colors</h4>
+              <div id="color-container">
 	                <div class="circle white"><span class="glyphicon glyphicon-ok"></span></div>
 	                <div class="circle red"><span class="glyphicon glyphicon-ok"></span></div>
 	                <div class="circle orange"><span class="glyphicon glyphicon-ok"></span></div>
 	                <div class="circle yellow"><span class="glyphicon glyphicon-ok"></span></div>
-	              </div>
-	              <div class="row">
 	                <div class="circle green"><span class="glyphicon glyphicon-ok"></span></div>
 	                <div class="circle cyan"><span class="glyphicon glyphicon-ok"></span></div>
 	                <div class="circle purple"><span class="glyphicon glyphicon-ok"></span></div>
 	                <div class="circle magenta"><span class="glyphicon glyphicon-ok"></span></div>
-	              </div>
+	            </div>
+	          </div>
 	        </div>
 	      </div>
 			</section>
@@ -336,7 +335,7 @@
 						</div>
 						<div class="col-sm-4 col-sm-offset-1">
 							<div class="vertical-align">
-	              <h2 style="text-align: left;">CONNECT WITH PEOPLE AROUND YOU</h2>
+	              <h2>CONNECT WITH PEOPLE AROUND YOU</h2>
 	              <p>Our mobile app enhances the Wearhaus Arc experience. See what people around you are listening to, join them in real time, or broadcast your own playlist.</p>
 	            </div>
 		        </div>
@@ -357,12 +356,9 @@
 			<!-- Details slide -->
 	    <section id="details">
         <div class="row">
-          <div class="col-sm-5" style="overflow: hidden;">
-          	<div id="image-container">
-							<div><img src="../static/img/closeups/chevron.jpg"></div>
-							<div><img src="../static/img/closeups/band.jpg"></div>
-							<div><img src="../static/img/closeups/cushion.jpg"></div>
-							<div><img src="../static/img/closeups/cables.jpg"></div>
+          <div class="col-sm-5" style="padding: 0;">
+          	<div id="image-size-frame">
+	          	<div id="image"></div>
 						</div>
           </div>
           <div class="col-sm-6">
@@ -386,7 +382,7 @@
  			<section id="story">
 				<div class="container">
 					<div id="story-video-container">
-						<iframe width="853" height="480" src="//www.youtube.com/embed/J_6vV5GvQZg?list=PLs0rLWE-xlJDJ14C0fJVMVLMgkcuGBRgC&rel=0&loop=1&color=white" frameborder="0" allowfullscreen></iframe>
+						<iframe src="//www.youtube.com/embed/J_6vV5GvQZg?list=PLs0rLWE-xlJDJ14C0fJVMVLMgkcuGBRgC&rel=0&loop=1&color=white" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<a href="https://checkout.wearhaus.com/preorder/checkout/amount" target="_blank">
 						<div id="bottom-button-outer">
