@@ -137,6 +137,23 @@ p {
 
 
 @media (max-width: 768px) {
+  .navbar {
+    min-height: 50px;
+  }
+
+  div.logo-thumb {
+    height: 30px;
+    width: 56px;
+  }
+
+  .navbar-brand {
+    height: 50px;
+    padding: 10px 10px;
+  }
+
+  .navbar-default {
+    height: 50px;
+  }
 
   h1 {
     font-size: 2em;
