@@ -753,18 +753,20 @@ section#details {
 
 @media (max-width: 768px) {
 	#home {
-		background-position-y: -120px;
-		padding: 2em 0;
+		background-position-y: -100px;
+		padding: 1em 0;
 	}
 
 	#home h1 {
 		font-size: 2.5em;
 	  letter-spacing: 0.05em;
+	  margin-bottom: 0.2em;
 	}
 
 	#home h3 {
 	  font-size: 1.5em;
 	  letter-spacing: 0.1em;
+	 	margin-bottom: 0.2em;
 	}
 
 	#home p {
@@ -776,7 +778,7 @@ section#details {
 	}
 
 	#title-container {
-		margin-top: 34em;
+		margin-top: 28em;
 		text-align: center;
 	}
 
