@@ -108,7 +108,7 @@
 
 			<!-- Video slide -->
 			<section id="home">
-				<div id="play-button">
+				<div class="hidden-xs" id="play-button">
 					<div class="outer-play">
 						<div class="inner-play">
 							<div id="play-symbol"></div>
@@ -116,6 +116,18 @@
 					</div>
 					<p>&nbsp;PLAY VIDEO</p>
 				</div>
+
+				<div class="visible-xs-block" id="play-button">
+					<a href="https://www.youtube.com/watch_popup?v=_Fo8CYQ2lpk">
+						<div class="outer-play">
+							<div class="inner-play">
+								<div id="play-symbol"></div>
+							</div>
+						</div>
+						<p>&nbsp;PLAY VIDEO</p>
+					</a>
+				</div>
+
 				<div class="container">
 					<div class="col-sm-6" id="title-container">
 						<h3 class="cyan">INTRODUCING</h3>
@@ -131,7 +143,7 @@
 					</div>
 				</div>
 				<div id="video-container" style="display: none;">
-					<iframe id="campaign-video" width="853" height="480" src="" frameborder="0" allowfullscreen></iframe>
+					<iframe id="campaign-video" src="" frameborder="0" allowfullscreen></iframe>
 					<div class="x"></div>
 				</div>
 			</section>
