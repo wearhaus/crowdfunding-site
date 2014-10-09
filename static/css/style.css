@@ -753,18 +753,18 @@ section#details {
 
 @media (max-width: 768px) {
 	#home {
-		background-position-y: -100px;
+		background-position-y: -90px;
 		padding: 1em 0;
 	}
 
 	#home h1 {
-		font-size: 2.4em;
+		font-size: 2.2em;
 	  letter-spacing: 0.05em;
 	  margin-bottom: 0.2em;
 	}
 
 	#home h3 {
-	  font-size: 1.5em;
+	  font-size: 1.2em;
 	  letter-spacing: 0.1em;
 	 	margin-bottom: 0.2em;
 	}
@@ -858,6 +858,6 @@ section#details {
 
 @media (max-width: 600px) {
 	#social h2 {
-		font-size: 1.5em;
+		font-size: 1.2em;
 	}
 }
