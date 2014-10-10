@@ -869,7 +869,12 @@ section#details {
 		padding: 0;
 	}
 
+	#touch .container {
+		padding: 0;
+	}
+
 	#touch #touch-text-container {
+		padding: 10px;
 		margin-top: 26em;
 	}
 
