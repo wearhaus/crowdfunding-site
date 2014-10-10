@@ -865,12 +865,12 @@ section#details {
 	}
 
 	#touch {
-		background-position-x: 90%;
+		background-position-x: 80%;
 		padding: 0;
 	}
 
 	#touch .container {
-		padding: 0;
+		padding: 0 5px;
 	}
 
 	#touch #touch-text-container {
