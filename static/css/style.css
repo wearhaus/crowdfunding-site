@@ -883,14 +883,14 @@ section#details {
 
 @media (max-width: 600px) {
 	#video-container {
-		height: 169px;
-		width: 340px;
+		height: 157px;
+		width: 320px;
 	}
 
 	#campaign-video {
-		height: 169px;
+		height: 157px;
 		margin-left: 20px;
-		width: 300px;
+		width: 280px;
 	}
 
 	div.x {
