@@ -49,6 +49,28 @@ div.x:hover {
 	background-image: url('../img/press/yankodesign.png');
 }
 
+#tap {
+	background-image: url('../img/gestures/tap.png');
+}
+
+#doubletap {
+	background-image: url('../img/gestures/doubletap.png');
+}
+
+#hold {
+	background-image: url('../img/gestures/hold.png');
+}
+
+#updown {
+	background-image: url('../img/gestures/updown.png');
+}
+
+#leftright {
+	background-image: url('../img/gestures/leftright.png');
+}
+
+
+
 .social-icon {
 	background-size: cover;
 	float: left;
