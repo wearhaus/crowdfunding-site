@@ -267,19 +267,13 @@ p.progress {
 	width: 100%;
 }
 
-#press-logo-container {
-	display: table;
-	margin: auto;
-	min-height: 50px;
-	overflow: auto;
-}
-
 .press-logo {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 40px;
-	min-width: 125px !important;
+	max-width: 200px !important;
+	min-width: 100px !important;
 	margin: 20px auto;
 	transition: opacity .25s;
 }
@@ -810,6 +804,18 @@ section#details {
 	#title-container #social-icon-container {
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.press-logo {
+		background-size: contain;
+		height: 30px;
+		max-width: 180px !important;
+		min-width: 120px !important;
+		margin: 0 auto;
+	}
+
+	#engadget {
+		height: 40px;
 	}
 
 	#social {
