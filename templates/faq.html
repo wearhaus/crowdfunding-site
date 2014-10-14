@@ -1,14 +1,26 @@
 <html>
 	<head>
+		<title>Wearhaus ARC - Headphones reinvented. Social listening redefined.</title>
+		<meta name="author" content="Wearhaus Inc." />
+	    <meta name="viewport" content="width=device-width"/>
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_blackwhite_cyan.jpg"/>
+		<meta property="og:image" content="http://campaign.wearhaus.com/static/img/headphones/WH_black_Blue.jpg"/>
+		<meta property="og:title" content="Wearhaus ARC - Headphones reinvented. Social listening redefined."/>
+		<meta property="og:url" content="http://campaign.wearhaus.com/"/>
+		<meta property="og:description" content="Hear and be heard. Tune in with friends and listen in sync. Share your sound and connect with people through the music you love."/>
 		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/js/wearhaus.js"></script>
+		<script language="javascript" type="text/javascript" src="../static/js/bootstrap.js"></script>
+
         <script>
             $(document).ready(function() {
-				$('.faqs h3').each(function() {
+				$('#faq h3').each(function() {
 					var tis = $(this), state = false, answer = tis.next('div').hide().css('height','auto').slideUp();
 					tis.click(function() {
 						state = !state;
@@ -18,273 +30,176 @@
 				});
 			});
         </script>
+
 	</head>
 	<body>
 
-		<!-- Nav bar content -->
-		<div class="nav">
-			<a href="/">
-				<div class="logo-container">
-					<div class="logo-thumb"></div>
-				</div>
-			</a>
-			<div id="preorder-container">
-				<div id="button-outer">
-					<div id="button" onclick="window.open('https://checkout.wearhaus.com/preorder/checkout/amount')">
-						<h1>PRE-ORDER NOW</h1>
-					</div>
-				</div>
-				<!--<p id="savings-text">Get yours early. Save $50</p>-->
-			</div>
-		</div>
 
-		<!-- Main carousel content -->
-		<div class="carousel">
-			
-			<!-- FAQ Slide -->
-			<div class="slide" id="faqtitle">
-				<div id="faq-background">
-					<div id="faq-title-container">
-						<h1>Frequently Asked Questions</h1>
+		<!-- Nav bar content -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wearhaus-navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><div class="logo-thumb"></div></a>
+		    </div>
+
+		    <div class="nav navbar-nav navbar-right preorder-container hidden-xs">
+		      	<a href="https://checkout.wearhaus.com/preorder/checkout/amount" target="_blank">
+							<div id="button-outer">
+								<div id="button-inner">
+									<p>SIGN UP NOW</p>
+								</div>
+							</div>
+						</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="wearhaus-navbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/">HOME</a></li>
+		        <li><a href="http://blog.wearhaus.com/" target="_blank">BLOG</a></li>
+		        <!--<li><a href="#">TEAM</a></li>-->
+		        <li><a href="http://jobs.wearhaus.com/" target="_blank">JOBS</a></li>
+		        <li><a style="color: #00bccc;" href="/faq" target="_blank">FAQS</a></li>
+		        <li><a href="mailto:team@wearhaus.com" target="_blank">CONTACT</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<section id="faq">
+			<div class="container">
+				<h1 class="cyan">Frequently Asked Questions</h1>
+				<div class="container">
+					<div class="faq-header">
+						<h2>The Headphones</h2>
 					</div>
-					<div id="faqs-container">
-						<div class="faq-header">
-							<h2>The Headphones</h2>
+					<div class="col-sm-5 col-sm-offset-1">
+					
+						<h3>What exactly does Wearhaus Arc do?</h3>
+						<div>
+							<p>Arc is a pair of wireless headphones that allows you to seamlessly listen to music together with other Arcs nearby. Combined with a mobile app, Arc provides a totally new way of enjoying music - whether by yourself, with friends, or with people you’ve just met.</p>
 						</div>
-						
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>What exactly does Wearhaus Arc do?</h3>
-								<div>
-									<p>Arc is a pair of wireless headphones that allows you to seamlessly listen to music together with other Arcs nearby. Combined with a mobile app, Arc provides a totally new way of enjoying music - whether by yourself, with friends, or with people you’ve just met.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>How much will a pair cost?</h3>
-								<div>
-									<p>Wearhaus Arc will retail at MSRP $200, but pre-order during the crowdfunding campaign and you'll get $50 off! You can save even more on the cost of an Arc by sharing referral codes (see Referrals/Discounts below)</p>
-								</div>
-							</div>
-							<br class="clear" />
+						<h3>How much will a pair cost?</h3>
+						<div>
+							<p>Wearhaus Arc will retail at MSRP $200, but pre-order during the crowdfunding campaign and you'll get $50 off! You can save even more on the cost of an Arc by sharing referral codes (see Referrals/Discounts below)</p>
 						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>How does sharing work?</h3>
-								<div>
-									<p>We’ve developed mesh networking technology that relays audio between all the headphones in a network, allowing everyone to listen to the same song without ever transferring any files - think of it like speakers with more fine-tuned privacy.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>How many people can I share with?</h3>
-								<div>
-									<p>Each mesh network is capable of supporting arbitrarily many listeners, but there are still limits to Bluetooth technology and the laws of physics! Our current design is rated for at least 30 simultaneous users and we’ve tested up to 6 listeners in person. You’ll receive updates over next few months whenever we get more units and do mass tests!</p>
-								</div>
-							</div>
-							<br class="clear" />
+						<h3>How does sharing work?</h3>
+						<div>
+							<p>We’ve developed mesh networking technology that relays audio between all the headphones in a network, allowing everyone to listen to the same song without ever transferring any files - think of it like speakers with more fine-tuned privacy.</p>
 						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>How comfortable is it?</h3>
-								<div>
-									<p>Arc is designed to fit snugly to the shape of your head, with memory foam cushions that also serve to seal out noise. The headband is extendable for those of us with larger heads.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>How's the sound quality?</h3>
-								<div>
-									<p>Our manufacturing partner has over 20 years of experience building headphones for various high quality brands, using patented driver designs to achieve a crisp response across all frequencies.</p>
-								</div>
-							</div>
-							<br class="clear" />
+						<h3>How many people can I share with?</h3>
+						<div>
+							<p>Each mesh network is capable of supporting arbitrarily many listeners, but there are still limits to Bluetooth technology and the laws of physics! Our current design is rated for at least 30 simultaneous users and we’ve tested up to 6 listeners in person. You’ll receive updates over next few months whenever we get more units and do mass tests!</p>
 						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>What colors does Arc come in?</h3>
-								<div>
-									<p>There are two base colors, black and white, in matte polycarbonate plastic.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>Can I choose the color/brightness of the ring?</h3>
-								<div>
-									<p>Yes! You can easily change these settings from the mobile app. You can also set your backlights to pulse to the music, in sync with friends, or turn off lighting entirely if you want to stay low-key.</p>
-								</div>
-							</div>
-							<br class="clear" />
+						<h3>How comfortable is it?</h3>
+						<div>
+							<p>Arc is designed to fit snugly to the shape of your head, with memory foam cushions that also serve to seal out noise. The headband is extendable for those of us with larger heads.</p>
 						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>How long does the battery last?</h3>
-								<div>
-									<p>Our current units play 16 hours of audio, or 10 hours with heavy usage, and we're still working on incorporating an even larger battery!</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>Can I still use it if it runs out of battery?</h3>
-								<div>
-									<p>Yes! We’re providing a backup AUX cable that you can use to connect your headphones to your audio playing device. You’ll be able to use your headphones to play audio like a regular pair of wired headphones, but the light-ring, touch controls, and sharing functionality won’t work.</p>
-								</div>
-							</div>
-							<br class="clear" />
+						<h3>How's the sound quality?</h3>
+						<div>
+							<p>Our manufacturing partner has over 20 years of experience building headphones for various high quality brands, using patented driver designs to achieve a crisp response across all frequencies.</p>
 						</div>
-						<div class="faq-header">
-							<h2>The App</h2>
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>Which platforms does the app support?</h3>
-								<div>
-									<p>Both iOS and Android will be supported by the time Wearhaus Arc ships. The app will become available on other platforms depending on demand.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>How does the app work?</h3>
-								<div>
-									<p>The app communicates with the headphones using Bluetooth serial. We grab the song metadata through a combination of Bluetooth and APIs made available by the music providers.</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>Do I have to use the Wearhaus app to play music?</h3>
-								<div>
-									<p>No - we don't stream or provide any music to you; Arc will work on top of any app playing audio, and the Wearhaus app simply controls sharing and tuning in with other people.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>Which music apps are supported?</h3>
-								<div>
-									<p>We are not targeting any specific music service, so you can play music from whatever source you prefer - even use Arc to watch YouTube with friends!</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>Where do I get the app?</h3>
-								<div>
-									<p>The app will be available on the App Store and Google Play, just before the first batch of Arcs ship.</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-header">
-							<h2>Logistics</h2>
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>When are you shipping?</h3>
-								<div>
-									<p>We'll be shipping the first batch of Arcs in December 2014. The order of shipping will depend on when you ordered your unit - so the earlier the better! You'll also get an update from us in the fall as soon as your unit's shipping date is set.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>Does Wearhaus ship internationally?</h3>
-								<div>
-									<p>Yes! But due to the extra cost, you will be responsible for the import duties and VAT. We will have more info about that once we collect your shipping address.</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>What stage of production are you in?</h3>
-								<div>
-									<p>We’ve completed the prototyping phase and are now entering pre-production at the factory - tooling molds for the structure and sourcing all the components for the electronics. Our design will be rigorously tested and refined over the next few months, and production is slated to happen in late fall.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>When will my credit card be charged?</h3>
-								<div>
-									<p>Your credit card won't be charged unless we reach our funding goal - if we do reach it, your payment will take around 1-2 days afterwards to process.</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>Why can't I enter shipping information now?</h3>
-								<div>
-									<p>Since we’re shipping in December, it’s possible that people could change addresses in between when they make the order and when we’re ready to ship. To save the hassle of changing shipping addresses, we’ll get in touch when we’re closer to our ship date.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>Can I order multiple units?</h3>
-								<div>
-									<p>The easiest way to do this would be to make multiple orders.</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>Will I get charged sales tax or VAT?</h3>
-								<div>
-									<p>Sales tax is included in the pricing of the reward tiers, but you will be responsible for any additional international shipping costs.</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>What will the funds go towards?</h3>
-								<div>
-									<p>All of the pre-order funds will go towards setting up our production lines manufacturing your units!</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-header">
-							<h2>Referrals/Discounts</h2>
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>I can get discounts?</h3>
-								<div>
-									<p>Yes! If you have a friend that has already preordered a pair for themselves, they have a unique promo code that will get you $15 off a pair of headphones at checkout!</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>How do I use a referral code?</h3>
-								<div>
-									<p>Go to our main site. http://campaign.wearhaus.com/ Click on PREORDER NOW. Select one of the headphone reward tiers (single unit or couple’s pack) and type in the promo code at the checkout page. The amount will be automatically deducted from your total!</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<div class="faq-row">
-							<div class="faqs">
-								<h3>How does the referral program work? Are there rules?</h3>
-								<div>
-									<p>You can only use referral codes when purchasing headphones. When you refer a friend, they can use the referral code to get $15 off, and you will get a $15 refund as well! You can use the referral code as many times as you want, and yes, if you refer enough friends you can get your headphones for free!</p>
-								</div>
-							</div>
-							<div class="faqs">
-								<h3>How do I collect my referral credit?</h3>
-								<div>
-									<p>We will distribute the referral credit two weeks after the end of the campaign, most likely through Paypal or some other means of electronic payment.</p>
-								</div>
-							</div>
-							<br class="clear" />
-						</div>
-						<br class="clear" />
 					</div>
-					<br class="clear" />
+					<div class="col-sm-5">
+						<h3>What colors does Arc come in?</h3>
+						<div>
+							<p>There are two base colors, black and white, in matte polycarbonate plastic.</p>
+						</div>
+						<h3>Can I choose the color/brightness of the ring?</h3>
+						<div>
+							<p>Yes! You can easily change these settings from the mobile app. You can also set your backlights to pulse to the music, in sync with friends, or turn off lighting entirely if you want to stay low-key.</p>
+						</div>
+						<h3>How long does the battery last?</h3>
+						<div>
+							<p>Our current units play 16 hours of audio, or 10 hours with heavy usage, and we're still working on incorporating an even larger battery!</p>
+						</div>
+						<h3>Can I still use it if it runs out of battery?</h3>
+						<div>
+							<p>Yes! We’re providing a backup AUX cable that you can use to connect your headphones to your audio playing device. You’ll be able to use your headphones to play audio like a regular pair of wired headphones, but the light-ring, touch controls, and sharing functionality won’t work.</p>
+						</div>
+					</div>
 				</div>
-				<br class="clear" />
+				<div class="container">
+					<div class="faq-header">
+						<h2>The App</h2>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<h3>Which platforms does the app support?</h3>
+						<div>
+							<p>Both iOS and Android will be supported by the time Wearhaus Arc ships. The app will become available on other platforms depending on demand.</p>
+						</div>
+						<h3>How does the app work?</h3>
+						<div>
+							<p>The app communicates with the headphones using Bluetooth serial. We grab the song metadata through a combination of Bluetooth and APIs made available by the music providers.</p>
+						</div>
+						<h3>Do I have to use the Wearhaus app to play music?</h3>
+						<div>
+							<p>No - we don't stream or provide any music to you; Arc will work on top of any app playing audio, and the Wearhaus app simply controls sharing and tuning in with other people.</p>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<h3>Which music apps are supported?</h3>
+						<div>
+							<p>We are not targeting any specific music service, so you can play music from whatever source you prefer - even use Arc to watch YouTube with friends!</p>
+						</div>
+						<h3>Where do I get the app?</h3>
+						<div>
+							<p>The app will be available on the App Store and Google Play, just before the first batch of Arcs ship.</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="faq-header">
+						<h2>Logistics</h2>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<h3>When are you shipping?</h3>
+						<div>
+							<p>We'll be shipping the first batch of Arcs in December 2014. The order of shipping will depend on when you ordered your unit - so the earlier the better! You'll also get an update from us in the fall as soon as your unit's shipping date is set.</p>
+						</div>
+						<h3>Does Wearhaus ship internationally?</h3>
+						<div>
+							<p>Yes! But due to the extra cost, you will be responsible for the import duties and VAT. We will have more info about that once we collect your shipping address.</p>
+						</div>
+						<h3>What stage of production are you in?</h3>
+						<div>
+							<p>We’ve completed the prototyping phase and are now entering pre-production at the factory - tooling molds for the structure and sourcing all the components for the electronics. Our design will be rigorously tested and refined over the next few months, and production is slated to happen in late fall.</p>
+						</div>
+						<h3>When will my credit card be charged?</h3>
+						<div>
+							<p>Your credit card won't be charged unless we reach our funding goal - if we do reach it, your payment will take around 1-2 days afterwards to process.</p>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<h3>Why can't I enter shipping information now?</h3>
+						<div>
+							<p>Since we’re shipping in December, it’s possible that people could change addresses in between when they make the order and when we’re ready to ship. To save the hassle of changing shipping addresses, we’ll get in touch when we’re closer to our ship date.</p>
+						</div>
+						<h3>Can I order multiple units?</h3>
+						<div>
+							<p>The easiest way to do this would be to make multiple orders.</p>
+						</div>
+						<h3>Will I get charged sales tax or VAT?</h3>
+						<div>
+							<p>Sales tax is included in the pricing of the reward tiers, but you will be responsible for any additional international shipping costs.</p>
+						</div>
+						<h3>What will the funds go towards?</h3>
+						<div>
+							<p>All of the pre-order funds will go towards setting up our production lines manufacturing your units!</p>
+						</div>
+					</div>
+				</div>
 			</div>
+		</section>
 
 		
 		<!-- Footer -->
-		<div class="footer">
-			<div id="footer-nav">
-				<ul>
-					<li><a href="/thankyou"><p>REFERRALS</p></a></li>
-					<li><a href="/press"><p>PRESS</p></a></li>
-					<li><a href="/faq"><p>FAQ</p></a></li>
-					<li><a href="http://jobs.wearhaus.com/" target="_blank"><p>JOBS</p></a></li>
-					<li><a href="mailto:team@wearhaus.com"><p>CONTACT</p></a></li>
-				</ul>
-			</div>
-		</div>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

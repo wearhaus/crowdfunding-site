@@ -634,97 +634,34 @@ section#details {
 }
 
 /*FAQ Title*/
-#faqtitle {
+#faq {
 	background-color: #111;
-	height: auto;
-	min-height: 100%;
-	display: block;
+	padding-top: 100px;
 }
 
-#faq-title-container {
-	position: absolute;
-	width: 100%;
-	height: 120px;
-	display: table;
+#faq h1 {
+  text-align: center;
 }
 
-#faq-title-container > h1 {
-	color: #00bccc;
-	font-size: 60px;
-	font-weight: 400px;
-	display: table-cell;
-    text-align: center;
-    vertical-align: bottom;
-    padding-bottom: 40px;
+#faq h3 {
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 700;
+	letter-spacing: .15em;
+	text-transform: uppercase;
 }
 
-#faqs-container {
-	position: relative;
-	overflow: auto;
-	width: 60%;
-	display: block;
-	margin-left: auto;
-    margin-right: auto;
-    padding-top: 100px;
-}
-
-.faq-row, .faq-header {
-	color: white;
-	position: relative;
-	width: 100%;
-	font-family: 'Lato', sans-serif;
+#faq p {
+	font-size: 1.2em;
+	margin-bottom: 20px;
 }
 
 .faq-header {
 	background-color: #00bccc;
-	margin-top: 40px;
+	margin: 40px 60px 0 60px;
+	padding-top: 5px;
+	padding-left: 40px;
 }
-
-.faq-header > h2 {
-	font-size: 18pt;
-	font-weight: 600;
-	padding-left: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.faqs {
-	position: relative;
-    width: 40%;
-    display: block;
-    padding-left: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    float: left;
-}
-
-.faq {
-	width: 50%;
-}
-
-.clear { 
-	clear: both; 
-}
-
-.faqs h3 { 
-	cursor: pointer;
-	font-size: 16pt;
-	font-weight: 400;
-}
-
-.faqs div { 
-	height: 0; 
-	overflow: hidden; 
-	position: relative;
-}
-
-.faqs div p	{ 
-	font-size: 14pt;
-	font-weight: 300;
-	padding: 0; 
-	margin-bottom: 15px; 
-}
-
 
 /* Footer */
 #footer {
@@ -902,6 +839,12 @@ section#details {
 		height: 169px;
 		margin: 0 auto;
 		width: 300px;
+	}
+
+	.faq-header {
+		margin: 40px 0 0 0;
+		padding-top: 5px;
+		padding-left: 0;
 	}
 
 }
