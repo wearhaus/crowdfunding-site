@@ -70,6 +70,19 @@ p {
   color: #00bccc;
 }
 
+/* Modal */
+.close {
+  color: #00bccc;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.close:hover {
+  color: #00bccc;
+  text-shadow: none;
+  opacity: .5;
+}
+
 /* Navbar */
 
 .navbar {

@@ -10,6 +10,10 @@ video {
 .preorder-container {
 	height: 50px;
 	margin: 5px 0 5px 20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #button-outer {
@@ -673,6 +677,25 @@ section#details {
 	margin: 0 auto;
 	width: 280px;
 }
+
+
+/* Modal */
+.modal-dialog {
+	margin: 100px auto;
+}
+
+.modal-content {
+	background-color: #222;
+}
+
+.modal-header {
+	border-bottom: 1px solid #00bccc;
+}
+
+.modal-content p {
+	margin-bottom: 10px;
+}
+
 
 /* Media Queries */
 @media (min-width: 1200px) {
