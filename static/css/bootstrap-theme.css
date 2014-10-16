@@ -73,8 +73,9 @@ p {
 /* Modal */
 .close {
   color: #00bccc;
-  text-shadow: none;
   opacity: 1;
+  text-shadow: none;
+  transition: 0.25s;
 }
 
 .close:hover {
