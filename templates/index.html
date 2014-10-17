@@ -480,6 +480,10 @@
 		  ga('create', 'UA-47387009-1', 'wearhaus.com');
 		  ga('send', 'pageview');
 
+		  $("#mc_embed_signup .button").click( function() {
+		  	ga('send', 'event', 'button', 'click', 'subscribe', 1);
+      });
+
 		</script>
 	</body>
 
