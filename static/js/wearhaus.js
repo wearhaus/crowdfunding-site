@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 	/* Scroll handler */
 	function updateShortCutOnScroll() {
-		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 640);
+		var slideIndex = Math.floor(($(window).scrollTop() + 60) / 550);
 		if (slideNames[slideIndex] != currentActiveShortcut) {
 			makeShortcutActive(slideNames[slideIndex])();
 		}
