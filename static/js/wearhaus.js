@@ -131,10 +131,10 @@ $(document).ready(function() {
 				customizeLightColor = "green";
 			} else if ($(this).attr("class").indexOf("cyan") > -1) {
 				customizeLightColor = "cyan";
-			} else if ($(this).attr("class").indexOf("purple") > -1) {
-				customizeLightColor = "purple";
+			} else if ($(this).attr("class").indexOf("blue") > -1) {
+				customizeLightColor = "blue";
 			} else if ($(this).attr("class").indexOf("magenta") > -1) {
-				customizeLightColor = "magenta";
+				customizeLightColor = "purple";
 			}
 
 			$("#customize img").fadeOut();

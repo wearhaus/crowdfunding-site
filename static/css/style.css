@@ -325,16 +325,16 @@ p.progress {
 
 #customize .headphone-container {
 	display: block;
-	height: 443px;
+	height: 420px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 280px;
+	width: 300px;
 }
 
 #customize img {
 	display: none;
 	position: absolute;
-	width: 280px;
+	width: 300px;
 }
 
 #customize .rectangle .glyphicon,
@@ -426,6 +426,14 @@ p.progress {
 #customize .circle.cyan.active {
   background-color: #0ee;
 }
+#customize .circle.blue {
+  background-color: #22c;
+}
+#customize .circle.blue:hover,
+#customize .circle.blue.active {
+  background-color: #33e;
+}
+
 #customize .circle.purple {
   background-color: #70b;
 }
