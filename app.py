@@ -34,6 +34,10 @@ def faq():
     data = grab_campaign_data()
     return render_template('faq.html', **data)
 
+@app.route('/video')
+def video():
+    return redirect('https://www.youtube.com/watch?v=_Fo8CYQ2lpk')
+
 @app.route('/zh/faq')
 def faq_zh():
     data = grab_campaign_data()
