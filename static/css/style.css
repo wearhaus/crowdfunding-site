@@ -53,18 +53,20 @@ video {
 /* Call to action */
 
 #cta {
-	height: 200px;
+	height: 100px;
 	opacity: 1;
 	position: fixed;
 	right: 20px;
-	top: 90px;
-	width: 320px;
+	top: 70px;
+	width: 164px;
 	z-index: 2;
 }
 
 #cta p {
 	font-size: 12pt;
+	font-weight: 700;
 	letter-spacing: 1px;
+	line-height: 12px;
 	margin-bottom: 10px;
 	text-align: center;
 }
@@ -249,7 +251,7 @@ p.progress {
 	transition: .25s;
 	right: 0;
 	opacity: 0;
-	width: 933px;
+	width: 720px;
 	z-index: 2;
 }
 
@@ -258,7 +260,7 @@ p.progress {
 	height: 480px;
 	margin-left: 40px;
 	position: absolute;
-	width: 853px;
+	width: 640px;
 }
 
 /* Press bar */
@@ -711,21 +713,9 @@ section#details {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-	h1 {
-	}
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-	#video-container {
-		height: 383px;
-		width: 760px;
-	}
-
-	#campaign-video {
-		height: 383px;
-		width: 680px;
-	}
-
 	#touch {
 		background-position-x: 80%;
 	}
@@ -752,12 +742,12 @@ section#details {
 
 @media (max-width: 768px) {
 	#video-container {
-		height: 281px;
+		height: 375px;
 		width: 580px;
 	}
 
 	#campaign-video {
-		height: 281px;
+		height: 375px;
 		width: 500px;
 	}
 
@@ -902,12 +892,12 @@ section#details {
 
 @media (max-width: 600px) {
 	#video-container {
-		height: 157px;
+		height: 210px;
 		width: 320px;
 	}
 
 	#campaign-video {
-		height: 157px;
+		height: 210px;
 		margin-left: 20px;
 		width: 280px;
 	}

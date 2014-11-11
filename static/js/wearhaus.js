@@ -98,7 +98,7 @@ $(document).ready(function() {
 			$("#video-container").css("opacity", "1");
 			$("#video-container").css("z-index", "3");
 			setTimeout(function() {
-				$("#campaign-video").attr("src", "http://www.youtube.com/embed/_Fo8CYQ2lpk?list=PLs0rLWE-xlJDJ14C0fJVMVLMgkcuGBRgC&rel=0&loop=1&autoplay=1&color=white&showinfo=0");
+				$("#campaign-video").attr("src", "https://www.kickstarter.com/projects/1445900023/wearhaus-arc-wireless-headphones-reinvented/widget/video.html");
 			}, 250);
 		});
 	});
@@ -190,9 +190,11 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > 200) {
+			$("#cta").fadeOut("fast");
 			$(".navbar-default").css("background", "#111");
 			$(".navbar-collapse").css("background", "#111");
 		} else {
+			$("#cta").fadeIn("fast");
 			$(".navbar-default").css("background", "transparent");
 			$(".navbar-collapse").css("background", "transparent");
 		}
