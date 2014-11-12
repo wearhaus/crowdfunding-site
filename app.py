@@ -36,7 +36,7 @@ def faq():
 
 @app.route('/video')
 def video():
-    return redirect('https://www.youtube.com/watch?v=_Fo8CYQ2lpk')
+    return redirect('https://www.youtube.com/watch?v=1JzJsSjQaiI')
 
 @app.route('/zh/faq')
 def faq_zh():
