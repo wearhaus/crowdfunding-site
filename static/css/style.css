@@ -4,6 +4,10 @@ video {
 	object-position: center 60%;
 }
 
+/* Mailing List on Nav Bar */
+#mailing-list:hover{
+	cursor: pointer;
+}
 
 /* Preorder button stuff */
 
@@ -56,9 +60,9 @@ video {
 	height: 100px;
 	opacity: 1;
 	position: fixed;
-	right: 20px;
+	right: 15px;
 	top: 70px;
-	width: 164px;
+	width: 180px;
 	z-index: 2;
 }
 
