@@ -38,6 +38,10 @@ def faq():
 def video():
     return redirect('https://www.youtube.com/watch?v=1JzJsSjQaiI')
 
+@app.route('/kickstarter')
+def video():
+    return redirect('https://www.kickstarter.com/projects/1445900023/wearhaus-arc-wireless-headphones-reinvented')
+
 @app.route('/zh/faq')
 def faq_zh():
     data = grab_campaign_data()
