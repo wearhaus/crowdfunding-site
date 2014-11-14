@@ -39,7 +39,7 @@ def video():
     return redirect('https://www.youtube.com/watch?v=1JzJsSjQaiI')
 
 @app.route('/kickstarter')
-def video():
+def kickstarter():
     return redirect('https://www.kickstarter.com/projects/1445900023/wearhaus-arc-wireless-headphones-reinvented')
 
 @app.route('/zh/faq')
