@@ -42,6 +42,14 @@ def video():
 def kickstarter():
     return redirect('https://www.kickstarter.com/projects/1445900023/wearhaus-arc-wireless-headphones-reinvented')
 
+@app.route('/twitter')
+def twitter():
+    return redirect('https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&text=I%20backed%20the%20%40Wearhausinc%20Arc!%20Check%20out%20the%20next%20generation%20of%20wireless%20headphones%2C%20now%20on%20Kickstarter%3A&tw_p=tweetbutton&url=http%3A%2F%2Fbit.ly%2Fwearhauskickstarter')
+
+@app.route('/facebook')
+def facebook():
+    return redirect('https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=http%3A%2F%2Fbit.ly%2Fwearhauskickstarter&display=popup&ref=plugin')
+
 @app.route('/zh/faq')
 def faq_zh():
     data = grab_campaign_data()
