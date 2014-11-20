@@ -37,8 +37,16 @@ div.x:hover {
 	background-image: url('../img/press/digitaltrends.png');
 }
 
+#discovery {
+	background-image: url('../img/press/discovery.png');
+}
+
 #engadget {
 	background-image: url('../img/press/engadget.png');
+}
+
+#slashgear {
+	background-image: url('../img/press/slashgear.png');
 }
 
 #techcrunch {
