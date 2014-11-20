@@ -87,6 +87,7 @@ p {
 /* Navbar */
 
 .navbar {
+  border-radius: 0;
   min-height: 60px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -108,7 +109,6 @@ p {
 .navbar-default {
   background: transparent;
   border: none;
-  height: 60px;
   transition: background .5s;
 }
 
@@ -171,7 +171,7 @@ p {
     padding: 10px 10px;
   }
 
-  .navbar-default {
+  #header .navbar-default {
     height: 50px;
   }
 
