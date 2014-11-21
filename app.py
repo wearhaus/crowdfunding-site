@@ -44,7 +44,7 @@ def kickstarter():
 
 @app.route('/twitter')
 def twitter():
-    return redirect('https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&text=I%20backed%20the%20%40Wearhausinc%20Arc!%20Check%20out%20the%20next%20generation%20of%20wireless%20headphones%2C%20now%20on%20Kickstarter%3A&tw_p=tweetbutton&url=http%3A%2F%2Fbit.ly%2Fwearhauskickstarter')
+    return redirect('https://twitter.com/intent/tweet?hashtags=ShareAndEnjoy&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&text=So%20excited%20for%20the%20%40WearhausInc%20Arc%2C%20the%20next%20generation%20of%20wireless%20headphones.%20Now%20on%20Kickstarter!&tw_p=tweetbutton&url=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2F1445900023%2Fwearhaus-arc-wireless-headphones-reinvented')
 
 @app.route('/facebook')
 def facebook():
