@@ -50,6 +50,10 @@ def twitter():
 def facebook():
     return redirect('https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=http%3A%2F%2Fbit.ly%2Fwearhauskickstarter&display=popup&ref=plugin')
 
+@app.route('/presskit')
+def presskit():
+    return redirect('https://www.dropbox.com/sh/krmdc1yx1o78ghh/AADJA-MwI-VAEdLhUbzrq7c-a?dl=0')
+
 @app.route('/zh/faq')
 def faq_zh():
     data = grab_campaign_data()
